@@ -61,9 +61,9 @@ const demo2Config = {
   },
   "components": {
     "hero": {
-      "title": "SæsaL",
-      "subtitle": "Professional Tattoo Removal Solution",
-      "description": "Advanced natural solution for removing tattoo ink from your skin",
+      "title": "Do Tattoo On Tattoo",
+      "subtitle": "Ink will Remove",
+      "description": "Solution of Remove Ink off your Skin",
       "cta": {
         "primary": "Learn More",
         "secondary": "Contact Us"

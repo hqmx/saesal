@@ -79,8 +79,8 @@ export default function Demo2Navigation({ activeSection, config }: Demo2Navigati
                 className="flex items-center group"
               >
                 <img 
-                  src="/images/saesal-logo.png" 
-                  alt="Saesal Logo" 
+                  src="/logo.png" 
+                  alt="SæsaL Logo" 
                   className="h-12 w-auto object-contain group-hover:opacity-80 transition-opacity"
                   style={{ filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))' }}
                 />
