@@ -93,19 +93,32 @@ export default function HeroSection({ config }: HeroSectionProps) {
       id="hero" 
       className="relative overflow-hidden flex items-center justify-center w-full"
       style={{
-        backgroundImage: `url('/background.png')`,
         backgroundColor: config.theme.colors.background,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
         height: '100vh',
         width: '100vw',
-        filter: isBackgroundLoaded ? 'blur(0px)' : 'blur(30px)',
-        transition: 'filter 2s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
       }}
     >
-      {/* Temporarily removed overlay to check background */}
-      {/* <div className="absolute inset-0 bg-white bg-opacity-20"></div> */}
+      {/* Background Video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+        style={{
+          filter: isBackgroundLoaded ? 'blur(0px)' : 'blur(30px)',
+          transition: 'filter 2s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+        }}
+        onLoadedData={() => setIsBackgroundLoaded(true)}
+      >
+        <source src="/4kbg.webm" type="video/webm" />
+      </video>
+      
+      {/* White overlay with 5% opacity */}
+      <div 
+        className="absolute inset-0"
+        style={{ backgroundColor: 'rgba(255, 255, 255, 0.26)' }}
+      ></div>
 
       <div className="relative z-10 w-full flex items-center justify-center" style={{ paddingTop: '8vh' }}>
         <div 

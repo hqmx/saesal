@@ -229,13 +229,25 @@ export default function ContactSection({ config }: ContactSectionProps) {
   return (
     <section 
       id="contact" 
-      className="py-20 px-4"
+      className="relative py-20 px-4"
       style={{
-        background: `linear-gradient(135deg, ${config.theme.colors.primary}10, ${config.theme.colors.secondary}08, ${config.theme.colors.background})`
+        background: `linear-gradient(135deg, ${config.theme.colors.primary}10, ${config.theme.colors.secondary}08, ${config.theme.colors.background})`,
+        backgroundImage: "url('/mb-clear.png')",
+        backgroundSize: '400px 400px',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed'
       }}
     >
       <div 
-        className="mx-auto"
+        className="absolute inset-0"
+        style={{
+          background: `linear-gradient(135deg, ${config.theme.colors.primary}10, ${config.theme.colors.secondary}08, ${config.theme.colors.background})`,
+          opacity: 0.95
+        }}
+      ></div>
+      <div 
+        className="relative z-10 mx-auto"
         style={{ maxWidth: config.layout.container.maxWidth }}
       >
         <motion.div 

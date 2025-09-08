@@ -47,11 +47,23 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
   return (
     <section 
       id="comparison" 
-      className="py-20 px-2 sm:px-4"
-      style={{ backgroundColor: config.theme.colors.background }}
+      className="relative pt-20 pb-0 px-2 sm:px-4"
+      style={{
+        backgroundImage: "url('/mb-clear.png')",
+        backgroundSize: '400px 400px',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed'
+      }}
     >
       <div 
-        className="mx-auto"
+        className="absolute inset-0"
+        style={{
+          backgroundColor: 'rgba(248, 250, 252, 0.1)'
+        }}
+      ></div>
+      <div 
+        className="relative z-10 mx-auto"
         style={{ maxWidth: config.layout.container.maxWidth }}
       >
         {/* 제목 */}
@@ -97,7 +109,7 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
             variants={itemVariants}
             className="h-full p-4 sm:p-8 rounded-3xl shadow-xl border-2"
             style={{
-              backgroundColor: '#fee2e2',
+              backgroundColor: 'rgba(254, 226, 226, 0.6)',
               borderColor: '#fca5a5'
             }}
             whileHover={{ y: -5, transition: { duration: 0.3 } }}
@@ -129,7 +141,10 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
                 <motion.div
                   key={index}
                   variants={featureVariants}
-                  className="bg-white p-3 sm:p-6 rounded-2xl shadow-md border border-red-200"
+                  className="p-3 sm:p-6 rounded-2xl shadow-md border border-red-200"
+                  style={{
+                    backgroundColor: 'rgba(255, 255, 255, 0.8)'
+                  }}
                   whileHover={{ scale: 1.02 }}
                 >
                   <div className="flex items-start space-x-4">
@@ -262,11 +277,7 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           viewport={{ once: true }}
-          className="p-6 sm:p-10 rounded-3xl shadow-2xl text-center"
-          style={{
-            background: `linear-gradient(135deg, ${config.theme.colors.primary}10, ${config.theme.colors.secondary}10)`,
-            border: `2px solid ${config.theme.colors.primary}20`
-          }}
+          className="p-6 sm:p-10 text-center"
           whileHover={{ y: -5 }}
         >
           <h3 

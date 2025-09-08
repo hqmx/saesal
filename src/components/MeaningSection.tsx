@@ -13,29 +13,42 @@ export default function MeaningSection({ config }: MeaningSectionProps) {
   
   return (
     <section 
-      className="py-20" 
+      className="relative py-20 overflow-hidden" 
       style={{
         background: `linear-gradient(135deg, ${config.theme.colors.primary}10, ${config.theme.colors.secondary}08, ${config.theme.colors.background})`
       }}
     >
-      <div className="w-full">
+      {/* Background Video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        style={{ 
+          width: '100vw',
+          left: '50%',
+          transform: 'translateX(-50%)'
+        }}
+      >
+        <source src="/meaningbg.webm" type="video/webm" />
+      </video>
+      
+      
+      <div className="relative z-10 w-full">
         <StaggeredAnimationContainer className="text-center" delay={400}>
           <StaggeredItem>
             <div 
               className="p-6 sm:p-12 relative overflow-hidden w-full"
               style={{
-                backgroundImage: "url('/mb.png')",
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-                opacity: 0.8
+                background: 'transparent'
               }}
             >
               <div className="relative z-10 mb-8">
                 <h3 
                   className="font-medium mb-4"
                   style={{ 
-                    color: '#1a5a3a',
+                    color: 'rgba(255, 255, 255, 0.9)',
                     fontFamily: config.theme.typography.fontFamily.heading,
                     fontSize: 'clamp(1.875rem, 4vw, 3rem)',
                     lineHeight: '1.3'
@@ -51,7 +64,7 @@ export default function MeaningSection({ config }: MeaningSectionProps) {
                   <p 
                     className="text-lg font-medium"
                     style={{ 
-                      color: '#1a5a3a',
+                      color: 'rgba(255, 255, 255, 0.9)',
                       fontFamily: config.theme.typography.fontFamily.heading
                     }}
                   >
@@ -62,12 +75,84 @@ export default function MeaningSection({ config }: MeaningSectionProps) {
                   <p 
                     className="text-lg leading-relaxed"
                     style={{ 
-                      color: '#1a5a3a',
+                      color: 'rgba(255, 255, 255, 0.9)',
                       fontSize: config.theme.typography.fontSize.lg
                     }}
                   >
                     <span dangerouslySetInnerHTML={{__html: t('about.meaning.line2')}} />
                   </p>
+                </div>
+              </div>
+
+              {/* Footer Section */}
+              <div className="relative z-10 mt-16 pt-12 border-t border-white border-opacity-20">
+                <div className="max-w-6xl mx-auto px-8">
+                  <div className="grid md:grid-cols-3 gap-8 text-center md:text-left">
+                    
+                    {/* Company Info */}
+                    <div className="space-y-4">
+                      <div className="flex justify-center md:justify-start">
+                        <img 
+                          src="/logo.png" 
+                          alt="SæsaL Logo" 
+                          className="h-12 object-contain"
+                          style={{
+                            filter: 'brightness(0) invert(1)'
+                          }}
+                        />
+                      </div>
+                      <p 
+                        className="text-sm leading-relaxed"
+                        style={{ 
+                          color: 'rgba(255, 255, 255, 0.7)',
+                          fontFamily: config.theme.typography.fontFamily.heading
+                        }}
+                      >
+                        Safe and effective tattoo removal solution using natural body components.
+                      </p>
+                    </div>
+
+                    {/* Contact Info */}
+                    <div className="space-y-4">
+                      <h4 
+                        className="text-lg font-semibold"
+                        style={{ color: 'rgba(255, 255, 255, 0.9)' }}
+                      >
+                        Contact
+                      </h4>
+                      <div className="space-y-2 text-sm" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
+                        <p>Email: info@saesal.com</p>
+                        <p>Phone: +1 (555) 123-4567</p>
+                        <p>Hours: Mon-Fri 9AM-6PM</p>
+                      </div>
+                    </div>
+
+                    {/* Legal */}
+                    <div className="space-y-4">
+                      <h4 
+                        className="text-lg font-semibold"
+                        style={{ color: 'rgba(255, 255, 255, 0.9)' }}
+                      >
+                        Legal
+                      </h4>
+                      <div className="space-y-2 text-sm" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
+                        <p>Privacy Policy</p>
+                        <p>Terms of Service</p>
+                        <p>Medical Disclaimer</p>
+                      </div>
+                    </div>
+                    
+                  </div>
+
+                  {/* Copyright */}
+                  <div className="mt-12 pt-8 border-t border-white border-opacity-20 text-center">
+                    <p 
+                      className="text-sm"
+                      style={{ color: 'rgba(255, 255, 255, 0.5)' }}
+                    >
+                      © 2024 SæsaL. All rights reserved.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

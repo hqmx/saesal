@@ -59,21 +59,7 @@ export default function AboutSection({ config }: AboutSectionProps) {
 
         <StaggeredAnimationContainer className="grid lg:grid-cols-2 gap-16 items-center mb-20" delay={200}>
           <StaggeredItem>
-            <div 
-              className="p-10 relative overflow-hidden aspect-square sm:aspect-auto lg:aspect-square"
-              style={{
-                backgroundImage: "url('/mb-clear.png')",
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
-              }}
-            >
-              <div 
-                className="absolute inset-0"
-                style={{
-                  backgroundColor: 'rgba(255, 255, 255, 0.35)'
-                }}
-              ></div>
+            <div className="p-10 relative overflow-hidden aspect-square sm:aspect-auto lg:aspect-square">
               
               <div className="relative z-10 h-full flex items-center justify-center">
                 <div className="flex flex-col items-center gap-0">
@@ -108,14 +94,8 @@ export default function AboutSection({ config }: AboutSectionProps) {
           </StaggeredItem>
 
           <StaggeredItem>
-            <div className="space-y-8">
-              <div 
-                className="p-4 sm:p-8 rounded-2xl shadow-lg border-l-4"
-                style={{
-                  backgroundColor: config.theme.colors.surface,
-                  borderColor: config.theme.colors.primary
-                }}
-              >
+            <div className="space-y-4">
+              <div>
                 <h4 
                   className="text-2xl font-medium mb-4"
                   style={{ color: config.theme.colors.text.primary }}
@@ -130,13 +110,7 @@ export default function AboutSection({ config }: AboutSectionProps) {
                 </p>
               </div>
 
-              <div 
-                className="p-4 sm:p-8 rounded-2xl shadow-lg border-l-4"
-                style={{
-                  backgroundColor: config.theme.colors.surface,
-                  borderColor: config.theme.colors.secondary
-                }}
-              >
+              <div>
                 <h4 
                   className="text-2xl font-medium mb-4"
                   style={{ color: config.theme.colors.text.primary }}
@@ -151,13 +125,7 @@ export default function AboutSection({ config }: AboutSectionProps) {
                 </p>
               </div>
 
-              <div 
-                className="p-4 sm:p-8 rounded-2xl shadow-lg border-l-4"
-                style={{
-                  backgroundColor: config.theme.colors.surface,
-                  borderColor: config.theme.colors.accent
-                }}
-              >
+              <div>
                 <h4 
                   className="text-2xl font-medium mb-4"
                   style={{ color: config.theme.colors.text.primary }}

@@ -13,20 +13,52 @@ export default function SafetySection({ config }: SafetySectionProps) {
   return (
     <section 
       id="safety" 
-      className="py-13 px-2 sm:px-4"
+      className="relative px-2 sm:px-4 overflow-hidden"
       style={{ backgroundColor: config.theme.colors.background }}
     >
+      {/* Background Video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        style={{ 
+          width: '100vw',
+          left: '50%',
+          transform: 'translateX(-50%)'
+        }}
+      >
+        <source src="/safebgwebm.webm" type="video/webm" />
+      </video>
+      
+      {/* Gradient overlay for smooth transition */}
       <div 
-        className="mx-auto"
+        className="absolute top-0 left-0 w-full h-full"
+        style={{ 
+          width: '100vw',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          background: `linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.4) 0%,
+            rgba(255, 255, 255, 0.6) 30%,
+            rgba(255, 255, 255, 0.7) 60%,
+            ${config.theme.colors.background} 100%
+          )`
+        }}
+      ></div>
+      
+      <div 
+        className="relative z-10 mx-auto pt-0"
         style={{ maxWidth: config.layout.container.maxWidth }}
       >
         <StaggeredAnimationContainer delay={200}>
           <StaggeredItem>
             <div 
-              className="max-w-4xl mx-auto text-center p-6 sm:p-12 rounded-3xl shadow-2xl"
+              className="max-w-4xl mx-auto text-center p-6 sm:p-12"
               style={{
-                background: `linear-gradient(135deg, ${config.theme.colors.secondary}15, ${config.theme.colors.primary}10, ${config.theme.colors.accent}08)`,
-                border: `3px solid ${config.theme.colors.secondary}30`
+                background: 'transparent'
               }}
             >
               <StaggeredAnimationContainer delay={1200}>
@@ -47,20 +79,6 @@ export default function SafetySection({ config }: SafetySectionProps) {
                   </div>
                 </StaggeredItem>
                 
-                {/* Answer Animation Second */}
-                <StaggeredItem>
-                  <div className="mb-12">
-                    <div 
-                      className="text-5xl md:text-6xl font-bold mb-8"
-                      style={{ 
-                        color: config.theme.colors.secondary
-                      }}
-                    >
-                      {t('safety.answer')}
-                    </div>
-                    
-                  </div>
-                </StaggeredItem>
               </StaggeredAnimationContainer>
 
               {/* Safety Features Grid */}

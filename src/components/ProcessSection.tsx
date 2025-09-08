@@ -47,11 +47,23 @@ export default function ProcessSection({ config }: ProcessSectionProps) {
   return (
     <section 
       id="process" 
-      className="py-20 px-2 sm:px-4"
-      style={{ backgroundColor: config.theme.colors.background }}
+      className="relative py-20 px-2 sm:px-4"
+      style={{
+        backgroundImage: "url('/mb-clear.png')",
+        backgroundSize: '400px 400px',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed'
+      }}
     >
       <div 
-        className="mx-auto space-y-20"
+        className="absolute inset-0"
+        style={{
+          backgroundColor: 'rgba(248, 250, 252, 0.1)'
+        }}
+      ></div>
+      <div 
+        className="relative z-10 mx-auto space-y-32"
         style={{ maxWidth: config.layout.container.maxWidth }}
       >
         
@@ -64,7 +76,7 @@ export default function ProcessSection({ config }: ProcessSectionProps) {
         >
           <motion.div
             variants={itemVariants}
-            className="text-center mb-6"
+            className="text-center mb-16"
           >
               <h2 className="text-2xl md:text-3xl font-bold mb-2" style={{ color: config.theme.colors.text.primary }}>
                 {t('process.laser.howWorks')}
@@ -190,7 +202,7 @@ export default function ProcessSection({ config }: ProcessSectionProps) {
           viewport={{ once: true, amount: 0.1 }}
         >
           <motion.div variants={itemVariants}>
-            <div className="text-center mb-6">
+            <div className="text-center mb-16">
               <h2 className="text-2xl md:text-3xl font-bold mb-2" style={{ color: config.theme.colors.text.primary }}>
                 {t('process.saesal.howWorks')}
               </h2>
@@ -318,7 +330,7 @@ export default function ProcessSection({ config }: ProcessSectionProps) {
           viewport={{ once: true, amount: 0.1 }}
         >
           <motion.div variants={itemVariants}>
-            <div className="text-center mb-6">
+            <div className="text-center mb-16">
               <h2 className="text-2xl md:text-3xl font-bold mb-2" style={{ color: config.theme.colors.text.primary }}>
                 {t('process.healing.title')}
               </h2>

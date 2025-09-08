@@ -8,7 +8,6 @@ import ComparisonSection from '@/components/ComparisonSection';
 import ProcessSection from '@/components/ProcessSection';
 import SafetySection from '@/components/SafetySection';
 import ContactSection from '@/components/ContactSection';
-import Footer from '@/components/Footer';
 import MeaningSection from '@/components/MeaningSection';
 import { useActiveSection } from '@/hooks/useActiveSection';
 
@@ -254,7 +253,6 @@ export default function Home() {
         <ContactSection config={siteConfig} />
         <MeaningSection config={siteConfig} />
       </main>
-      <Footer config={siteConfig} />
     </div>
   );
 }
