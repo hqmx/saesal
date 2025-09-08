@@ -2,6 +2,7 @@
 
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 interface HeroSectionProps {
   config: any;
@@ -90,14 +91,14 @@ export default function HeroSection({ config }: HeroSectionProps) {
   return (
     <section 
       id="hero" 
-      className="relative overflow-hidden -mt-20 pt-48 pb-10 flex items-center w-full"
+      className="relative overflow-hidden flex items-center justify-center w-full"
       style={{
         backgroundImage: `url('/background.png')`,
         backgroundColor: config.theme.colors.background,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        minHeight: '95vh',
+        height: '100vh',
         filter: isBackgroundLoaded ? 'blur(0px)' : 'blur(30px)',
         transition: 'filter 2s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
       }}
@@ -175,12 +176,41 @@ export default function HeroSection({ config }: HeroSectionProps) {
               {t('hero.description')}
             </p>
 
-
-            
-
           </div>
         </div>
       </div>
+
+      {/* 스크롤 인디케이터 */}
+      <motion.div
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+        style={{
+          opacity: showSubtitle ? 1 : 0,
+          transition: 'opacity 1s ease-in-out'
+        }}
+      >
+        <div 
+          className="w-6 h-10 border-2 rounded-full flex justify-center cursor-pointer hover:opacity-80 transition-opacity"
+          style={{ 
+            borderColor: config.theme.colors.text.primary,
+            backgroundColor: 'rgba(255, 255, 255, 0.1)'
+          }}
+          onClick={() => {
+            const aboutSection = document.getElementById('about');
+            if (aboutSection) {
+              aboutSection.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}
+        >
+          <motion.div
+            className="w-1 h-3 rounded-full mt-2"
+            style={{ backgroundColor: config.theme.colors.text.primary }}
+            animate={{ y: [0, 12, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+          />
+        </div>
+      </motion.div>
     </section>
   );
 }
