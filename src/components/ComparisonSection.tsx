@@ -295,7 +295,6 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
                 10+
               </div>
               <div className="text-base md:text-lg text-red-600 mb-1">{t('comparison.laser.sessions')}</div>
-              <div className="text-sm md:text-base text-gray-500">{t('comparison.laser.traditional')}</div>
             </motion.div>
             
             <motion.div 
@@ -327,7 +326,6 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
               >
                 {t('comparison.saesal.sessions')}
               </div>
-              <div className="text-sm md:text-base text-gray-500">{t('comparison.saesal.revolutionary')}</div>
             </motion.div>
           </div>
         </motion.div>

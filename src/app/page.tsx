@@ -28,8 +28,8 @@ const siteConfig = {
     },
     "typography": {
       "fontFamily": {
-        "primary": "'Montserrat', 'S-CoreDream', system-ui, sans-serif",
-        "heading": "'Montserrat', 'S-CoreDream', system-ui, sans-serif"
+        "primary": "'Montserrat', 'Pretendard', system-ui, sans-serif",
+        "heading": "'Montserrat', 'Pretendard', system-ui, sans-serif"
       },
       "fontSize": {
         "xs": "0.75rem",
@@ -161,7 +161,7 @@ const siteConfig = {
     "safety": {
       "title": "Solution is Safe?",
       "answer": "Yes!",
-      "description": "Our solution uses 100% natural ingredients that are essential components of the human body - not synthetic chemicals, but substances naturally found in your skin."
+      "description": ""
     },
     "contact": {
       "title": "Contact Us !",

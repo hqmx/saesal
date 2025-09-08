@@ -40,15 +40,15 @@ export default function HeroSection({ config }: HeroSectionProps) {
             return newStates;
           });
           
-          // 2단계: 투명/완성 상태 (300ms 후)
+          // 2단계: 투명/완성 상태 (125ms 후)
           setTimeout(() => {
             setCharStates1(prev => {
               const newStates = [...prev];
               newStates[index] = 2;
               return newStates;
             });
-          }, 300);
-        }, index * 150); // 각 글자마다 150ms씩 지연
+          }, 125);
+        }, index * 62); // 각 글자마다 62ms씩 지연
       });
 
       // 첫 번째 줄 완성 후 두 번째 줄 시작
@@ -62,21 +62,21 @@ export default function HeroSection({ config }: HeroSectionProps) {
               return newStates;
             });
             
-            // 2단계: 투명/완성 상태 (300ms 후)
+            // 2단계: 투명/완성 상태 (125ms 후)
             setTimeout(() => {
               setCharStates2(prev => {
                 const newStates = [...prev];
                 newStates[index] = 2;
                 return newStates;
               });
-            }, 300);
-          }, index * 150); // 각 글자마다 150ms씩 지연
+            }, 125);
+          }, index * 62); // 각 글자마다 62ms씩 지연
         });
-      }, text1.length * 150 + 500); // 첫 번째 줄 완성 후 500ms 대기
+      }, text1.length * 62 + 208); // 첫 번째 줄 완성 후 208ms 대기
     }, 100 + (2000 * 0.28)); // 배경보다 28% 늦게 시작
 
     // 소제목 애니메이션 (모든 글자 완성 후)
-    const totalAnimationTime = 100 + (2000 * 0.28) + (text1.length * 150) + 500 + (text2.length * 150) + 300 + 500;
+    const totalAnimationTime = 100 + (2000 * 0.28) + (text1.length * 62) + 208 + (text2.length * 62) + 125 + 208;
     const subtitleTimer = setTimeout(() => {
       setShowSubtitle(true);
     }, totalAnimationTime);
@@ -99,6 +99,7 @@ export default function HeroSection({ config }: HeroSectionProps) {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         height: '100vh',
+        width: '100vw',
         filter: isBackgroundLoaded ? 'blur(0px)' : 'blur(30px)',
         transition: 'filter 2s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
       }}
@@ -106,7 +107,7 @@ export default function HeroSection({ config }: HeroSectionProps) {
       {/* Temporarily removed overlay to check background */}
       {/* <div className="absolute inset-0 bg-white bg-opacity-20"></div> */}
 
-      <div className="relative z-10 w-full">
+      <div className="relative z-10 w-full flex items-center justify-center" style={{ paddingTop: '8vh' }}>
         <div 
           className="mx-auto px-2 sm:px-4 text-center"
           style={{ 

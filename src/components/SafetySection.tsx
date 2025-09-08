@@ -59,15 +59,6 @@ export default function SafetySection({ config }: SafetySectionProps) {
                       {t('safety.answer')}
                     </div>
                     
-                    <p 
-                      className="text-2xl leading-relaxed max-w-3xl mx-auto"
-                      style={{ 
-                        color: config.theme.colors.text.primary,
-                        fontSize: config.theme.typography.fontSize['2xl']
-                      }}
-                    >
-                      {t('safety.description')}
-                    </p>
                   </div>
                 </StaggeredItem>
               </StaggeredAnimationContainer>
@@ -82,16 +73,11 @@ export default function SafetySection({ config }: SafetySectionProps) {
                     className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
                     style={{ backgroundColor: `${config.theme.colors.secondary}20` }}
                   >
-                    <svg 
-                      className="w-8 h-8" 
-                      style={{ color: config.theme.colors.secondary }} 
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <circle cx="12" cy="12" r="10" strokeWidth="1.5" />
-                      <circle cx="12" cy="12" r="3" strokeWidth="1.5" />
-                    </svg>
+                    <img 
+                      src="https://cdn-icons-png.flaticon.com/256/1598/1598431.png" 
+                      alt="Natural Leaf Icon"
+                      className="w-8 h-8"
+                    />
                   </div>
                   <h3 
                     className="text-lg font-medium mb-3"
@@ -115,16 +101,11 @@ export default function SafetySection({ config }: SafetySectionProps) {
                     className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
                     style={{ backgroundColor: `${config.theme.colors.primary}20` }}
                   >
-                    <svg 
-                      className="w-8 h-8" 
-                      style={{ color: config.theme.colors.primary }} 
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <rect x="3" y="3" width="18" height="18" rx="2" strokeWidth="1.5" />
-                      <path d="8 12l2 2 4-4" strokeWidth="1.5" />
-                    </svg>
+                    <img 
+                      src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji/assets/Shield/3D/shield_3d.png" 
+                      alt="Professional Shield Icon"
+                      className="w-8 h-8"
+                    />
                   </div>
                   <h3 
                     className="text-lg font-medium mb-3"
@@ -148,19 +129,11 @@ export default function SafetySection({ config }: SafetySectionProps) {
                     className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
                     style={{ backgroundColor: `${config.theme.colors.accent}20` }}
                   >
-                    <svg 
-                      className="w-8 h-8" 
-                      style={{ color: config.theme.colors.accent }} 
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M12 2L12 22M2 12L22 12" strokeWidth="1.5" />
-                      <circle cx="7" cy="7" r="2" strokeWidth="1.5" />
-                      <circle cx="17" cy="7" r="2" strokeWidth="1.5" />
-                      <circle cx="7" cy="17" r="2" strokeWidth="1.5" />
-                      <circle cx="17" cy="17" r="2" strokeWidth="1.5" />
-                    </svg>
+                    <img 
+                      src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji/assets/Dna/3D/dna_3d.png" 
+                      alt="Body Components Icon"
+                      className="w-8 h-8"
+                    />
                   </div>
                   <h3 
                     className="text-lg font-medium mb-3"

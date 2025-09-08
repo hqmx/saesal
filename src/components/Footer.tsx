@@ -10,14 +10,14 @@ interface FooterProps {
 export default function Footer({ config }: FooterProps) {
   return (
     <footer 
-      className="py-16 px-4"
+      className="py-10 px-4"
       style={{ 
-        backgroundColor: '#4a5c5a', // Dark teal color from screenshot
-        color: '#20b2aa' // Light teal color for text
+        backgroundColor: '#1d3739', // Dark teal matching screenshot
+        color: '#4fd1c7' // Teal color for text
       }}
     >
       <div 
-        className="mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-16"
+        className="mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10"
         style={{ maxWidth: config.layout.container.maxWidth }}
       >
         {/* Left Section - SNS Links */}
@@ -26,17 +26,17 @@ export default function Footer({ config }: FooterProps) {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="space-y-6"
+          className="space-y-4"
         >
-          <h3 className="text-lg font-medium mb-4" style={{ color: '#9ca3af' }}>
+          <h3 className="text-base font-normal mb-4" style={{ color: '#9ca3af' }}>
             SNS
           </h3>
-          <div className="space-y-4">
+          <div className="space-y-3">
             <div>
               <a 
                 href="#" 
-                className="text-lg hover:opacity-80 transition-opacity duration-300"
-                style={{ color: '#20b2aa' }}
+                className="text-lg font-light hover:opacity-80 transition-opacity duration-300"
+                style={{ color: '#4fd1c7' }}
               >
                 Instagram
               </a>
@@ -44,8 +44,8 @@ export default function Footer({ config }: FooterProps) {
             <div>
               <a 
                 href="#" 
-                className="text-lg hover:opacity-80 transition-opacity duration-300"
-                style={{ color: '#20b2aa' }}
+                className="text-lg font-light hover:opacity-80 transition-opacity duration-300"
+                style={{ color: '#4fd1c7' }}
               >
                 Facebook
               </a>
@@ -53,8 +53,8 @@ export default function Footer({ config }: FooterProps) {
             <div>
               <a 
                 href="#" 
-                className="text-lg hover:opacity-80 transition-opacity duration-300"
-                style={{ color: '#20b2aa' }}
+                className="text-lg font-light hover:opacity-80 transition-opacity duration-300"
+                style={{ color: '#4fd1c7' }}
               >
                 Linkedin
               </a>
@@ -68,16 +68,20 @@ export default function Footer({ config }: FooterProps) {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="flex justify-center items-start md:items-center"
+          className="flex justify-center items-center"
         >
           <div className="text-center">
             <Image
               src="/logo.png"
               alt="SæsaL Logo"
-              width={200}
-              height={60}
-              className="mx-auto mb-4"
-              style={{ filter: 'brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(140deg)' }} // Teal filter
+              width={150}
+              height={45}
+              className="mx-auto"
+              style={{ 
+                filter: 'brightness(0) saturate(100%) invert(72%) sepia(49%) saturate(392%) hue-rotate(127deg) brightness(98%) contrast(85%)',
+                width: 'auto',
+                height: 'auto'
+              }}
             />
           </div>
         </motion.div>
@@ -88,24 +92,24 @@ export default function Footer({ config }: FooterProps) {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="text-right space-y-6"
+          className="text-right space-y-4"
         >
-          <h3 className="text-lg font-medium mb-4" style={{ color: '#9ca3af' }}>
+          <h3 className="text-base font-normal mb-4" style={{ color: '#9ca3af' }}>
             Contact Us
           </h3>
-          <div className="space-y-4">
+          <div className="space-y-3">
             <div>
               <p 
-                className="text-lg"
-                style={{ color: '#20b2aa' }}
+                className="text-lg font-light"
+                style={{ color: '#4fd1c7' }}
               >
                 010-1234-5678
               </p>
             </div>
             <div>
               <p 
-                className="text-lg"
-                style={{ color: '#20b2aa' }}
+                className="text-lg font-light leading-relaxed"
+                style={{ color: '#4fd1c7' }}
               >
                 501, Wonhyo-ro, Yongsan-gu, Seoul
               </p>
@@ -120,11 +124,10 @@ export default function Footer({ config }: FooterProps) {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.6 }}
         viewport={{ once: true }}
-        className="border-t mt-12 pt-8 text-center"
-        style={{ borderColor: 'rgba(32, 178, 170, 0.3)' }}
+        className="mt-8 pt-4 text-center"
       >
         <p 
-          className="text-sm"
+          className="text-sm font-light"
           style={{ color: '#9ca3af' }}
         >
           @Copyright Saesal, 2025. All Rights Reserved.

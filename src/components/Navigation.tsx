@@ -215,6 +215,50 @@ export default function Navigation({ activeSection, config }: NavigationProps) {
                   {item.label}
                 </button>
               ))}
+              
+              {/* Mobile Language Selector */}
+              <div className="border-t pt-4 mx-4" style={{ borderColor: config.theme.colors.text.primary + '20' }}>
+                <div className="relative">
+                  <button
+                    onClick={() => setIsLanguageDropdownOpen(!isLanguageDropdownOpen)}
+                    className="w-full flex items-center justify-center gap-2 py-3 rounded-lg hover:bg-white hover:bg-opacity-80 transition-all duration-200"
+                    style={{ color: config.theme.colors.text.primary }}
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
+                      <circle cx="12" cy="12" r="9" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 3c2.5 0 4.5 4.03 4.5 9s-2 9-4.5 9m0-18c-2.5 0-4.5 4.03-4.5 9s2 9 4.5 9M3 12h18m-9-9v18" />
+                    </svg>
+                    <span className="text-sm font-medium">{availableLanguages[language]?.flag} {availableLanguages[language]?.name}</span>
+                    <svg className={`w-4 h-4 transition-transform ${isLanguageDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  
+                  {isLanguageDropdownOpen && (
+                    <div className="mt-2 bg-white rounded-lg shadow-lg border max-h-48 overflow-y-auto">
+                      {Object.entries(availableLanguages).map(([code, langInfo], index, array) => (
+                        <button
+                          key={code}
+                          onClick={() => {
+                            setLanguage(code as any);
+                            setIsLanguageDropdownOpen(false);
+                            setIsMobileMenuOpen(false);
+                          }}
+                          className={`w-full text-left px-3 py-2 text-sm hover:bg-gray-50 ${
+                            index === 0 ? 'rounded-t-lg' : ''
+                          } ${
+                            index === array.length - 1 ? 'rounded-b-lg' : ''
+                          } ${
+                            language === code ? 'bg-blue-50 text-blue-600' : ''
+                          }`}
+                        >
+                          {langInfo.flag} {langInfo.name}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
             </div>
           </div>
         </>

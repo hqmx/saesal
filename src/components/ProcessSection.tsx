@@ -74,7 +74,7 @@ export default function ProcessSection({ config }: ProcessSectionProps) {
                 style={{
                   width: 'fit-content',
                   height: '4px',
-                  background: 'linear-gradient(135deg, rgba(30, 64, 175, 0.8), rgba(5, 150, 105, 0.8))',
+                  background: 'linear-gradient(135deg, rgba(220, 38, 38, 0.8), rgba(239, 68, 68, 0.8))',
                   borderRadius: '2px',
                   paddingLeft: '2px',
                   paddingRight: '2px'
