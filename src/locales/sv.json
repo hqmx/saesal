@@ -1,0 +1,53 @@
+{
+  "nav": {
+    "about": "Om",
+    "comparison": "Jämförelse",
+    "process": "Process",
+    "safety": "Säkerhet",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Tatuering Över Tatuering",
+    "subtitle": "Bläck Kommer Att Tas Bort",
+    "description": "Lösning för att ta bort bläck från din hud"
+  },
+  "about": {
+    "title": "What is 'Saesal'?",
+    "subtitle": "Perfekt och effektivt sätt att ta bort tatueringsbläck från huden",
+    "description": "'Saesal' löser alla begränsningar med laserbehandling",
+    "meaning": {
+      "title": "Betydelsen av 'Saesal'",
+      "line1": "Betyder 'Ny hud' på koreanska.",
+      "line2": "Leder till nytt liv med ny hud<br />Skapar en större och ljusare framtid."
+    }
+  },
+  "comparison": {
+    "title": "Laser vs Saesal",
+    "subtitle": "Se skillnaden mellan traditionell laserbehandling och vår innovativa Saesal-metod"
+  },
+  "process": {
+    "title": "SæsaL Process",
+    "subtitle": "Enkel och effektiv 4-stegsprocess"
+  },
+  "safety": {
+    "title": "Solution is Safe?",
+    "answer": "Ja!",
+    "description": "Vår lösning använder 100% naturliga ingredienser som är viktiga komponenter i människokroppen - inte syntetiska kemikalier, utan ämnen som naturligt finns i din hud.",
+    "natural": "100% Natural",
+    "professional": "Professional Grade",
+    "bodyComponents": "Body Components",
+    "guaranteed": "Safety Guaranteed"
+  },
+  "contact": {
+    "title": "Kontakta Oss!",
+    "subtitle": "Vi är alltid öppna",
+    "form": {
+      "send": "Skicka",
+      "sending": "Skickar...",
+      "name": "Namn",
+      "email": "Email",
+      "phone": "Telefon",
+      "location": "Plats"
+    }
+  }
+}

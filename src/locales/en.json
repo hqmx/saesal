@@ -1,0 +1,223 @@
+{
+  "nav": {
+    "about": "About",
+    "comparison": "Comparison",
+    "process": "Process",
+    "safety": "Safety",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Do Tattoo On Tattoo",
+    "subtitle": "Ink will Remove",
+    "description": "Solution of Remove Ink off your Skin"
+  },
+  "about": {
+    "title": "What is 'Saesal'?",
+    "subtitle": "Perfect and Effective way to Remove Tattoo ink of skin",
+    "description": "'Saesal' Solve Every Limitation of Laser Treatment",
+    "meaning": {
+      "title": "Meaning of 'Saesal'",
+      "line1": "It Means \"New Skin\" in Korean.",
+      "line2": "Leading to new life with new skin.<br />Create a bigger and brighter future."
+    },
+    "revolutionary": {
+      "title": "Revolutionary Approach",
+      "description": "Unlike traditional laser treatments, Saesal works with your body's natural healing system to safely and effectively remove tattoo ink from all colors and types."
+    },
+    "natural": {
+      "title": "Natural & Safe",
+      "description": "Our solution uses only natural and organic materials that are already components of the human body, ensuring maximum safety and effectiveness."
+    },
+    "fast": {
+      "title": "Fast Results",
+      "description": "Complete tattoo removal in just 4 sessions, compared to 10+ sessions required by traditional laser treatments."
+    }
+  },
+  "comparison": {
+    "title": "Laser vs Saesal",
+    "subtitle": "See the difference between traditional laser treatment and our innovative Saesal method",
+    "clearChoice": "The Clear Choice",
+    "laser": {
+      "title": "Limitations of Laser Treatment",
+      "sessions": "Laser Sessions",
+      "traditional": "Traditional",
+      "summary": "10+ Sessions Required • Painful Process • Limited Colors",
+      "colorLimitation": {
+        "title": "Color Limitation",
+        "description": "Laser only works on dark colors. Warm and bright (Red, Yellow, Green) color removal is big limitation."
+      },
+      "painful": {
+        "title": "Painful Process",
+        "description": "Technically Laser treatment is burning skin which is most painful issue of humans body. Also it causes burn scars."
+      },
+      "longProcess": {
+        "title": "Long Process",
+        "description": "It takes more then 10 sessions to completely remove tattoo. If it's color tattoo, it takes more sessions."
+      },
+      "aftercare": {
+        "title": "Difficult Aftercare",
+        "description": "Laser treatment left blister. It's needs more difficult aftercare."
+      }
+    },
+    "saesal": {
+      "title": "What about 'Saesal'?",
+      "sessions": "Saesal Sessions",
+      "revolutionary": "Revolutionary",
+      "summary": "Only 4 Sessions • Less Pain • All Colors Supported",
+      "allColors": {
+        "title": "All Colors",
+        "description": "'Saesal' works every single colors. Also it works on Cosmetic Tattoo."
+      },
+      "safe": {
+        "title": "Safe Process",
+        "description": "It's not Laser Removal. 'Saesal' Treatment is same as Tattooing. (To apply, using tattoo needle)"
+      },
+      "fast": {
+        "title": "Fast Results",
+        "description": "'Saesal' Treatment only takes 4 sessions to completely remove inks. If it's simple line tattoo, it takes only 2 sessions."
+      },
+      "easycare": {
+        "title": "Easy Aftercare",
+        "description": "'Saesal' treatment only left scabs, like tattoo. And aftercare is also like tattoo."
+      }
+    }
+  },
+  "process": {
+    "title": "SæsaL Process",
+    "subtitle": "Simple and Effective 4-Step Process",
+    "comparison": {
+      "subtitle": "See the difference between traditional laser treatment and our innovative Saesal method"
+    },
+    "laser": {
+      "howWorks": "How Laser Treatment Works",
+      "step1": {
+        "title": "Ink Particles Under Skin",
+        "description": "Large tattoo ink particles embedded in skin layers"
+      },
+      "step2": {
+        "title": "Laser Breaks Particles",
+        "description": "High-energy laser breaks ink into smaller fragments"
+      },
+      "step3": {
+        "title": "Bloodstream Transport",
+        "description": "Particles travel through bloodstream to organs"
+      },
+      "warning1": "Laser treatment slowly fades but remains visible during sessions",
+      "warning2": "Requires 10+ sessions and may cause burn scars",
+      "warning3": "Unknown effects of ink particles accumulating in organs"
+    },
+    "saesal": {
+      "howWorks": "How 'Saesal' Treatment Works",
+      "step1": {
+        "title": "Saesal Solution Applied",
+        "description": "Saesal treatment process like tattooing"
+      },
+      "step2": {
+        "title": "Natural Scab Formation",
+        "description": "Body forms protective scab containing ink"
+      },
+      "step3": {
+        "title": "Natural Ink Removal",
+        "description": "Ink exits naturally with scab after 2 weeks"
+      },
+      "benefit1": "Works on every single color including cosmetic tattoos",
+      "benefit2": "Visible results in just one session - no burn scars",
+      "benefit3": "100% natural process with faster healing"
+    },
+    "healing": {
+      "title": "'Saesal' Treatment's Natural Healing Process",
+      "step1": {
+        "title": "Right After Scabs Fall Off",
+        "description": "Skin looks pink - this is completely normal during the natural healing process"
+      },
+      "step2": {
+        "title": "10-12 Weeks Later",
+        "description": "Skin fully heals and becomes ready for the next treatment session"
+      },
+      "timeline": {
+        "day": "Treatment\nDay",
+        "weeks2": "2 Weeks\nScabs Fall Off",
+        "weeks12": "10-12 Weeks\nCompletely Healed"
+      },
+      "whyChoose": "Why Choose Saesal?",
+      "benefit1": "Only 4 sessions needed",
+      "benefit2": "No internal organ involvement",
+      "benefit3": "Works on all colors",
+      "benefit4": "No burn scars"
+    },
+    "step1": {
+      "title": "1. Consultation & Analysis",
+      "description": "Analyze tattoo condition and create personalized treatment plan"
+    },
+    "step2": {
+      "title": "2. Treatment Preparation",
+      "description": "Skin preparation and anesthesia for safe procedure"
+    },
+    "step3": {
+      "title": "3. SæsaL Application",
+      "description": "Precisely apply SæsaL solution using tattoo needle technique"
+    },
+    "step4": {
+      "title": "4. Aftercare",
+      "description": "Recovery process management and next session planning"
+    }
+  },
+  "safety": {
+    "title": "Solution is Safe?",
+    "answer": "Yes!",
+    "description": "Our solution uses 100% natural ingredients that are essential components of the human body - not synthetic chemicals, but substances naturally found in your skin.",
+    "natural": "100% Natural",
+    "professional": "Professional Grade",
+    "bodyComponents": "Body Components",
+    "guaranteed": "Safety Guaranteed",
+    "naturalDescription": "Naturally-derived substances found in nature, not laboratory-created chemicals",
+    "professionalDescription": "Widely trusted in aesthetic treatments and dermatological procedures worldwide",
+    "bodyComponentsDescription": "Contains the same compounds naturally present in healthy human tissue",
+    "guarantee1": "Naturally-derived biocompatible ingredients only",
+    "guarantee2": "Identical to substances found in healthy skin",
+    "guarantee3": "Minimized risk of adverse reactions",
+    "guarantee4": "Supports natural skin regeneration process",
+    "guarantee5": "Metabolized safely by the body",
+    "guarantee6": "Compatible with diverse skin conditions"
+  },
+  "contact": {
+    "title": "Contact Us !",
+    "subtitle": "We are always open",
+    "info": {
+      "title": "Checklist",
+      "subtitle": "Everything you need to know before your consultation",
+      "photo": {
+        "title": "Photo Requirements",
+        "description": "Please prepare clear photos of your tattoo from different angles with good lighting in natural light"
+      },
+      "history": {
+        "title": "Tattoo History",
+        "description": "When did you get your tattoo? Age of tattoo affects treatment planning and session count"
+      },
+      "medical": {
+        "title": "Medical History",
+        "description": "Do you have any existing medical conditions, skin disorders, or allergies we should know about?"
+      },
+      "skin": {
+        "title": "Skin Conditions",
+        "description": "Any current skin treatments, medications, or dermatological conditions in the tattoo area?"
+      }
+    },
+    "form": {
+      "subtitle": "Ready to start your journey to new skin?",
+      "privacy": "By submitting this form, you agree to the collection and use of your personal information for consultation purposes.",
+      "send": "Send",
+      "sending": "Sending...",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location",
+      "images": "Tattoo Images (up to 5 photos)",
+      "message": "Consultation Details",
+      "messagePlaceholder": "Please describe your tattoo (size, location, colors, age, etc.) and any specific concerns you have.",
+      "uploadPhotos": "Upload Tattoo Photos",
+      "successMessage": "Your consultation request has been sent successfully. We will respond within 24-48 hours.",
+      "errorMessage": "An error occurred while sending. Please try again."
+    }
+  }
+}

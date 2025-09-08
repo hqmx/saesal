@@ -1,0 +1,136 @@
+{
+  "nav": {
+    "about": "关于",
+    "comparison": "比较",
+    "process": "流程",
+    "safety": "安全性",
+    "contact": "联系"
+  },
+  "hero": {
+    "title": "纹身覆盖纹身",
+    "subtitle": "墨水将被清除",
+    "description": "从皮肤上清除墨水的解决方案"
+  },
+  "about": {
+    "title": "What is 'Saesal'?",
+    "subtitle": "从皮肤上清除纹身墨水的完美有效方法",
+    "description": "'Saesal'解决了激光治疗的所有限制",
+    "meaning": {
+      "title": "'Saesal'的含义",
+      "line1": "在韩语中意为'新皮肤'。",
+      "line2": "引领新皮肤的新生活，<br />创造更大更光明的未来。"
+    },
+    "revolutionary": {
+      "title": "革命性方法",
+      "description": "与传统激光治疗不同，Saesal与您身体的自然愈合系统配合，安全有效地清除所有颜色和类型的纹身墨水。"
+    },
+    "natural": {
+      "title": "天然安全",
+      "description": "我们的解决方案仅使用已是人体组成成分的天然有机材料，确保最大的安全性和有效性。"
+    },
+    "fast": {
+      "title": "快速效果",
+      "description": "相比传统激光治疗需要10次以上的疗程，仅需4次疗程即可完全清除纹身。"
+    }
+  },
+  "comparison": {
+    "title": "Laser vs Saesal",
+    "subtitle": "了解传统激光治疗与我们创新Saesal方法的区别",
+    "clearChoice": "The Clear Choice",
+    "laser": {
+      "title": "激光治疗的局限性",
+      "sessions": "激光疗程",
+      "traditional": "传统的",
+      "summary": "需要10次以上 • 痛苦过程 • 颜色受限",
+      "colorLimitation": {
+        "title": "颜色限制",
+        "description": "激光只对深色有效。温暖明亮的颜色（红、黄、绿）清除有很大限制。"
+      },
+      "painful": {
+        "title": "痛苦过程",
+        "description": "技术上激光治疗是烧灼皮肤，这是人体最痛苦的问题。还会造成烧伤疤痕。"
+      },
+      "longProcess": {
+        "title": "漫长过程",
+        "description": "完全清除纹身需要10次以上的疗程。如果是彩色纹身，需要更多疗程。"
+      },
+      "aftercare": {
+        "title": "困难的护理",
+        "description": "激光治疗会留下水泡。需要更困难的后续护理。"
+      }
+    },
+    "saesal": {
+      "title": "'Saesal'如何呢？",
+      "sessions": "Saesal疗程",
+      "revolutionary": "革命性的",
+      "summary": "仅需4次疗程 • 更少痛苦 • 支持所有颜色",
+      "allColors": {
+        "title": "所有颜色",
+        "description": "'Saesal'对所有颜色都有效。对纹绣也有效。"
+      },
+      "safe": {
+        "title": "安全过程",
+        "description": "这不是激光清除。'Saesal'治疗与纹身相同。（使用纹身针进行应用）"
+      },
+      "fast": {
+        "title": "快速效果",
+        "description": "'Saesal'治疗只需4次疗程即可完全清除墨水。如果是简单线条纹身，只需2次疗程。"
+      },
+      "easycare": {
+        "title": "简易护理",
+        "description": "'Saesal'治疗只留下像纹身一样的结痂。后续护理也和纹身一样。"
+      }
+    }
+  },
+  "process": {
+    "title": "SæsaL Process",
+    "subtitle": "简单有效的4步流程"
+  },
+  "safety": {
+    "title": "Solution is Safe?",
+    "answer": "是的！",
+    "description": "我们的解决方案使用人体必需组成成分的100%天然成分 - 不是合成化学品，而是自然存在于您皮肤中的物质。",
+    "natural": "100% Natural",
+    "professional": "Professional Grade",
+    "bodyComponents": "Body Components",
+    "guaranteed": "Safety Guaranteed",
+    "naturalDescription": "自然界中发现的天然衍生物质，不是实验室制造的化学品",
+    "professionalDescription": "在全世界的美容治疗和皮肤科手术中广受信赖",
+    "bodyComponentsDescription": "含有健康人体组织中自然存在的相同化合物"
+  },
+  "contact": {
+    "title": "联系我们！",
+    "subtitle": "我们随时开放",
+    "info": {
+      "title": "检查清单",
+      "photo": {
+        "title": "照片要求",
+        "description": "请在自然光下准备不同角度纹身的清晰照片"
+      },
+      "history": {
+        "title": "纹身历史",
+        "description": "您何时纹的身？纹身的年龄影响治疗计划和疗程次数"
+      },
+      "medical": {
+        "title": "病史",
+        "description": "您是否有任何现有疾病、皮肤病或我们应该了解的过敏？"
+      },
+      "skin": {
+        "title": "皮肤状况",
+        "description": "纹身区域是否有当前的皮肤治疗、药物或皮肤科状况？"
+      }
+    },
+    "form": {
+      "privacy": "提交此表格即表示您同意为咨询目的收集和使用您的个人信息。",
+      "send": "发送",
+      "sending": "发送中...",
+      "name": "姓名",
+      "email": "邮箱",
+      "phone": "电话",
+      "location": "位置",
+      "images": "纹身图片",
+      "message": "咨询详情",
+      "messagePlaceholder": "请描述您的纹身（大小、位置、颜色、年龄等）以及任何特别担心的问题。"
+    }
+  }
+}

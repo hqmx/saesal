@@ -81,7 +81,7 @@ export default function Demo2HeroSection({ config }: Demo2HeroSectionProps) {
             </div>
 
             <p 
-              className="text-2xl mb-12 max-w-2xl mx-auto font-medium"
+              className="text-2xl mb-8 max-w-2xl mx-auto font-medium"
               style={{ 
                 color: config.theme.colors.text.primary,
                 fontSize: config.theme.typography.fontSize['2xl']
@@ -89,6 +89,19 @@ export default function Demo2HeroSection({ config }: Demo2HeroSectionProps) {
             >
               {hero.description}
             </p>
+
+            {/* Solution Image */}
+            <div className="mb-12 flex justify-center">
+              <img 
+                src="/solution.png" 
+                alt="SæsaL Solution" 
+                className="max-w-md md:max-w-lg lg:max-w-xl rounded-2xl shadow-2xl"
+                style={{ 
+                  filter: 'drop-shadow(0 8px 16px rgba(0,0,0,0.15))',
+                  border: `4px solid ${config.theme.colors.surface}`
+                }}
+              />
+            </div>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
               <button
@@ -110,21 +123,6 @@ export default function Demo2HeroSection({ config }: Demo2HeroSectionProps) {
               >
                 {hero.cta.secondary}
               </button>
-            </div>
-
-            {/* Solution Product Image */}
-            <div className="mb-16">
-              <div className="max-w-2xl mx-auto">
-                <img 
-                  src="/solution.png" 
-                  alt="SæsaL Solution Product" 
-                  className="w-full h-auto object-contain rounded-2xl shadow-2xl"
-                  style={{ 
-                    filter: 'drop-shadow(0 8px 16px rgba(0,0,0,0.15))',
-                    border: '4px solid white'
-                  }}
-                />
-              </div>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mt-16">

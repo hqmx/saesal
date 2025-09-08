@@ -1,0 +1,53 @@
+{
+  "nav": {
+    "about": "Über",
+    "comparison": "Vergleich",
+    "process": "Prozess",
+    "safety": "Sicherheit",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Tattoo Über Tattoo",
+    "subtitle": "Tinte Wird Entfernt",
+    "description": "Lösung zur Entfernung von Tinte aus Ihrer Haut"
+  },
+  "about": {
+    "title": "What is 'Saesal'?",
+    "subtitle": "Perfekte und effektive Methode zur Entfernung von Tattoo-Tinte aus der Haut",
+    "description": "'Saesal' löst alle Einschränkungen der Laserbehandlung",
+    "meaning": {
+      "title": "Bedeutung von 'Saesal'",
+      "line1": "Bedeutet 'Neue Haut' auf Koreanisch.",
+      "line2": "Führt zu einem neuen Leben mit neuer Haut<br />Schafft eine größere und hellere Zukunft."
+    }
+  },
+  "comparison": {
+    "title": "Laser vs Saesal",
+    "subtitle": "Sehen Sie den Unterschied zwischen traditioneller Laserbehandlung und unserer innovativen Saesal-Methode"
+  },
+  "process": {
+    "title": "SæsaL Process",
+    "subtitle": "Einfacher und effektiver 4-Stufen-Prozess"
+  },
+  "safety": {
+    "title": "Solution is Safe?",
+    "answer": "Ja!",
+    "description": "Unsere Lösung verwendet 100% natürliche Inhaltsstoffe, die wesentliche Bestandteile des menschlichen Körpers sind - keine synthetischen Chemikalien, sondern Substanzen, die natürlich in Ihrer Haut vorkommen.",
+    "natural": "100% Natural",
+    "professional": "Professional Grade", 
+    "bodyComponents": "Body Components",
+    "guaranteed": "Safety Guaranteed"
+  },
+  "contact": {
+    "title": "Kontaktieren Sie Uns!",
+    "subtitle": "Wir sind immer offen",
+    "form": {
+      "send": "Senden",
+      "sending": "Wird gesendet...",
+      "name": "Name",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "location": "Standort"
+    }
+  }
+}

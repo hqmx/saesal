@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "title": "Tatuaje Sobre Tatuaje",
+    "subtitle": "La Tinta Se Eliminará",
+    "description": "Solución para eliminar tinta de tu piel"
+  },
+  "about": {
+    "title": "What is 'Saesal'?",
+    "subtitle": "Manera perfecta y efectiva de eliminar la tinta del tatuaje de la piel",
+    "description": "'Saesal' resuelve todas las limitaciones del tratamiento láser"
+  },
+  "comparison": {
+    "title": "Laser vs Saesal",
+    "subtitle": "Vea la diferencia entre el tratamiento láser tradicional y nuestro método innovador Saesal"
+  },
+  "process": {
+    "title": "SæsaL Process",
+    "subtitle": "Proceso simple y efectivo de 4 pasos"
+  },
+  "safety": {
+    "title": "Solution is Safe?",
+    "answer": "¡Sí!",
+    "description": "Nuestra solución utiliza ingredientes 100% naturales que son componentes esenciales del cuerpo humano - no químicos sintéticos, sino sustancias que se encuentran naturalmente en tu piel.",
+    "natural": "100% Natural",
+    "professional": "Professional Grade",
+    "bodyComponents": "Body Components", 
+    "guaranteed": "Safety Guaranteed"
+  },
+  "contact": {
+    "title": "¡Contáctanos!",
+    "subtitle": "Siempre estamos abiertos",
+    "form": {
+      "send": "Enviar",
+      "sending": "Enviando...",
+      "name": "Nombre",
+      "email": "Email",
+      "phone": "Teléfono",
+      "location": "Ubicación"
+    }
+  }
+}

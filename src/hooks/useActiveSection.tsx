@@ -6,11 +6,11 @@ export function useActiveSection() {
   const [activeSection, setActiveSection] = useState('hero');
 
   useEffect(() => {
-    const sections = ['hero', 'about', 'comparison', 'process', 'faq', 'contact'];
+    const sections = ['hero', 'about', 'comparison', 'process', 'safety', 'contact'];
     
     const handleScroll = () => {
-      const headerHeight = window.innerWidth >= 1024 ? 80 : 64;
-      const scrollPosition = window.scrollY + headerHeight + 100; // 헤더 높이 + 여유분
+      const headerHeight = 40;
+      const scrollPosition = window.scrollY + headerHeight - 40; // 헤더 높이 + 여유분
       
       // 스크롤 위치에 따라 활성 섹션 결정
       for (let i = sections.length - 1; i >= 0; i--) {

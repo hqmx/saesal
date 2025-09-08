@@ -1,0 +1,53 @@
+{
+  "nav": {
+    "about": "Giới thiệu",
+    "comparison": "So sánh",
+    "process": "Quy trình",
+    "safety": "An toàn",
+    "contact": "Liên hệ"
+  },
+  "hero": {
+    "title": "Xăm Đè Lên Xăm",
+    "subtitle": "Mực Sẽ Được Loại Bỏ",
+    "description": "Giải pháp loại bỏ mực khỏi da của bạn"
+  },
+  "about": {
+    "title": "What is 'Saesal'?",
+    "subtitle": "Cách hoàn hảo và hiệu quả để loại bỏ mực xăm khỏi da",
+    "description": "'Saesal' giải quyết mọi hạn chế của điều trị bằng laser",
+    "meaning": {
+      "title": "Ý nghĩa của 'Saesal'",
+      "line1": "Trong tiếng Hàn có nghĩa là 'Da mới'.",
+      "line2": "Dẫn đến cuộc sống mới với làn da mới<br />Tạo ra tương lai lớn hơn và tươi sáng hơn."
+    }
+  },
+  "comparison": {
+    "title": "Laser vs Saesal", 
+    "subtitle": "Xem sự khác biệt giữa điều trị laser truyền thống và phương pháp Saesal sáng tạo của chúng tôi"
+  },
+  "process": {
+    "title": "SæsaL Process",
+    "subtitle": "Quy trình 4 bước đơn giản và hiệu quả"
+  },
+  "safety": {
+    "title": "Solution is Safe?",
+    "answer": "Có!",
+    "description": "Giải pháp của chúng tôi sử dụng 100% thành phần tự nhiên là các thành phần thiết yếu của cơ thể con người - không phải hóa chất tổng hợp mà là các chất tự nhiên có trong da của bạn.",
+    "natural": "100% Natural",
+    "professional": "Professional Grade", 
+    "bodyComponents": "Body Components",
+    "guaranteed": "Safety Guaranteed"
+  },
+  "contact": {
+    "title": "Liên Hệ Chúng Tôi !",
+    "subtitle": "Chúng tôi luôn sẵn sàng",
+    "form": {
+      "send": "Gửi",
+      "sending": "Đang gửi...",
+      "name": "Tên",
+      "email": "Email",
+      "phone": "Điện thoại",
+      "location": "Địa điểm"
+    }
+  }
+}

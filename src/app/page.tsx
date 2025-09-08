@@ -1,16 +1,18 @@
 'use client';
 
 import React from 'react';
-import Demo2Navigation from '@/components/demo2/Demo2Navigation';
-import Demo2HeroSection from '@/components/demo2/Demo2HeroSection';
-import Demo2AboutSection from '@/components/demo2/Demo2AboutSection';
-import Demo2ComparisonSection from '@/components/demo2/Demo2ComparisonSection';
-import Demo2ProcessSection from '@/components/demo2/Demo2ProcessSection';
-import Demo2SafetySection from '@/components/demo2/Demo2SafetySection';
-import Demo2ContactSection from '@/components/demo2/Demo2ContactSection';
+import Navigation from '@/components/Navigation';
+import HeroSection from '@/components/HeroSection';
+import AboutSection from '@/components/AboutSection';
+import ComparisonSection from '@/components/ComparisonSection';
+import ProcessSection from '@/components/ProcessSection';
+import SafetySection from '@/components/SafetySection';
+import ContactSection from '@/components/ContactSection';
+import Footer from '@/components/Footer';
+import MeaningSection from '@/components/MeaningSection';
 import { useActiveSection } from '@/hooks/useActiveSection';
 
-const demo2Config = {
+const siteConfig = {
   "theme": {
     "colors": {
       "primary": "#2563EB",
@@ -19,15 +21,15 @@ const demo2Config = {
       "background": "#F8FAFC",
       "surface": "#FFFFFF",
       "text": {
-        "primary": "#1F2937",
-        "secondary": "#6B7280",
+        "primary": "#336666",
+        "secondary": "#336666",
         "muted": "#9CA3AF"
       }
     },
     "typography": {
       "fontFamily": {
-        "primary": "Inter, system-ui, sans-serif",
-        "heading": "Inter, system-ui, sans-serif"
+        "primary": "'Montserrat', 'S-CoreDream', system-ui, sans-serif",
+        "heading": "'Montserrat', 'S-CoreDream', system-ui, sans-serif"
       },
       "fontSize": {
         "xs": "0.75rem",
@@ -61,7 +63,7 @@ const demo2Config = {
   },
   "components": {
     "hero": {
-      "title": "Do Tattoo On Tattoo",
+      "title": "Do Tattoo<br/>On Tattoo",
       "subtitle": "Ink will Remove",
       "description": "Solution of Remove Ink off your Skin",
       "cta": {
@@ -79,7 +81,7 @@ const demo2Config = {
       }
     },
     "comparison": {
-      "title": "Laser vs Saesal Treatment",
+      "title": "Laser vs Saesal",
       "laser": {
         "title": "Limitations of Laser Treatment",
         "issues": [
@@ -110,11 +112,11 @@ const demo2Config = {
           },
           {
             "title": "Safe Process",
-            "description": "It's not Laser Removal. 'Saesal' Treatment is same as Tattooing."
+            "description": "It's not Laser Removal. 'Saesal' Treatment is same as Tattooing. (To apply, using tattoo needle)"
           },
           {
             "title": "Fast Results",
-            "description": "'Saesal' Treatment only takes 4 sessions to completely remove inks."
+            "description": "'Saesal' Treatment only takes 4 sessions to completely remove inks. If it's simple line tattoo, it takes only 2 sessions."
           },
           {
             "title": "Easy Aftercare", 
@@ -159,18 +161,46 @@ const demo2Config = {
     "safety": {
       "title": "Solution is Safe?",
       "answer": "Yes!",
-      "description": "It's all Natural and Organic Material also those are part of the Components of Human's Body."
+      "description": "Our solution uses 100% natural ingredients that are essential components of the human body - not synthetic chemicals, but substances naturally found in your skin."
     },
     "contact": {
-      "title": "Work with us!",
+      "title": "Contact Us !",
       "subtitle": "We are always open",
+      "info": {
+        "title": "Checklist",
+        "items": [
+          {
+            "title": "Photo Requirements",
+            "description": "Please prepare clear photos of your tattoo from different angles with good lighting in natural light"
+          },
+          {
+            "title": "Tattoo History", 
+            "description": "When did you get your tattoo? Age of tattoo affects treatment planning and session count"
+          },
+          {
+            "title": "Medical History",
+            "description": "Do you have any existing medical conditions, skin disorders, or allergies we should know about?"
+          },
+          {
+            "title": "Skin Conditions",
+            "description": "Any current skin treatments, medications, or dermatological conditions in the tattoo area?"
+          }
+        ]
+      },
       "form": {
-        "title": "지원하시겠습니까?",
+        "title": "Get In Touch",
+        "subtitle": "",
         "fields": [
           {
             "name": "name",
             "label": "Name",
             "type": "text",
+            "required": true
+          },
+          {
+            "name": "email",
+            "label": "Email",
+            "type": "email", 
             "required": true
           },
           {
@@ -180,31 +210,24 @@ const demo2Config = {
             "required": true
           },
           {
-            "name": "email",
-            "label": "E-mail",
-            "type": "email", 
+            "name": "location",
+            "label": "Location",
+            "type": "location",
             "required": true
           },
           {
-            "name": "position",
-            "label": "Position",
-            "type": "select",
-            "options": [
-              "(선택)",
-              "Interior Designer", 
-              "Data Engineer",
-              "Product Designer"
-            ]
+            "name": "tattooImages",
+            "label": "Tattoo Images",
+            "type": "file",
+            "multiple": true,
+            "accept": "image/*"
           },
           {
-            "name": "resume",
-            "label": "Resume",
-            "type": "file"
-          },
-          {
-            "name": "portfolio",
-            "label": "Portfolio", 
-            "type": "file"
+            "name": "message",
+            "label": "Consultation Details",
+            "type": "textarea",
+            "placeholder": "Please describe your tattoo (size, location, colors, age, etc.) and any specific concerns you have.",
+            "required": true
           }
         ]
       }
@@ -217,19 +240,21 @@ export default function Home() {
 
   return (
     <div style={{ 
-      fontFamily: demo2Config.theme.typography.fontFamily.primary,
-      backgroundColor: demo2Config.theme.colors.background,
-      color: demo2Config.theme.colors.text.primary
+      fontFamily: siteConfig.theme.typography.fontFamily.primary,
+      backgroundColor: siteConfig.theme.colors.background,
+      color: siteConfig.theme.colors.text.primary
     }}>
-      <Demo2Navigation activeSection={activeSection} config={demo2Config} />
+      <Navigation activeSection={activeSection} config={siteConfig} />
       <main>
-        <Demo2HeroSection config={demo2Config} />
-        <Demo2AboutSection config={demo2Config} />
-        <Demo2ComparisonSection config={demo2Config} />
-        <Demo2ProcessSection config={demo2Config} />
-        <Demo2SafetySection config={demo2Config} />
-        <Demo2ContactSection config={demo2Config} />
+        <HeroSection config={siteConfig} />
+        <AboutSection config={siteConfig} />
+        <ComparisonSection config={siteConfig} />
+        <ProcessSection config={siteConfig} />
+        <SafetySection config={siteConfig} />
+        <ContactSection config={siteConfig} />
+        <MeaningSection config={siteConfig} />
       </main>
+      <Footer config={siteConfig} />
     </div>
   );
 }

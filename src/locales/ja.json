@@ -1,0 +1,136 @@
+{
+  "nav": {
+    "about": "について",
+    "comparison": "比較",
+    "process": "プロセス",
+    "safety": "安全性",
+    "contact": "お問い合わせ"
+  },
+  "hero": {
+    "title": "タトゥーの上にタトゥー",
+    "subtitle": "インクが除去されます",
+    "description": "肌からインクを除去するソリューション"
+  },
+  "about": {
+    "title": "What is 'Saesal'?",
+    "subtitle": "肌からタトゥーインクを除去する完璧で効果的な方法",
+    "description": "'Saesal'はレーザー治療のすべての限界を解決します",
+    "meaning": {
+      "title": "'Saesal'の意味",
+      "line1": "韓国語で「新しい肌」を意味します。",
+      "line2": "新しい肌で新しい人生を導き<br />より大きく明るい未来を創ります。"
+    },
+    "revolutionary": {
+      "title": "革命的なアプローチ",
+      "description": "従来のレーザー治療とは異なり、Saesalは身体の自然治癒システムと連携して、あらゆる色とタイプのタトゥーインクを安全かつ効果的に除去します。"
+    },
+    "natural": {
+      "title": "自然で安全",
+      "description": "私たちのソリューションは、すでに人体の構成要素である天然有機材料のみを使用し、最大限の安全性と効果を保証します。"
+    },
+    "fast": {
+      "title": "迅速な結果",
+      "description": "従来のレーザー治療に必要な10回以上のセッションと比較して、わずか4回のセッションで完全なタトゥー除去が可能です。"
+    }
+  },
+  "comparison": {
+    "title": "Laser vs Saesal",
+    "subtitle": "従来のレーザー治療と革新的なSaesalメソッドの違いをご確認ください",
+    "clearChoice": "The Clear Choice",
+    "laser": {
+      "title": "レーザー治療の限界",
+      "sessions": "レーザーセッション",
+      "traditional": "従来型",
+      "summary": "10回以上必要 • 痛みを伴うプロセス • 限定的な色",
+      "colorLimitation": {
+        "title": "色の制限",
+        "description": "レーザーは暗い色にのみ効果があります。温かく明るい色（赤、黄、緑）の除去は大きな制限があります。"
+      },
+      "painful": {
+        "title": "痛みを伴うプロセス",
+        "description": "技術的にレーザー治療は肌を焼くことで、人体にとって最も痛みを伴う問題です。また火傷の傷跡を残します。"
+      },
+      "longProcess": {
+        "title": "長いプロセス",
+        "description": "タトゥーを完全に除去するには10回以上のセッションが必要です。カラータトゥーの場合はさらに多くのセッションが必要です。"
+      },
+      "aftercare": {
+        "title": "困難なアフターケア",
+        "description": "レーザー治療は水ぶくれを残します。より困難なアフターケアが必要です。"
+      }
+    },
+    "saesal": {
+      "title": "'Saesal'はどうでしょうか？",
+      "sessions": "Saesalセッション",
+      "revolutionary": "革新的",
+      "summary": "わずか4セッション • 少ない痛み • 全色対応",
+      "allColors": {
+        "title": "すべての色",
+        "description": "'Saesal'はすべての色に効果があります。アートメイクにも効果があります。"
+      },
+      "safe": {
+        "title": "安全なプロセス",
+        "description": "レーザー除去ではありません。'Saesal'治療はタトゥーと同じです。（タトゥー針を使用して適用）"
+      },
+      "fast": {
+        "title": "迅速な結果",
+        "description": "'Saesal'治療はインクを完全に除去するのにわずか4回のセッションしか必要としません。シンプルなラインタトゥーならわずか2回のセッションです。"
+      },
+      "easycare": {
+        "title": "簡単なアフターケア",
+        "description": "'Saesal'治療はタトゥーのようにかさぶたしか残しません。アフターケアもタトゥーと同じです。"
+      }
+    }
+  },
+  "process": {
+    "title": "SæsaL Process",
+    "subtitle": "シンプルで効果的な4ステッププロセス"
+  },
+  "safety": {
+    "title": "Solution is Safe?",
+    "answer": "はい！",
+    "description": "私たちのソリューションは人体の必須構成要素である100％天然成分を使用しています - 合成化学物質ではなく、自然に肌に見つかる物質です。",
+    "natural": "100% Natural",
+    "professional": "Professional Grade",
+    "bodyComponents": "Body Components",
+    "guaranteed": "Safety Guaranteed",
+    "naturalDescription": "自然界で見つかる天然由来物質で、実験室で作られた化学物質ではありません",
+    "professionalDescription": "世界中の美容治療と皮膚科手術で広く信頼されています",
+    "bodyComponentsDescription": "健康な人体組織に自然に存在する同じ化合物を含んでいます"
+  },
+  "contact": {
+    "title": "お問い合わせください！",
+    "subtitle": "いつでもオープンしています",
+    "info": {
+      "title": "チェックリスト",
+      "photo": {
+        "title": "写真要件",
+        "description": "自然光の良い照明で様々な角度のタトゥーの鮮明な写真をご用意ください"
+      },
+      "history": {
+        "title": "タトゥー履歴",
+        "description": "いつタトゥーを入れましたか？タトゥーの年数は治療計画とセッション数に影響します"
+      },
+      "medical": {
+        "title": "医療履歴",
+        "description": "既存の病気、皮膚疾患、またはアレルギーなど、知っておくべきことはありますか？"
+      },
+      "skin": {
+        "title": "肌の状態",
+        "description": "タトゥー部位の現在の皮膚治療、薬物、または皮膚科的状態はありますか？"
+      }
+    },
+    "form": {
+      "privacy": "このフォームを送信することで、相談目的での個人情報の収集と使用に同意します。",
+      "send": "送信",
+      "sending": "送信中...",
+      "name": "名前",
+      "email": "メール",
+      "phone": "電話",
+      "location": "場所",
+      "images": "タトゥー画像",
+      "message": "相談詳細",
+      "messagePlaceholder": "タトゥーについて説明してください（サイズ、場所、色、年数など）そして特別な懸念事項があればお知らせください。"
+    }
+  }
+}
