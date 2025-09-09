@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import OptimizedImage from './OptimizedImage';
 
 interface NavigationProps {
   activeSection?: string;
@@ -110,7 +111,11 @@ export default function Navigation({ activeSection, config }: NavigationProps) {
                       : 'hover:opacity-70'
                   }`}
                   style={{
-                    color: activeSection === item.id ? '#5CBDB9' : config.theme.colors.text.primary
+                    color: activeSection === item.id 
+                      ? '#5CBDB9' 
+                      : isScrolled 
+                        ? config.theme.colors.text.primary 
+                        : '#ffffff'
                   }}
                 >
                   {item.label}
@@ -122,7 +127,9 @@ export default function Navigation({ activeSection, config }: NavigationProps) {
                 <button
                   onClick={() => setIsLanguageDropdownOpen(!isLanguageDropdownOpen)}
                   className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
-                  style={{ color: config.theme.colors.text.primary }}
+                  style={{ 
+                    color: isScrolled ? config.theme.colors.text.primary : '#ffffff'
+                  }}
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
                     <circle cx="12" cy="12" r="9" />
@@ -163,7 +170,9 @@ export default function Navigation({ activeSection, config }: NavigationProps) {
 
             <button
               className="lg:hidden p-2 rounded-md hover:bg-gray-100 transition-colors"
-              style={{ color: config.theme.colors.text.primary }}
+              style={{ 
+                color: isScrolled ? config.theme.colors.text.primary : '#ffffff'
+              }}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               <svg

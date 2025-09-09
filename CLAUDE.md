@@ -89,31 +89,31 @@ The project implements a custom i18n system through:
 ### Typography Settings
 The project uses a multi-language font system configured through `siteConfig.theme.typography.fontFamily`:
 
-- **Primary Font**: `'Montserrat', 'S-CoreDream', system-ui, sans-serif`
+- **Primary Font**: `'Montserrat', 'Pretendard', system-ui, sans-serif`
   - Montserrat: English content (영문 내용) - Default
-  - S-CoreDream: Korean content (한글 내용) - Korean unicode range only
+  - Pretendard: Korean content (한글 내용) - Modern Korean typeface
   
-- **Heading Font**: `'Montserrat', 'S-CoreDream', system-ui, sans-serif`
+- **Heading Font**: `'Montserrat', 'Pretendard', system-ui, sans-serif`
   - Montserrat: English headings (영문 제목)
-  - S-CoreDream: Korean headings (한글 제목)
+  - Pretendard: Korean headings (한글 제목)
 
 ### Font Implementation
-- **Korean Font**: S-CoreDream loaded via CDN in `globals.css`
-  - Light (300), Regular (400), Medium (500), Bold (600) weights
-  - Source: `https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/`
-  - **Unicode Range**: `U+AC00-D7AF, U+1100-11FF, U+3130-318F, U+A960-A97F, U+D7B0-D7FF` (Korean characters only)
+- **Korean Font**: Pretendard loaded via CDN in `globals.css`
+  - All weights (100, 200, 300, 400, 500, 600, 700, 800, 900)
+  - Source: `https://cdn.jsdelivr.net/gh/orioncactus/pretendard/packages/pretendard/dist/web/static/woff/`
+  - Modern Korean typeface with better readability
 
-- **English Fonts**: Google Fonts via Next.js
-  - Montserrat: All English content (300, 400, 500, 600, 700, 800 weights)
+- **English Fonts**: Montserrat via Google Fonts
+  - All English content (300, 400, 500, 600, 700, 800 weights)
   
 ### Font Fallback Chain
 ```css
 /* All Text (Body & Headings) */
-font-family: var(--font-montserrat), 'S-CoreDream', system-ui, sans-serif;
+font-family: var(--font-montserrat), 'Pretendard', system-ui, sans-serif;
 
 /* Font Selection Logic */  
 - English text: Uses Montserrat (first in fallback chain)
-- Korean text: Uses S-CoreDream (unicode-range restriction)
+- Korean text: Uses Pretendard (loaded via @font-face)
 - Other text: Falls back to system fonts
 ```
 

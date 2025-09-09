@@ -2,6 +2,7 @@
 
 import { StaggeredAnimationContainer, StaggeredItem } from '@/hooks/useStaggeredAnimation';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useLazyVideo } from '@/hooks/useLazyVideo';
 
 interface MeaningSectionProps {
   config: any;
@@ -9,6 +10,7 @@ interface MeaningSectionProps {
 
 export default function MeaningSection({ config }: MeaningSectionProps) {
   const { t } = useLanguage();
+  const { videoRef, isInView, handleLoadedData } = useLazyVideo({ threshold: 0.3 });
   const { about } = config.components;
   
   return (
@@ -20,18 +22,21 @@ export default function MeaningSection({ config }: MeaningSectionProps) {
     >
       {/* Background Video */}
       <video
-        autoPlay
+        ref={videoRef}
+        autoPlay={isInView}
         muted
         loop
         playsInline
+        preload="none"
         className="absolute top-0 left-0 w-full h-full object-cover"
         style={{ 
           width: '100vw',
           left: '50%',
           transform: 'translateX(-50%)'
         }}
+        onLoadedData={handleLoadedData}
       >
-        <source src="/meaningbg.webm" type="video/webm" />
+        {isInView && <source src="/meaningbg.webm" type="video/webm" />}
       </video>
       
       

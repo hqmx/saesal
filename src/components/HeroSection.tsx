@@ -1,16 +1,18 @@
 'use client';
 
 import { useLanguage } from '@/contexts/LanguageContext';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, memo } from 'react';
 import { motion } from 'framer-motion';
+import { useLazyVideo } from '@/hooks/useLazyVideo';
 
 interface HeroSectionProps {
   config: any;
 }
 
-export default function HeroSection({ config }: HeroSectionProps) {
+const HeroSection = memo(function HeroSection({ config }: HeroSectionProps) {
   const { t, language } = useLanguage();
   const [isBackgroundLoaded, setIsBackgroundLoaded] = useState(false);
+  const { videoRef, isInView, isLoaded, handleLoadedData } = useLazyVideo({ threshold: 0.1 });
   const [charStates1, setCharStates1] = useState<number[]>([]);
   const [charStates2, setCharStates2] = useState<number[]>([]);
   const [showSubtitle, setShowSubtitle] = useState(false);
@@ -100,18 +102,23 @@ export default function HeroSection({ config }: HeroSectionProps) {
     >
       {/* Background Video */}
       <video
-        autoPlay
+        ref={videoRef}
+        autoPlay={isInView}
         muted
         loop
         playsInline
+        preload="none"
         className="absolute inset-0 w-full h-full object-cover"
         style={{
-          filter: isBackgroundLoaded ? 'blur(0px)' : 'blur(30px)',
+          filter: isLoaded ? 'blur(0px)' : 'blur(30px)',
           transition: 'filter 2s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
         }}
-        onLoadedData={() => setIsBackgroundLoaded(true)}
+        onLoadedData={() => {
+          setIsBackgroundLoaded(true);
+          handleLoadedData();
+        }}
       >
-        <source src="/4kbg.webm" type="video/webm" />
+        {isInView && <source src="/4kbg.webm" type="video/webm" />}
       </video>
       
       {/* White overlay with 5% opacity */}
@@ -227,4 +234,6 @@ export default function HeroSection({ config }: HeroSectionProps) {
       </motion.div>
     </section>
   );
-}
+});
+
+export default HeroSection;

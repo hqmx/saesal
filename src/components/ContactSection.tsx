@@ -51,7 +51,6 @@ export default function ContactSection({ config }: ContactSectionProps) {
     }
   };
 
-
   const handleCountrySearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     const query = e.target.value;
     setCountryQuery(query);
@@ -280,7 +279,7 @@ export default function ContactSection({ config }: ContactSectionProps) {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-          {/* Left Side - Consultation Info */}
+          {/* Left Side - 상담 전 준비사항 안내 */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -295,72 +294,82 @@ export default function ContactSection({ config }: ContactSectionProps) {
               }}
             >
               <div className="text-center mb-8">
-                <div className="w-24 h-24 mx-auto mb-6 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur">
+                <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center">
                   <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                 </div>
                 
-                <h3 className="text-2xl lg:text-3xl font-bold mb-4">Free Consultation</h3>
-                <p className="text-base lg:text-lg opacity-90 mb-6 lg:mb-8">
-                  Get professional assessment for your tattoo removal journey. Our experts will analyze your case and provide personalized treatment recommendations.
+                <h3 className="text-2xl lg:text-3xl font-bold mb-4">Checklist</h3>
+                <p className="text-base lg:text-lg opacity-90 mb-6">
+                  Please prepare the following information for an accurate consultation
                 </p>
               </div>
 
               <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                {/* Tattoo Photos */}
+                <div>
+                  <div className="flex items-center space-x-2 mb-2">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
+                    <h4 className="font-semibold text-lg">Tattoo Photos</h4>
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-lg">Photo Analysis</h4>
-                    <p className="opacity-90">Clear photos with good lighting required</p>
-                  </div>
+                  <ul className="space-y-1 opacity-90 text-sm ml-7">
+                    <li>• Clear photos taken in natural lighting</li>
+                    <li>• Multiple angles (front, side views)</li>
+                    <li>• Both close-up and distance shots</li>
+                    <li>• Ensure entire tattoo is visible</li>
+                  </ul>
                 </div>
 
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                {/* Health Information */}
+                <div>
+                  <div className="flex items-center space-x-2 mb-2">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                     </svg>
+                    <h4 className="font-semibold text-lg">Health Information</h4>
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-lg">Response Time</h4>
-                    <p className="opacity-90">24-48 hours</p>
-                  </div>
+                  <ul className="space-y-1 opacity-90 text-sm ml-7">
+                    <li>• Current medications you are taking</li>
+                    <li>• Known allergies or reactions</li>
+                    <li>• History of skin conditions</li>
+                    <li>• Other chronic health conditions</li>
+                  </ul>
                 </div>
 
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                {/* Tattoo History */}
+                <div>
+                  <div className="flex items-center space-x-2 mb-2">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
+                    <h4 className="font-semibold text-lg">Tattoo History & Timeline</h4>
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-lg">Treatment Plan</h4>
-                    <p className="opacity-90">Personalized session planning</p>
-                  </div>
+                  <ul className="space-y-1 opacity-90 text-sm ml-7">
+                    <li>• When did you get your tattoo? (year/month)</li>
+                    <li>• How long have you had this tattoo?</li>
+                    <li>• When was your last tattoo session?</li>
+               
+                    <li>• Tattoo size and location details</li>
+                    <li>• Any previous removal attempts</li>
+                  </ul>
                 </div>
-              </div>
 
-              <div className="mt-8 p-6 bg-white bg-opacity-10 rounded-2xl backdrop-blur">
-                <h4 className="font-semibold text-lg mb-3">What We Need</h4>
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between">
-                    <span className="opacity-90">Tattoo Photos</span>
-                    <span className="text-sm opacity-70">Required</span>
+                {/* Privacy Policy */}
+                <div>
+                  <div className="flex items-center space-x-2 mb-2">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                    <h4 className="font-semibold text-lg">Privacy & Data Protection</h4>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="opacity-90">Tattoo History</span>
-                    <span className="text-sm opacity-70">Age & Details</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="opacity-90">Medical History</span>
-                    <span className="text-sm opacity-70">If Applicable</span>
+                  <div className="space-y-1 opacity-90 text-sm ml-7">
+                    <p>• Personal information used for consultation</p>
+                  
+                    <p>• Secure handling of all medical and personal data</p>
                   </div>
                 </div>
               </div>
@@ -554,7 +563,7 @@ export default function ContactSection({ config }: ContactSectionProps) {
                   className="w-full py-4 px-6 rounded-xl font-semibold text-white transition-all duration-300 disabled:opacity-50 hover:transform hover:scale-105"
                   style={{ background: `linear-gradient(135deg, ${config.theme.colors.primary}, ${config.theme.colors.secondary})` }}
                 >
-                  {isSubmitting ? 'Sending...' : 'Send Consultation Request'}
+                  {isSubmitting ? 'Sending...' : 'Send Request'}
                 </button>
                 
                 {submitStatus === 'success' && (

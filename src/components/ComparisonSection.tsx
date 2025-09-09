@@ -47,7 +47,7 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
   return (
     <section 
       id="comparison" 
-      className="relative pt-20 pb-0 px-2 sm:px-4"
+      className="relative pt-20 pb-0 px-2 sm:px-4 overflow-x-hidden w-full"
       style={{
         backgroundImage: "url('/mb-clear.png')",
         backgroundSize: '400px 400px',
@@ -63,7 +63,7 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
         }}
       ></div>
       <div 
-        className="relative z-10 mx-auto"
+        className="relative z-10 mx-auto w-full overflow-x-hidden"
         style={{ maxWidth: config.layout.container.maxWidth }}
       >
         {/* 제목 */}
@@ -271,17 +271,17 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
           </motion.div>
         </motion.div>
 
-        {/* 요약 비교 */}
+        {/* "The Clear Choice" 요약 비교 컨테이너 */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           viewport={{ once: true }}
-          className="p-6 sm:p-10 text-center"
+          className="p-6 lg:p-10 mt-8"
           whileHover={{ y: -5 }}
         >
           <h3 
-            className="font-medium mb-8"
+            className="font-medium mb-8 text-center"
             style={{ 
               color: config.theme.colors.text.primary,
               fontSize: 'clamp(1.875rem, 4vw, 3rem)',
@@ -291,55 +291,163 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
             {t('comparison.clearChoice')}
           </h3>
           
-          <div className="flex flex-row items-center justify-between max-w-5xl mx-auto px-8">
-            <motion.div 
-              className="text-center flex-1"
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-            >
-              <div 
-                className="text-4xl md:text-6xl font-medium mb-2"
-                style={{ color: '#dc2626' }}
+          <div className="max-w-6xl mx-auto">
+            {/* 모든 화면 크기에서 항상 좌우 배치 */}
+            <div className="flex flex-row gap-4 md:gap-8">
+              {/* 레이저 치료 */}
+              <motion.div 
+                className="h-full p-4 sm:p-8 rounded-3xl shadow-xl border-2 flex-1"
+                style={{
+                  backgroundColor: 'rgba(254, 226, 226, 0.3)',
+                  borderColor: '#fca5a5'
+                }}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5, transition: { duration: 0.3 } }}
               >
-                10+
-              </div>
-              <div className="text-base md:text-lg text-red-600 mb-1">{t('comparison.laser.sessions')}</div>
-            </motion.div>
-            
-            <motion.div 
-              className="text-center"
-              initial={{ opacity: 0, scale: 0.5 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              viewport={{ once: true }}
-            >
-              <div className="text-xl md:text-3xl font-medium">VS</div>
-            </motion.div>
-            
-            <motion.div 
-              className="text-center flex-1"
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <div 
-                className="text-4xl md:text-6xl font-medium mb-2"
-                style={{ color: config.theme.colors.secondary }}
+                <div className="text-center">
+                  <div 
+                    className="text-3xl md:text-5xl lg:text-6xl font-bold mb-2 md:mb-3"
+                    style={{ color: '#dc2626' }}
+                  >
+                    10+
+                  </div>
+                  <div className="text-sm md:text-lg font-semibold text-red-600 mb-3 md:mb-4">
+                    {t('comparison.laser.sessions')}
+                  </div>
+                  
+                  {/* 레이저 치료의 한계점들 */}
+                  <div className="space-y-1.5 md:space-y-2 text-xs md:text-sm">
+                    <div className="flex items-center justify-center space-x-1 md:space-x-2">
+                      <svg 
+                        className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0" 
+                        style={{ color: '#dc2626' }}
+                        fill="currentColor" 
+                        viewBox="0 0 20 20"
+                      >
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-gray-900 font-semibold text-left">{t('comparison.laser.colorLimitation.title')}</span>
+                    </div>
+                    <div className="flex items-center justify-center space-x-1 md:space-x-2">
+                      <svg 
+                        className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0" 
+                        style={{ color: '#dc2626' }}
+                        fill="currentColor" 
+                        viewBox="0 0 20 20"
+                      >
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-gray-900 font-semibold text-left">{t('comparison.laser.painful.title')}</span>
+                    </div>
+                    <div className="flex items-center justify-center space-x-1 md:space-x-2">
+                      <svg 
+                        className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0" 
+                        style={{ color: '#dc2626' }}
+                        fill="currentColor" 
+                        viewBox="0 0 20 20"
+                      >
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-gray-900 font-semibold text-left">{t('comparison.laser.longProcess.title')}</span>
+                    </div>
+                    <div className="flex items-center justify-center space-x-1 md:space-x-2">
+                      <svg 
+                        className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0" 
+                        style={{ color: '#dc2626' }}
+                        fill="currentColor" 
+                        viewBox="0 0 20 20"
+                      >
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-gray-900 font-semibold text-left">{t('comparison.laser.aftercare.title')}</span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+              
+              {/* SæsaL 치료 */}
+              <motion.div
+                className="h-full p-4 sm:p-8 rounded-3xl shadow-xl border-2 flex-1"
+                style={{
+                  backgroundColor: `${config.theme.colors.secondary}10`,
+                  borderColor: config.theme.colors.secondary
+                }}
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5, transition: { duration: 0.3 } }}
               >
-                4
-              </div>
-              <div 
-                className="text-base md:text-lg mb-1"
-                style={{ color: config.theme.colors.secondary }}
-              >
-                {t('comparison.saesal.sessions')}
-              </div>
-            </motion.div>
+                <div className="text-center">
+                  <div 
+                    className="text-3xl md:text-5xl lg:text-6xl font-bold mb-2 md:mb-3"
+                    style={{ color: config.theme.colors.secondary }}
+                  >
+                    4
+                  </div>
+                  <div 
+                    className="text-sm md:text-lg font-semibold mb-3 md:mb-4"
+                    style={{ color: config.theme.colors.text.primary }}
+                  >
+                    {t('comparison.saesal.sessions')}
+                  </div>
+                  
+                  {/* SæsaL 치료의 장점들 */}
+                  <div className="space-y-1.5 md:space-y-2 text-xs md:text-sm">
+                    <div className="flex items-center justify-center space-x-1 md:space-x-2">
+                      <svg 
+                        className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0" 
+                        style={{ color: config.theme.colors.secondary }}
+                        fill="currentColor" 
+                        viewBox="0 0 20 20"
+                      >
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-gray-900 font-semibold text-left">{t('comparison.saesal.allColors.title')}</span>
+                    </div>
+                    <div className="flex items-center justify-center space-x-1 md:space-x-2">
+                      <svg 
+                        className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0" 
+                        style={{ color: config.theme.colors.secondary }}
+                        fill="currentColor" 
+                        viewBox="0 0 20 20"
+                      >
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-gray-900 font-semibold text-left">{t('comparison.saesal.safe.title')}</span>
+                    </div>
+                    <div className="flex items-center justify-center space-x-1 md:space-x-2">
+                      <svg 
+                        className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0" 
+                        style={{ color: config.theme.colors.secondary }}
+                        fill="currentColor" 
+                        viewBox="0 0 20 20"
+                      >
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-gray-900 font-semibold text-left">{t('comparison.saesal.fast.title')}</span>
+                    </div>
+                    <div className="flex items-center justify-center space-x-1 md:space-x-2">
+                      <svg 
+                        className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0" 
+                        style={{ color: config.theme.colors.secondary }}
+                        fill="currentColor" 
+                        viewBox="0 0 20 20"
+                      >
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-gray-900 font-semibold text-left">{t('comparison.saesal.easycare.title')}</span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </motion.div>
+
       </div>
     </section>
   );

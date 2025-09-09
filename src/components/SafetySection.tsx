@@ -2,6 +2,7 @@
 
 import { StaggeredAnimationContainer, StaggeredItem } from '@/hooks/useStaggeredAnimation';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useLazyVideo } from '@/hooks/useLazyVideo';
 
 interface SafetySectionProps {
   config: any;
@@ -9,6 +10,7 @@ interface SafetySectionProps {
 
 export default function SafetySection({ config }: SafetySectionProps) {
   const { t } = useLanguage();
+  const { videoRef, isInView, handleLoadedData } = useLazyVideo({ threshold: 0.2 });
   
   return (
     <section 
@@ -18,18 +20,21 @@ export default function SafetySection({ config }: SafetySectionProps) {
     >
       {/* Background Video */}
       <video
-        autoPlay
+        ref={videoRef}
+        autoPlay={isInView}
         muted
         loop
         playsInline
+        preload="none"
         className="absolute top-0 left-0 w-full h-full object-cover"
         style={{ 
           width: '100vw',
           left: '50%',
           transform: 'translateX(-50%)'
         }}
+        onLoadedData={handleLoadedData}
       >
-        <source src="/safebgwebm.webm" type="video/webm" />
+        {isInView && <source src="/safebgwebm.webm" type="video/webm" />}
       </video>
       
       {/* Gradient overlay for smooth transition */}

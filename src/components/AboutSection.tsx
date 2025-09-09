@@ -2,6 +2,7 @@
 
 import { StaggeredAnimationContainer, StaggeredItem, useInViewAnimation } from '@/hooks/useStaggeredAnimation';
 import { useLanguage } from '@/contexts/LanguageContext';
+import OptimizedImage from './OptimizedImage';
 
 interface AboutSectionProps {
   config: any;
@@ -24,7 +25,7 @@ export default function AboutSection({ config }: AboutSectionProps) {
       >
         <div 
           ref={titleRef}
-          className="text-center mb-16 opacity-0 -translate-y-8 scale-95 transition-all duration-700 ease-out"
+          className="text-center mb-16 opacity-100 translate-y-0 scale-100 transition-all duration-700 ease-out"
         >
           <h2 
             className="font-medium mb-6"
@@ -78,9 +79,31 @@ export default function AboutSection({ config }: AboutSectionProps) {
                   >
                   </div>
                   
-                  <img 
+                  {/* mb-clear.png 배경 추가 */}
+                  <div 
+                    className="absolute inset-0 -z-10"
+                    style={{
+                      backgroundImage: "url('/mb-clear.png')",
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      backgroundRepeat: 'no-repeat'
+                    }}
+                  >
+                    {/* 흰색 오버레이 */}
+                    <div 
+                      className="absolute inset-0"
+                      style={{
+                        backgroundColor: 'white',
+                        opacity: 0.1
+                      }}
+                    ></div>
+                  </div>
+                  
+                  <OptimizedImage 
                     src="/logo.png" 
                     alt="SæsaL Logo" 
+                    width={200}
+                    height={80}
                     className="object-contain"
                     style={{ 
                       height: '80px',
@@ -94,8 +117,8 @@ export default function AboutSection({ config }: AboutSectionProps) {
           </StaggeredItem>
 
           <StaggeredItem>
-            <div className="space-y-4">
-              <div>
+            <div className="space-y-8">
+              <div className="bg-white rounded-2xl p-6 shadow-lg border-l-4" style={{ borderColor: config.theme.colors.primary }}>
                 <h4 
                   className="text-2xl font-medium mb-4"
                   style={{ color: config.theme.colors.text.primary }}
@@ -110,7 +133,7 @@ export default function AboutSection({ config }: AboutSectionProps) {
                 </p>
               </div>
 
-              <div>
+              <div className="bg-white rounded-2xl p-6 shadow-lg border-l-4" style={{ borderColor: config.theme.colors.secondary }}>
                 <h4 
                   className="text-2xl font-medium mb-4"
                   style={{ color: config.theme.colors.text.primary }}
@@ -125,7 +148,7 @@ export default function AboutSection({ config }: AboutSectionProps) {
                 </p>
               </div>
 
-              <div>
+              <div className="bg-white rounded-2xl p-6 shadow-lg border-l-4" style={{ borderColor: config.theme.colors.primary }}>
                 <h4 
                   className="text-2xl font-medium mb-4"
                   style={{ color: config.theme.colors.text.primary }}
