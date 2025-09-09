@@ -569,7 +569,7 @@ export default function ContactSection({ config }: ContactSectionProps) {
                 {submitStatus === 'success' && (
                   <div className="p-4 bg-green-50 border border-green-200 rounded-xl">
                     <p className="text-green-600 text-center font-medium">
-                      Your consultation request has been sent successfully! We'll respond within 24-48 hours.
+                      Your consultation request has been sent successfully! We&apos;ll respond within 24-48 hours.
                     </p>
                   </div>
                 )}

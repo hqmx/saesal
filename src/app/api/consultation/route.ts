@@ -1,22 +1,45 @@
 import { NextRequest, NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
-import { createClient } from '@supabase/supabase-js';
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-);
+// 배포를 위해 동적 import 사용
+let supabase: any = null;
+let transporter: any = null;
 
-const transporter = nodemailer.createTransporter({
-  service: 'gmail',
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS
+// 서비스 초기화 함수
+async function initializeServices() {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  
+  if (supabaseUrl && supabaseKey) {
+    const { createClient } = await import('@supabase/supabase-js');
+    supabase = createClient(supabaseUrl, supabaseKey);
   }
-});
+  
+  if (process.env.EMAIL_USER && process.env.EMAIL_PASS) {
+    const nodemailer = await import('nodemailer');
+    transporter = nodemailer.default.createTransporter({
+      service: 'gmail',
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
+      }
+    });
+  }
+}
 
 export async function POST(request: NextRequest) {
   try {
+    // 서비스 초기화
+    await initializeServices();
+    
+    // 환경변수가 설정되지 않은 경우 개발/빌드 모드로 처리
+    if (!supabase || !transporter) {
+      return NextResponse.json({
+        success: false,
+        message: 'Service configuration required. Please contact administrator.',
+        dev_mode: true
+      }, { status: 503 });
+    }
+
     const formData = await request.formData();
     
     const name = formData.get('name') as string;
@@ -31,10 +54,11 @@ export async function POST(request: NextRequest) {
       email,
       phone,
       location,
+      message,
       created_at: new Date().toISOString()
     };
 
-    const { data, error } = await supabase
+    const { error } = await supabase
       .from('consultations')
       .insert([consultationData])
       .select();

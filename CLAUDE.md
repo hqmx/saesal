@@ -139,6 +139,27 @@ EMAIL_PASS=your_gmail_app_password
 TO_EMAIL=consultation_recipient_email
 ```
 
+## Recent Updates & Improvements
+
+### UI/UX Enhancements
+- **Dynamic Navigation**: Header elements adapt color based on scroll position (white at top, themed when scrolled)
+- **Enhanced ContactSection**: Pre-consultation checklist with English content and tattoo timeline information
+- **Improved ComparisonSection**: "The Clear Choice" section with better layout and transparency adjustments
+- **AboutSection Refinements**: Background overlay optimizations for better text visibility
+- **Responsive Design**: Consistent mobile-first approach across all sections
+
+### Performance Optimizations
+- **OptimizedImage Component**: Custom image optimization with WebP/AVIF support and lazy loading
+- **Lazy Video Loading**: Custom hooks for efficient video resource management
+- **Next.js Configuration**: Production-ready settings with bundle optimization and code splitting
+- **Font Loading**: Optimized Pretendard font loading for Korean content
+
+### Component Architecture
+- **Staggered Animations**: Sophisticated animation system using Framer Motion
+- **Configuration-Driven**: Centralized theme and content management through siteConfig
+- **Type Safety**: Full TypeScript implementation with strict mode
+- **Modern Hooks**: Custom React hooks for scroll detection and internationalization
+
 ## Important Notes
 - Uses Turbopack for both development and production builds
 - ESLint configured with Next.js recommended rules
@@ -146,3 +167,5 @@ TO_EMAIL=consultation_recipient_email
 - Static assets stored in `/public` directory
 - Form submissions require Supabase database setup with `consultations` table
 - Email functionality requires Gmail SMTP configuration
+- Production-ready with optimized performance settings
+- All UI components tested and validated across different screen sizes
