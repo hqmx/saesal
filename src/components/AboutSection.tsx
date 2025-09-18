@@ -60,44 +60,39 @@ export default function AboutSection({ config }: AboutSectionProps) {
 
         <StaggeredAnimationContainer className="grid lg:grid-cols-2 gap-16 items-center mb-20" delay={200}>
           <StaggeredItem>
-            <div className="p-10 relative overflow-hidden aspect-square sm:aspect-auto lg:aspect-square">
-              
-              <div className="relative z-10 h-full flex items-center justify-center">
-                <div className="flex flex-col items-center gap-0">
-                  <div 
-                    className="w-55 h-55 flex items-center justify-center"
-                    style={{
-                      borderRadius: '40px',
-                      overflow: 'hidden',
-                      backgroundImage: "url('/solution.png')",
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                      backgroundRepeat: 'no-repeat',
-                      margin: '0',
-                      padding: '0'
-                    }}
-                  >
-                  </div>
-                  
-                  {/* mb-clear.png 배경 추가 */}
-                  <div 
-                    className="absolute inset-0 -z-10"
-                    style={{
-                      backgroundImage: "url('/mb-clear.png')",
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                      backgroundRepeat: 'no-repeat'
-                    }}
-                  >
-                    {/* 흰색 오버레이 */}
-                    <div 
-                      className="absolute inset-0"
-                      style={{
-                        backgroundColor: 'white',
-                        opacity: 0.1
-                      }}
-                    ></div>
-                  </div>
+            <div className="relative flex items-center justify-center min-h-[400px]">
+              {/* 배경 이미지 */}
+              <div
+                className="absolute inset-0 rounded-3xl overflow-hidden"
+                style={{
+                  backgroundImage: "url('/mb-clear.png')",
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat'
+                }}
+              >
+                {/* 오버레이 */}
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    backgroundColor: 'rgba(255, 255, 255, 0.1)'
+                  }}
+                ></div>
+              </div>
+
+              {/* Solution 이미지 */}
+              <div className="relative z-10 flex items-center justify-center">
+                <div
+                  className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-3xl shadow-2xl"
+                  style={{
+                    backgroundImage: "url('/solution.png')",
+                    backgroundSize: 'contain',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat'
+                  }}
+                >
+                </div>
+              </div>
                   
                   <OptimizedImage 
                     src="/logo.png" 

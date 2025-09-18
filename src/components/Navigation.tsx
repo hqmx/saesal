@@ -25,7 +25,8 @@ export default function Navigation({ activeSection, config }: NavigationProps) {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      // 스크롤 위치가 100px 이상일 때만 스크롤된 상태로 간주
+      setIsScrolled(window.scrollY > 100);
     };
 
     window.addEventListener('scroll', handleScroll);
