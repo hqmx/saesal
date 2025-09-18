@@ -36,7 +36,12 @@ export default function MeaningSection({ config }: MeaningSectionProps) {
         }}
         onLoadedData={handleLoadedData}
       >
-        {isInView && <source src="/meaningbg.webm" type="video/webm" />}
+        {isInView && (
+          <>
+            <source media="(max-width: 768px)" src="/footermobbgwebm.webm" type="video/webm" />
+            <source src="/meaningbg.webm" type="video/webm" />
+          </>
+        )}
       </video>
       
       

@@ -118,7 +118,12 @@ const HeroSection = memo(function HeroSection({ config }: HeroSectionProps) {
           handleLoadedData();
         }}
       >
-        {isInView && <source src="/4kbg.webm" type="video/webm" />}
+        {isInView && (
+          <>
+            <source media="(max-width: 768px)" src="/mobbg.webm" type="video/webm" />
+            <source src="/4kbg.webm" type="video/webm" />
+          </>
+        )}
       </video>
       
       {/* White overlay with 5% opacity */}

@@ -34,7 +34,12 @@ export default function SafetySection({ config }: SafetySectionProps) {
         }}
         onLoadedData={handleLoadedData}
       >
-        {isInView && <source src="/safebgwebm.webm" type="video/webm" />}
+        {isInView && (
+          <>
+            <source media="(max-width: 768px)" src="/safemobbg.webm" type="video/webm" />
+            <source src="/safebgwebm.webm" type="video/webm" />
+          </>
+        )}
       </video>
       
       {/* Gradient overlay for smooth transition */}
