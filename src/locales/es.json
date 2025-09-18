@@ -29,13 +29,41 @@
   "contact": {
     "title": "¡Contáctanos!",
     "subtitle": "Siempre estamos abiertos",
+    "info": {
+      "title": "Lista de verificación",
+      "subtitle": "Todo lo que necesitas saber antes de tu consulta",
+      "photo": {
+        "title": "Requisitos de foto",
+        "description": "Por favor, prepara fotos claras de tu tatuaje desde diferentes ángulos con buena iluminación en luz natural"
+      },
+      "history": {
+        "title": "Historia del tatuaje",
+        "description": "¿Cuándo te hiciste el tatuaje? La edad del tatuaje afecta la planificación del tratamiento y el número de sesiones"
+      },
+      "medical": {
+        "title": "Historia médica",
+        "description": "¿Tienes alguna condición médica existente, trastornos de la piel o alergias que debamos conocer?"
+      },
+      "skin": {
+        "title": "Condiciones de la piel",
+        "description": "¿Algún tratamiento actual de la piel, medicamentos o condiciones dermatológicas en el área del tatuaje?"
+      }
+    },
     "form": {
+      "subtitle": "¿Listo para comenzar tu viaje hacia una nueva piel?",
+      "privacy": "Al enviar este formulario, aceptas la recolección y uso de tu información personal para fines de consulta.",
       "send": "Enviar",
       "sending": "Enviando...",
       "name": "Nombre",
       "email": "Email",
       "phone": "Teléfono",
-      "location": "Ubicación"
+      "location": "Ubicación",
+      "images": "Imágenes de tatuaje (hasta 5 fotos)",
+      "message": "Detalles de consulta",
+      "messagePlaceholder": "Por favor describe tu tatuaje (tamaño, ubicación, colores, edad, etc.) y cualquier preocupación específica que tengas.",
+      "uploadPhotos": "Subir fotos del tatuaje",
+      "successMessage": "Tu solicitud de consulta ha sido enviada exitosamente. Te responderemos dentro de 24-48 horas.",
+      "errorMessage": "Ocurrió un error al enviar. Por favor, inténtalo de nuevo."
     }
   }
 }

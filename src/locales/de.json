@@ -41,13 +41,41 @@
   "contact": {
     "title": "Kontaktieren Sie Uns!",
     "subtitle": "Wir sind immer offen",
+    "info": {
+      "title": "Checkliste",
+      "subtitle": "Alles, was Sie vor Ihrem Beratungsgespräch wissen müssen",
+      "photo": {
+        "title": "Foto-Anforderungen",
+        "description": "Bitte bereiten Sie klare Fotos Ihres Tattoos aus verschiedenen Winkeln mit guter Beleuchtung bei natürlichem Licht vor"
+      },
+      "history": {
+        "title": "Tattoo-Geschichte",
+        "description": "Wann haben Sie Ihr Tattoo bekommen? Das Alter des Tattoos beeinflusst die Behandlungsplanung und Anzahl der Sitzungen"
+      },
+      "medical": {
+        "title": "Krankengeschichte",
+        "description": "Haben Sie bestehende Erkrankungen, Hautkrankheiten oder Allergien, über die wir Bescheid wissen sollten?"
+      },
+      "skin": {
+        "title": "Hautzustand",
+        "description": "Aktuelle Hautbehandlungen, Medikamente oder dermatologische Erkrankungen im Tattoo-Bereich?"
+      }
+    },
     "form": {
+      "subtitle": "Bereit, Ihre Reise zur neuen Haut zu beginnen?",
+      "privacy": "Durch das Absenden dieses Formulars stimmen Sie der Erhebung und Nutzung Ihrer persönlichen Daten zu Beratungszwecken zu.",
       "send": "Senden",
       "sending": "Wird gesendet...",
       "name": "Name",
       "email": "E-Mail",
       "phone": "Telefon",
-      "location": "Standort"
+      "location": "Standort",
+      "images": "Tattoo-Bilder (bis zu 5 Fotos)",
+      "message": "Beratungsdetails",
+      "messagePlaceholder": "Bitte beschreiben Sie Ihr Tattoo (Größe, Lage, Farben, Alter usw.) und spezielle Bedenken, die Sie haben.",
+      "uploadPhotos": "Tattoo-Fotos hochladen",
+      "successMessage": "Ihre Beratungsanfrage wurde erfolgreich gesendet. Wir werden innerhalb von 24-48 Stunden antworten.",
+      "errorMessage": "Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
     }
   }
 }

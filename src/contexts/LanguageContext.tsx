@@ -8,6 +8,7 @@ import enTranslations from '@/locales/en.json';
 import koTranslations from '@/locales/ko.json';
 import jaTranslations from '@/locales/ja.json';
 import zhTranslations from '@/locales/zh.json';
+import zhTwTranslations from '@/locales/zh-tw.json';
 import thTranslations from '@/locales/th.json';
 import viTranslations from '@/locales/vi.json';
 import esTranslations from '@/locales/es.json';
@@ -27,6 +28,7 @@ const translations = {
   ko: koTranslations,
   ja: jaTranslations,
   zh: zhTranslations,
+  'zh-tw': zhTwTranslations,
   th: thTranslations,
   vi: viTranslations,
   es: esTranslations,

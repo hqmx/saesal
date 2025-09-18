@@ -41,13 +41,41 @@
   "contact": {
     "title": "Kontakta Oss!",
     "subtitle": "Vi är alltid öppna",
+    "info": {
+      "title": "Checklista",
+      "subtitle": "Allt du behöver veta innan din konsultation",
+      "photo": {
+        "title": "Fotokrav",
+        "description": "Vänligen förbered tydliga foton av din tatuering från olika vinklar med bra belysning i naturligt ljus"
+      },
+      "history": {
+        "title": "Tatueringshistoria",
+        "description": "När fick du din tatuering? Åldern på tatueringen påverkar behandlingsplanering och antal sessioner"
+      },
+      "medical": {
+        "title": "Medicinsk historia",
+        "description": "Har du några befintliga medicinska tillstånd, hudsjukdomar eller allergier vi bör känna till?"
+      },
+      "skin": {
+        "title": "Hudförhållanden",
+        "description": "Några aktuella hudbehandlingar, mediciner eller dermatologiska tillstånd i tatueringsområdet?"
+      }
+    },
     "form": {
+      "subtitle": "Redo att börja din resa till ny hud?",
+      "privacy": "Genom att skicka detta formulär godkänner du insamling och användning av din personliga information för konsultationsändamål.",
       "send": "Skicka",
       "sending": "Skickar...",
       "name": "Namn",
       "email": "Email",
       "phone": "Telefon",
-      "location": "Plats"
+      "location": "Plats",
+      "images": "Tatueringsbilder (upp till 5 foton)",
+      "message": "Konsultationsdetaljer",
+      "messagePlaceholder": "Vänligen beskriv din tatuering (storlek, plats, färger, ålder, etc.) och eventuella specifika bekymmer du har.",
+      "uploadPhotos": "Ladda upp tatueringsfoton",
+      "successMessage": "Din konsultationsförfrågan har skickats framgångsrikt. Vi kommer att svara inom 24-48 timmar.",
+      "errorMessage": "Ett fel uppstod vid sändning. Vänligen försök igen."
     }
   }
 }

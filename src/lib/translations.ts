@@ -1,10 +1,11 @@
-export type Language = 'en' | 'ko' | 'ja' | 'zh' | 'th' | 'vi' | 'es' | 'sv' | 'de';
+export type Language = 'en' | 'ko' | 'ja' | 'zh' | 'zh-tw' | 'th' | 'vi' | 'es' | 'sv' | 'de';
 
 export const languages: Record<Language, { name: string; nativeName: string; flag: string }> = {
   en: { name: 'English', nativeName: 'English', flag: '🇺🇸' },
   ko: { name: 'Korean', nativeName: '한국어', flag: '🇰🇷' },
   ja: { name: 'Japanese', nativeName: '日本語', flag: '🇯🇵' },
-  zh: { name: 'Chinese', nativeName: '中文', flag: '🇨🇳' },
+  zh: { name: 'Chinese (Simplified)', nativeName: '简体中文', flag: '🇨🇳' },
+  'zh-tw': { name: 'Chinese (Traditional)', nativeName: '繁體中文', flag: '🇹🇼' },
   th: { name: 'Thai', nativeName: 'ไทย', flag: '🇹🇭' },
   vi: { name: 'Vietnamese', nativeName: 'Tiếng Việt', flag: '🇻🇳' },
   es: { name: 'Spanish', nativeName: 'Español', flag: '🇪🇸' },
@@ -31,7 +32,7 @@ export function detectBrowserLanguage(): Language {
     'ja-jp': 'ja',
     'zh': 'zh',
     'zh-cn': 'zh',
-    'zh-tw': 'zh',
+    'zh-tw': 'zh-tw',
     'th': 'th',
     'th-th': 'th',
     'vi': 'vi',

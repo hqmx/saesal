@@ -76,7 +76,7 @@ const siteConfig = {
       "description": "'Saesal' Solve Every Limitation of Laser Treatment",
       "meaning": {
         "title": "Meaning of 'Saesal'",
-        "description": "It Means \"New Skin\" in Korean leading to new life with new skin. create a bigger and brighter future."
+        "description": "It Means \"New Skin\" in Korean leading to new life with new skin. create a clean and brighter future."
       }
     },
     "comparison": {

@@ -1,0 +1,242 @@
+{
+  "nav": {
+    "about": "關於",
+    "comparison": "比較",
+    "process": "流程",
+    "safety": "安全性",
+    "contact": "聯絡"
+  },
+  "hero": {
+    "title": "紋身覆蓋紋身",
+    "subtitle": "墨水將被清除",
+    "description": "從皮膚上清除墨水的解決方案"
+  },
+  "about": {
+    "title": "什麼是 'Saesal'？",
+    "subtitle": "從皮膚上清除紋身墨水的完美有效方法",
+    "description": "'Saesal'解決了雷射治療的所有限制",
+    "meaning": {
+      "title": "'Saesal'的含義",
+      "line1": "在韓語中意為'新皮膚'。",
+      "line2": "引領新皮膚的新生活，<br />創造更大更光明的未來。"
+    },
+    "revolutionary": {
+      "title": "革命性方法",
+      "description": "與傳統雷射治療不同，Saesal與您身體的自然癒合系統配合，安全有效地清除所有顏色和類型的紋身墨水。"
+    },
+    "natural": {
+      "title": "天然安全",
+      "description": "我們的解決方案僅使用已是人體組成成分的天然有機材料，確保最大的安全性和有效性。"
+    },
+    "fast": {
+      "title": "快速效果",
+      "description": "相比傳統雷射治療需要10次以上的療程，僅需4次療程即可完全清除紋身。"
+    }
+  },
+  "comparison": {
+    "title": "雷射 vs Saesal",
+    "subtitle": "了解傳統雷射治療與我們創新Saesal方法的區別",
+    "clearChoice": "明智的選擇",
+    "laser": {
+      "title": "雷射治療的局限性",
+      "sessions": "雷射療程",
+      "traditional": "傳統的",
+      "summary": "需要10次以上 • 痛苦過程 • 顏色受限",
+      "colorLimitation": {
+        "title": "顏色限制",
+        "description": "雷射只對深色有效。溫暖明亮的顏色（紅、黃、綠）清除有很大限制。"
+      },
+      "painful": {
+        "title": "痛苦過程",
+        "description": "技術上雷射治療是燒灼皮膚，這是人體最痛苦的問題。還會造成燒傷疤痕。"
+      },
+      "longProcess": {
+        "title": "漫長過程",
+        "description": "完全清除紋身需要10次以上的療程。如果是彩色紋身，需要更多療程。"
+      },
+      "aftercare": {
+        "title": "困難的護理",
+        "description": "雷射治療會留下水泡。需要更困難的後續護理。"
+      }
+    },
+    "saesal": {
+      "title": "'Saesal'如何呢？",
+      "sessions": "Saesal療程",
+      "revolutionary": "革命性的",
+      "summary": "僅需4次療程 • 更少痛苦 • 支援所有顏色",
+      "allColors": {
+        "title": "所有顏色",
+        "description": "'Saesal'對所有顏色都有效。對紋繡也有效。"
+      },
+      "safe": {
+        "title": "安全過程",
+        "description": "這不是雷射清除。'Saesal'治療與紋身相同。（使用紋身針進行應用）"
+      },
+      "fast": {
+        "title": "快速效果",
+        "description": "'Saesal'治療只需4次療程即可完全清除墨水。如果是簡單線條紋身，只需2次療程。"
+      },
+      "easycare": {
+        "title": "簡易護理",
+        "description": "'Saesal'治療只留下像紋身一樣的結痂。後續護理也和紋身一樣。"
+      }
+    }
+  },
+  "process": {
+    "title": "SæsaL 流程",
+    "subtitle": "簡單有效的4步流程",
+    "comparison": {
+      "subtitle": "了解傳統雷射治療與我們創新Saesal方法的區別"
+    },
+    "laser": {
+      "howWorks": "雷射治療如何運作",
+      "step1": {
+        "title": "皮膚下的墨水顆粒",
+        "description": "大型紋身墨水顆粒嵌入在皮膚層中"
+      },
+      "step2": {
+        "title": "雷射分解顆粒",
+        "description": "高能量雷射將墨水分解成更小的碎片"
+      },
+      "step3": {
+        "title": "血流運輸",
+        "description": "顆粒通過血流運輸到器官"
+      },
+      "warning1": "雷射治療緩慢褪色但在療程期間仍可見",
+      "warning2": "需要10次以上療程並可能造成燒傷疤痕",
+      "warning3": "墨水顆粒在器官中累積的未知影響"
+    },
+    "saesal": {
+      "howWorks": "'Saesal'治療如何運作",
+      "step1": {
+        "title": "應用Saesal溶液",
+        "description": "Saesal治療過程像紋身一樣"
+      },
+      "step2": {
+        "title": "自然結痂形成",
+        "description": "身體形成含有墨水的保護性結痂"
+      },
+      "step3": {
+        "title": "自然墨水清除",
+        "description": "墨水在2週後隨著結痂自然脫落"
+      },
+      "benefit1": "對包括紋繡在內的所有顏色都有效",
+      "benefit2": "一次療程即可見效果 - 無燒傷疤痕",
+      "benefit3": "100%自然過程，癒合更快"
+    },
+    "healing": {
+      "title": "'Saesal'治療的自然癒合過程",
+      "step1": {
+        "title": "結痂脫落後",
+        "description": "皮膚看起來是粉紅色的 - 這在自然癒合過程中是完全正常的"
+      },
+      "step2": {
+        "title": "10-12週後",
+        "description": "皮膚完全癒合，準備進行下次治療"
+      },
+      "timeline": {
+        "day": "治療\n當天",
+        "weeks2": "2週\n結痂脫落",
+        "weeks12": "10-12週\n完全癒合"
+      },
+      "whyChoose": "為什麼選擇Saesal？",
+      "benefit1": "僅需4次療程",
+      "benefit2": "不涉及內部器官",
+      "benefit3": "對所有顏色都有效",
+      "benefit4": "無燒傷疤痕"
+    },
+    "step1": {
+      "title": "1. 諮詢與分析",
+      "description": "分析紋身狀況並制定個人化治療計劃"
+    },
+    "step2": {
+      "title": "2. 治療準備",
+      "description": "皮膚準備和麻醉，確保安全程序"
+    },
+    "step3": {
+      "title": "3. SæsaL應用",
+      "description": "使用紋身針技術精確應用SæsaL溶液"
+    },
+    "step4": {
+      "title": "4. 術後護理",
+      "description": "恢復過程管理和下次療程規劃"
+    }
+  },
+  "safety": {
+    "title": "溶液安全嗎？",
+    "answer": "是的！",
+    "description": "我們的解決方案使用人體必需組成成分的100%天然成分 - 不是合成化學品，而是自然存在於您皮膚中的物質。",
+    "natural": "100% 天然",
+    "professional": "專業級",
+    "bodyComponents": "身體成分",
+    "guaranteed": "安全保證",
+    "naturalDescription": "自然界中發現的天然衍生物質，不是實驗室製造的化學品",
+    "professionalDescription": "在全世界的美容治療和皮膚科手術中廣受信賴",
+    "bodyComponentsDescription": "含有健康人體組織中自然存在的相同化合物",
+    "guarantee1": "僅使用天然衍生的生物相容性成分",
+    "guarantee2": "與健康皮膚中發現的物質相同",
+    "guarantee3": "最小化不良反應風險",
+    "guarantee4": "支援自然皮膚再生過程",
+    "guarantee5": "被身體安全代謝",
+    "guarantee6": "與各種皮膚狀況相容"
+  },
+  "contact": {
+    "title": "聯絡我們！",
+    "subtitle": "我們隨時為您服務",
+    "info": {
+      "title": "檢查清單",
+      "subtitle": "為了準確諮詢，請準備以下資訊",
+      "tattooPhotos": {
+        "title": "紋身照片",
+        "items": [
+          "在自然光下拍攝的清晰照片",
+          "多個角度（正面、側面）",
+          "近距離和遠距離拍攝",
+          "確保整個紋身可見"
+        ]
+      },
+      "healthInfo": {
+        "title": "健康資訊",
+        "items": [
+          "您目前服用的藥物",
+          "已知的過敏或反應",
+          "皮膚疾病病史",
+          "其他慢性健康狀況"
+        ]
+      },
+      "history": {
+        "title": "紋身歷史與時間線",
+        "items": [
+          "您何時紋的身？（年/月）",
+          "您已經有這個紋身多久了？",
+          "您最後一次紋身是什麼時候？",
+          "紋身大小和位置詳細資訊",
+          "任何之前的清除嘗試"
+        ]
+      },
+      "privacy": {
+        "title": "隱私與數據保護",
+        "items": [
+          "個人資訊用於諮詢目的",
+          "所有醫療和個人數據的安全處理"
+        ]
+      }
+    },
+    "form": {
+      "subtitle": "準備開始您的新皮膚之旅了嗎？",
+      "privacy": "提交此表格即表示您同意為諮詢目的收集和使用您的個人資訊。",
+      "send": "發送",
+      "sending": "發送中...",
+      "name": "姓名",
+      "email": "電子郵件",
+      "phone": "電話",
+      "location": "地點",
+      "images": "紋身圖片（最多5張照片）",
+      "message": "諮詢詳情",
+      "messagePlaceholder": "請描述您的紋身（大小、位置、顏色、年齡等）以及任何特別擔心的問題。",
+      "uploadPhotos": "上傳紋身照片",
+      "successMessage": "您的諮詢請求已成功發送。我們將在24-48小時內回覆。",
+      "errorMessage": "發送時發生錯誤。請重試。"
+    }
+  }
+}

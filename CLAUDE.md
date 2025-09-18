@@ -31,7 +31,7 @@ npm run lint
 - **Database**: Supabase (PostgreSQL)
 - **Email Service**: Nodemailer with Gmail SMTP
 - **Animations**: Framer Motion
-- **Internationalization**: Custom i18n system with 9 languages
+- **Internationalization**: Custom i18n system with 10 languages
 
 ## Project Structure
 
@@ -76,7 +76,7 @@ All sections are React components that receive the `siteConfig` as props:
 ### Internationalization System
 The project implements a custom i18n system through:
 - **LanguageContext**: React context providing language state and translation function
-- **Translation Files**: JSON files in `/src/locales/` for 9 languages (en, ko, ja, zh, th, vi, es, sv, de)
+- **Translation Files**: JSON files in `/src/locales/` for 10 languages (en, ko, ja, zh, zh-tw, th, vi, es, sv, de)
 - **Language Detection**: Automatic browser language detection with localStorage persistence
 - **Translation Function**: `t(key)` function with fallback to English
 
