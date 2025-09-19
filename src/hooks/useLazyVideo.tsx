@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 
 interface UseLazyVideoOptions {
   threshold?: number;
@@ -12,8 +12,12 @@ export function useLazyVideo(options: UseLazyVideoOptions = {}) {
   const [isInView, setIsInView] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const [isReversed, setIsReversed] = useState(false);
+  const [isPingPongActive, setIsPingPongActive] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const animationFrameRef = useRef<number | null>(null);
+  const lastTimeRef = useRef<number>(0);
 
+  // Intersection Observer for lazy loading
   useEffect(() => {
     const videoElement = videoRef.current;
     if (!videoElement) return;
@@ -39,74 +43,115 @@ export function useLazyVideo(options: UseLazyVideoOptions = {}) {
     };
   }, [threshold, rootMargin]);
 
-  // 핑퐁 효과 구현 (재생-역재생-재생 무한루프)
+  // 역재생 함수 (더 부드럽고 정확한 역재생)
+  const reversePlayback = useCallback(() => {
+    const videoElement = videoRef.current;
+    if (!videoElement || !isReversed || !isPingPongActive) return;
+
+    const currentTime = videoElement.currentTime;
+    const fps = 30; // 30fps로 고정
+    const frameTime = 1 / fps;
+
+    // 더 정확한 시간 감소
+    const newTime = Math.max(0, currentTime - frameTime);
+
+    if (newTime <= 0) {
+      // 역재생 완료 - 정방향으로 전환
+      videoElement.currentTime = 0;
+      setIsReversed(false);
+      videoElement.play().catch(console.error);
+    } else {
+      videoElement.currentTime = newTime;
+      animationFrameRef.current = requestAnimationFrame(reversePlayback);
+    }
+  }, [isReversed, isPingPongActive]);
+
+  // 비디오 이벤트 핸들러들
+  const handleLoadedData = useCallback(() => {
+    const videoElement = videoRef.current;
+    if (!videoElement) return;
+
+    setIsLoaded(true);
+
+    // 비디오가 로드되면 핑퐁 효과 활성화
+    if (isInView && !isPingPongActive) {
+      setIsPingPongActive(true);
+      videoElement.play().catch(console.error);
+    }
+  }, [isInView, isPingPongActive]);
+
+  const handleEnded = useCallback(() => {
+    if (!isPingPongActive) return;
+
+    // 정방향 재생이 끝나면 역재생 시작
+    setIsReversed(true);
+  }, [isPingPongActive]);
+
+  const handleTimeUpdate = useCallback(() => {
+    const videoElement = videoRef.current;
+    if (!videoElement) return;
+
+    lastTimeRef.current = videoElement.currentTime;
+  }, []);
+
+  // 핑퐁 효과 메인 로직
   useEffect(() => {
     const videoElement = videoRef.current;
-    if (!videoElement || !isInView) return;
+    if (!videoElement || !isInView || !isLoaded) return;
 
-    let animationFrame: number;
+    // 이벤트 리스너 등록
+    videoElement.addEventListener('loadeddata', handleLoadedData);
+    videoElement.addEventListener('ended', handleEnded);
+    videoElement.addEventListener('timeupdate', handleTimeUpdate);
 
-    const handleEnded = () => {
-      // 비디오가 끝나면 방향을 바꿔서 다시 재생
-      setIsReversed(prev => !prev);
-    };
-
-    const handleLoadedData = () => {
-      setIsLoaded(true);
-      if (isInView) {
-        videoElement.play();
-      }
-    };
-
-    // 역재생 효과 구현 (역재생 모드일 때)
-    const updateTime = () => {
-      if (!videoElement || !isReversed) return;
-
-      const currentTime = videoElement.currentTime;
-      const newTime = currentTime - 0.033; // 약 30fps
-
-      if (newTime <= 0) {
-        videoElement.currentTime = 0;
-        setIsReversed(false); // 정방향으로 전환
-        videoElement.play();
-      } else {
-        videoElement.currentTime = newTime;
-        animationFrame = requestAnimationFrame(updateTime);
-      }
-    };
-
-    // 역재생 모드 처리
-    if (isReversed) {
-      videoElement.pause();
-      videoElement.currentTime = videoElement.duration;
-      animationFrame = requestAnimationFrame(updateTime);
-    } else {
+    // 핑퐁 효과가 활성화되면 시작
+    if (isPingPongActive && !isReversed) {
       videoElement.currentTime = 0;
-      if (isInView) {
-        videoElement.play();
-      }
+      videoElement.play().catch(console.error);
     }
 
-    videoElement.addEventListener('ended', handleEnded);
-    videoElement.addEventListener('loadeddata', handleLoadedData);
-
     return () => {
-      videoElement.removeEventListener('ended', handleEnded);
       videoElement.removeEventListener('loadeddata', handleLoadedData);
-      if (animationFrame) {
-        cancelAnimationFrame(animationFrame);
+      videoElement.removeEventListener('ended', handleEnded);
+      videoElement.removeEventListener('timeupdate', handleTimeUpdate);
+
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+        animationFrameRef.current = null;
       }
     };
-  }, [isInView, isReversed]);
+  }, [isInView, isLoaded, isPingPongActive, isReversed, handleLoadedData, handleEnded, handleTimeUpdate]);
 
-  const handleLoadedData = () => {
-    setIsLoaded(true);
-  };
+  // 역재생 실행
+  useEffect(() => {
+    if (isReversed && isPingPongActive) {
+      const videoElement = videoRef.current;
+      if (!videoElement) return;
+
+      // 비디오 정지하고 끝 지점에서 시작
+      videoElement.pause();
+      if (videoElement.duration && !isNaN(videoElement.duration)) {
+        videoElement.currentTime = videoElement.duration;
+      }
+
+      // 역재생 시작
+      reversePlayback();
+    }
+
+    return () => {
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+        animationFrameRef.current = null;
+      }
+    };
+  }, [isReversed, isPingPongActive, reversePlayback]);
 
   return {
     videoRef,
     isInView,
     isLoaded,
+    isReversed,
+    isPingPongActive,
     handleLoadedData,
   };
 }
