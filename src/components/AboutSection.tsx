@@ -93,21 +93,6 @@ export default function AboutSection({ config }: AboutSectionProps) {
                 >
                 </div>
               </div>
-                  
-                  <OptimizedImage 
-                    src="/logo.png" 
-                    alt="SæsaL Logo" 
-                    width={200}
-                    height={80}
-                    className="object-contain"
-                    style={{ 
-                      height: '80px',
-                      margin: '0',
-                      marginTop: '-10px'
-                    }}
-                  />
-                </div>
-              </div>
             </div>
           </StaggeredItem>
 
