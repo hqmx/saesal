@@ -48,8 +48,7 @@ const HeroSection = memo(function HeroSection({ config }: HeroSectionProps) {
         preload="none"
         className="absolute inset-0 w-full h-full object-cover"
         style={{
-          filter: isLoaded ? 'blur(0px)' : 'blur(30px)',
-          transition: 'filter 2s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+          filter: 'none'
         }}
         onLoadedData={() => {
           setIsBackgroundLoaded(true);
