@@ -12,7 +12,11 @@ interface HeroSectionProps {
 const HeroSection = memo(function HeroSection({ config }: HeroSectionProps) {
   const { t, language } = useLanguage();
   const [isBackgroundLoaded, setIsBackgroundLoaded] = useState(false);
-  const { videoRef, isInView, isLoaded, handleLoadedData } = useLazyVideo({ threshold: 0.1 });
+  const { videoRef, isInView, isLoaded, showFirstFrame, handleLoadedData } = useLazyVideo({
+    threshold: 0.1,
+    enableSlowMotion: true,
+    slowMotionSpeed: 0.25 // 25% 속도로 슬로우모션
+  });
   const [showContent, setShowContent] = useState(false);
 
   const text1 = language === 'ko' ? '타투 위에 타투' : 'Do Tattoo On Tattoo';
@@ -41,14 +45,16 @@ const HeroSection = memo(function HeroSection({ config }: HeroSectionProps) {
       {/* Background Video */}
       <video
         ref={videoRef}
-        autoPlay={isInView}
+        autoPlay={isInView && !showFirstFrame}
         muted
         loop
         playsInline
-        preload="none"
+        preload="metadata"
         className="absolute inset-0 w-full h-full object-cover"
         style={{
-          filter: 'none'
+          filter: 'none',
+          opacity: showFirstFrame ? 0 : 1,
+          transition: 'opacity 1s ease-in-out'
         }}
         onLoadedData={() => {
           setIsBackgroundLoaded(true);
@@ -62,6 +68,24 @@ const HeroSection = memo(function HeroSection({ config }: HeroSectionProps) {
           </>
         )}
       </video>
+
+      {/* 첫 프레임 정지 이미지 */}
+      {showFirstFrame && (
+        <div
+          className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-50 to-blue-100"
+          style={{
+            opacity: showFirstFrame ? 1 : 0,
+            transition: 'opacity 1s ease-in-out'
+          }}
+        >
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center text-blue-900">
+              <div className="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+              <p className="text-lg font-medium">동영상 준비 중...</p>
+            </div>
+          </div>
+        </div>
+      )}
       
       {/* White overlay with 5% opacity */}
       <div 

@@ -10,7 +10,11 @@ interface SafetySectionProps {
 
 export default function SafetySection({ config }: SafetySectionProps) {
   const { t } = useLanguage();
-  const { videoRef, isInView, handleLoadedData } = useLazyVideo({ threshold: 0.2 });
+  const { videoRef, isInView, showFirstFrame, handleLoadedData } = useLazyVideo({
+    threshold: 0.2,
+    enableSlowMotion: true,
+    slowMotionSpeed: 0.3 // 30% 속도로 슬로우모션
+  });
   
   return (
     <section 
@@ -21,16 +25,18 @@ export default function SafetySection({ config }: SafetySectionProps) {
       {/* Background Video */}
       <video
         ref={videoRef}
-        autoPlay={isInView}
+        autoPlay={isInView && !showFirstFrame}
         muted
         loop
         playsInline
-        preload="none"
+        preload="metadata"
         className="absolute top-0 left-0 w-full h-full object-cover"
-        style={{ 
+        style={{
           width: '100vw',
           left: '50%',
-          transform: 'translateX(-50%)'
+          transform: 'translateX(-50%)',
+          opacity: showFirstFrame ? 0 : 1,
+          transition: 'opacity 1s ease-in-out'
         }}
         onLoadedData={handleLoadedData}
       >
@@ -41,6 +47,27 @@ export default function SafetySection({ config }: SafetySectionProps) {
           </>
         )}
       </video>
+
+      {/* 첫 프레임 정지 이미지 */}
+      {showFirstFrame && (
+        <div
+          className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-green-50 to-green-100"
+          style={{
+            width: '100vw',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            opacity: showFirstFrame ? 1 : 0,
+            transition: 'opacity 1s ease-in-out'
+          }}
+        >
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center text-green-900">
+              <div className="w-16 h-16 border-4 border-green-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+              <p className="text-lg font-medium">안전성 영상 준비 중...</p>
+            </div>
+          </div>
+        </div>
+      )}
       
       {/* Gradient overlay for smooth transition */}
       <div 

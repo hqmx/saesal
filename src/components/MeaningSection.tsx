@@ -10,7 +10,11 @@ interface MeaningSectionProps {
 
 export default function MeaningSection({ config }: MeaningSectionProps) {
   const { t } = useLanguage();
-  const { videoRef, isInView, handleLoadedData } = useLazyVideo({ threshold: 0.3 });
+  const { videoRef, isInView, showFirstFrame, handleLoadedData } = useLazyVideo({
+    threshold: 0.3,
+    enableSlowMotion: true,
+    slowMotionSpeed: 0.35 // 35% 속도로 슬로우모션
+  });
   const { about } = config.components;
   
   return (
@@ -23,16 +27,18 @@ export default function MeaningSection({ config }: MeaningSectionProps) {
       {/* Background Video */}
       <video
         ref={videoRef}
-        autoPlay={isInView}
+        autoPlay={isInView && !showFirstFrame}
         muted
         loop
         playsInline
-        preload="none"
+        preload="metadata"
         className="absolute top-0 left-0 w-full h-full object-cover"
-        style={{ 
+        style={{
           width: '100vw',
           left: '50%',
-          transform: 'translateX(-50%)'
+          transform: 'translateX(-50%)',
+          opacity: showFirstFrame ? 0 : 1,
+          transition: 'opacity 1s ease-in-out'
         }}
         onLoadedData={handleLoadedData}
       >
@@ -43,6 +49,27 @@ export default function MeaningSection({ config }: MeaningSectionProps) {
           </>
         )}
       </video>
+
+      {/* 첫 프레임 정지 이미지 */}
+      {showFirstFrame && (
+        <div
+          className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-50 to-purple-100"
+          style={{
+            width: '100vw',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            opacity: showFirstFrame ? 1 : 0,
+            transition: 'opacity 1s ease-in-out'
+          }}
+        >
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center text-purple-900">
+              <div className="w-16 h-16 border-4 border-purple-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+              <p className="text-lg font-medium">새살 영상 준비 중...</p>
+            </div>
+          </div>
+        </div>
+      )}
       
       
       <div className="relative z-10 w-full">
