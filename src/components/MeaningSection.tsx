@@ -38,8 +38,8 @@ export default function MeaningSection({ config }: MeaningSectionProps) {
       >
         {isInView && (
           <>
-            <source media="(max-width: 768px)" src="/footermobbgwebm.webm" type="video/webm" />
-            <source src="/meaningbg.webm" type="video/webm" />
+            <source media="(max-width: 768px)" src="/footermob.webm" type="video/webm" />
+            <source src="/footer.webm" type="video/webm" />
           </>
         )}
       </video>

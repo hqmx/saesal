@@ -57,8 +57,8 @@ const HeroSection = memo(function HeroSection({ config }: HeroSectionProps) {
       >
         {isInView && (
           <>
-            <source media="(max-width: 768px)" src="/mobbg.webm" type="video/webm" />
-            <source src="/4kbg.webm" type="video/webm" />
+            <source media="(max-width: 768px)" src="/heromob.webm" type="video/webm" />
+            <source src="/hero.webm" type="video/webm" />
           </>
         )}
       </video>
