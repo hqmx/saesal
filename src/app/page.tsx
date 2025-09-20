@@ -237,49 +237,44 @@ const siteConfig = {
 
 export default function Home() {
   const activeSection = useActiveSection();
-  const [isMobile, setIsMobile] = useState(false);
+  const [showBackground, setShowBackground] = useState(false);
 
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768 || /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+    const handleScroll = () => {
+      const comparisonSection = document.getElementById('comparison');
+      if (comparisonSection) {
+        const rect = comparisonSection.getBoundingClientRect();
+        // ComparisonSection이 화면에 나타나기 시작하면 배경 표시
+        setShowBackground(rect.top <= window.innerHeight);
+      }
     };
 
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <VideoManagerProvider>
-      {/* 전체 페이지 고정 배경 */}
-      {!isMobile ? (
-        // 데스크톱: CSS 고정 배경
+      {/* ComparisonSection부터 시작하는 고정 배경 */}
+      {showBackground && (
         <div
           style={{
             position: 'fixed',
             top: 0,
             left: 0,
-            width: '100vw',
-            height: '100vh',
+            width: '100%',
+            height: '100%',
             backgroundImage: "url('/mb.png')",
             backgroundSize: '400px 400px',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
-            backgroundAttachment: 'fixed',
-            zIndex: -1
+            zIndex: -10,
+            pointerEvents: 'none',
+            opacity: 1,
+            transition: 'opacity 0.3s ease-in-out'
           }}
         />
-      ) : (
-        // 모바일: body 배경으로 설정
-        <style jsx global>{`
-          body {
-            background-image: url('/mb.png') !important;
-            background-size: 400px 400px !important;
-            background-position: center !important;
-            background-repeat: no-repeat !important;
-            background-attachment: fixed !important;
-          }
-        `}</style>
       )}
       <div style={{
         fontFamily: siteConfig.theme.typography.fontFamily.primary,
