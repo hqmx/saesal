@@ -12,24 +12,16 @@ interface HeroSectionProps {
 const HeroSection = memo(function HeroSection({ config }: HeroSectionProps) {
   const { t, language } = useLanguage();
   const [isBackgroundLoaded, setIsBackgroundLoaded] = useState(false);
-  const { videoRef, isInView, isLoaded, showFirstFrame, handleLoadedData } = useLazyVideo({
-    threshold: 0.1,
-    enableSlowMotion: true,
-    slowMotionSpeed: 0.25 // 25% 속도로 슬로우모션
+  const { videoRef, isInView, isLoaded, handleLoadedData, handleEnded, handleTimeUpdate } = useLazyVideo({
+    threshold: 0.1
   });
-  const [showContent, setShowContent] = useState(false);
+  const [showContent, setShowContent] = useState(true);
 
   const text1 = language === 'ko' ? '타투 위에 타투' : 'Do Tattoo On Tattoo';
   const text2 = language === 'ko' ? '잉크가 제거됩니다' : 'Ink will Remove';
 
   useEffect(() => {
-    // 간단한 딜레이 후 모든 컨텐츠 표시
-    const timer = setTimeout(() => {
-      setIsBackgroundLoaded(true);
-      setShowContent(true);
-    }, 500);
-
-    return () => clearTimeout(timer);
+    setIsBackgroundLoaded(true);
   }, []);
   
   return (
@@ -45,21 +37,19 @@ const HeroSection = memo(function HeroSection({ config }: HeroSectionProps) {
       {/* Background Video */}
       <video
         ref={videoRef}
-        autoPlay={isInView && !showFirstFrame}
+        autoPlay={isInView}
         muted
-        loop
         playsInline
         preload="metadata"
         className="absolute inset-0 w-full h-full object-cover"
         style={{
           filter: 'none',
-          opacity: showFirstFrame ? 0 : 1,
+          opacity: isLoaded ? 1 : 0,
           transition: 'opacity 1s ease-in-out'
         }}
-        onLoadedData={() => {
-          setIsBackgroundLoaded(true);
-          handleLoadedData();
-        }}
+        onLoadedData={handleLoadedData}
+        onEnded={handleEnded}
+        onTimeUpdate={handleTimeUpdate}
       >
         {isInView && (
           <>
@@ -69,21 +59,17 @@ const HeroSection = memo(function HeroSection({ config }: HeroSectionProps) {
         )}
       </video>
 
-      {/* 첫 프레임 정지 이미지 */}
-      {showFirstFrame && (
-        <div
-          className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-50 to-blue-100"
-          style={{
-            opacity: showFirstFrame ? 1 : 0,
-            transition: 'opacity 1s ease-in-out'
-          }}
-        >
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center text-blue-900">
-              <div className="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-              <p className="text-lg font-medium">동영상 준비 중...</p>
-            </div>
-          </div>
+      {/* 로딩 중 정적 이미지 */}
+      {!isLoaded && (
+        <div className="absolute inset-0 w-full h-full">
+          <picture>
+            <source media="(max-width: 768px)" srcSet="/heromob.jpg" />
+            <img
+              src="/hero.jpg"
+              alt="Hero Background"
+              className="w-full h-full object-cover"
+            />
+          </picture>
         </div>
       )}
       

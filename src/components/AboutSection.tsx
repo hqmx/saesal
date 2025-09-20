@@ -12,24 +12,24 @@ export default function AboutSection({ config }: AboutSectionProps) {
   const { t } = useLanguage();
   const titleRef = useInViewAnimation();
   const { about } = config.components;
-  
+
   return (
-    <section 
-      id="about" 
+    <section
+      id="about"
       className="py-20 px-2 sm:px-4"
       style={{ backgroundColor: config.theme.colors.surface }}
     >
-      <div 
+      <div
         className="mx-auto"
         style={{ maxWidth: config.layout.container.maxWidth }}
       >
-        <div 
+        <div
           ref={titleRef}
           className="text-center mb-16 opacity-100 translate-y-0 scale-100 transition-all duration-700 ease-out"
         >
-          <h2 
+          <h2
             className="font-medium mb-6"
-            style={{ 
+            style={{
               color: config.theme.colors.text.primary,
               fontFamily: config.theme.typography.fontFamily.heading,
               fontSize: 'clamp(1.875rem, 4vw, 3rem)',
@@ -38,18 +38,18 @@ export default function AboutSection({ config }: AboutSectionProps) {
           >
             {t('about.title')}
           </h2>
-          <p 
+          <p
             className="text-xl mb-4"
-            style={{ 
+            style={{
               color: config.theme.colors.text.secondary,
               fontSize: config.theme.typography.fontSize.xl
             }}
           >
             {t('about.subtitle')}
           </p>
-          <p 
+          <p
             className="text-lg font-normal"
-            style={{ 
+            style={{
               color: config.theme.colors.primary,
               fontSize: config.theme.typography.fontSize.lg
             }}
@@ -93,19 +93,35 @@ export default function AboutSection({ config }: AboutSectionProps) {
                 >
                 </div>
               </div>
+
+              {/* Logo at bottom */}
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20">
+                <OptimizedImage
+                  src="/logo.png"
+                  alt="SæsaL Logo"
+                  width={200}
+                  height={80}
+                  className="object-contain"
+                  style={{
+                    height: '80px',
+                    margin: '0',
+                    marginTop: '-10px'
+                  }}
+                />
+              </div>
             </div>
           </StaggeredItem>
 
           <StaggeredItem>
             <div className="space-y-8">
               <div className="bg-white rounded-2xl p-6 shadow-lg border-l-4" style={{ borderColor: config.theme.colors.primary }}>
-                <h4 
+                <h4
                   className="text-2xl font-medium mb-4"
                   style={{ color: config.theme.colors.text.primary }}
                 >
                   {t('about.revolutionary.title')}
                 </h4>
-                <p 
+                <p
                   className="text-lg leading-relaxed"
                   style={{ color: config.theme.colors.text.secondary }}
                 >
@@ -114,13 +130,13 @@ export default function AboutSection({ config }: AboutSectionProps) {
               </div>
 
               <div className="bg-white rounded-2xl p-6 shadow-lg border-l-4" style={{ borderColor: config.theme.colors.secondary }}>
-                <h4 
+                <h4
                   className="text-2xl font-medium mb-4"
                   style={{ color: config.theme.colors.text.primary }}
                 >
                   {t('about.natural.title')}
                 </h4>
-                <p 
+                <p
                   className="text-lg leading-relaxed"
                   style={{ color: config.theme.colors.text.secondary }}
                 >
@@ -129,13 +145,13 @@ export default function AboutSection({ config }: AboutSectionProps) {
               </div>
 
               <div className="bg-white rounded-2xl p-6 shadow-lg border-l-4" style={{ borderColor: config.theme.colors.primary }}>
-                <h4 
+                <h4
                   className="text-2xl font-medium mb-4"
                   style={{ color: config.theme.colors.text.primary }}
                 >
                   {t('about.fast.title')}
                 </h4>
-                <p 
+                <p
                   className="text-lg leading-relaxed"
                   style={{ color: config.theme.colors.text.secondary }}
                 >

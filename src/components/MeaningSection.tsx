@@ -10,10 +10,8 @@ interface MeaningSectionProps {
 
 export default function MeaningSection({ config }: MeaningSectionProps) {
   const { t } = useLanguage();
-  const { videoRef, isInView, showFirstFrame, handleLoadedData } = useLazyVideo({
-    threshold: 0.3,
-    enableSlowMotion: true,
-    slowMotionSpeed: 0.35 // 35% 속도로 슬로우모션
+  const { videoRef, isInView, isLoaded, handleLoadedData, handleEnded, handleTimeUpdate } = useLazyVideo({
+    threshold: 0.3
   });
   const { about } = config.components;
   
@@ -27,9 +25,8 @@ export default function MeaningSection({ config }: MeaningSectionProps) {
       {/* Background Video */}
       <video
         ref={videoRef}
-        autoPlay={isInView && !showFirstFrame}
+        autoPlay={isInView}
         muted
-        loop
         playsInline
         preload="metadata"
         className="absolute top-0 left-0 w-full h-full object-cover"
@@ -37,10 +34,12 @@ export default function MeaningSection({ config }: MeaningSectionProps) {
           width: '100vw',
           left: '50%',
           transform: 'translateX(-50%)',
-          opacity: showFirstFrame ? 0 : 1,
+          opacity: isLoaded ? 1 : 0,
           transition: 'opacity 1s ease-in-out'
         }}
         onLoadedData={handleLoadedData}
+        onEnded={handleEnded}
+        onTimeUpdate={handleTimeUpdate}
       >
         {isInView && (
           <>
@@ -50,24 +49,24 @@ export default function MeaningSection({ config }: MeaningSectionProps) {
         )}
       </video>
 
-      {/* 첫 프레임 정지 이미지 */}
-      {showFirstFrame && (
+      {/* 로딩 중 정적 이미지 */}
+      {!isLoaded && (
         <div
-          className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-50 to-purple-100"
+          className="absolute top-0 left-0 w-full h-full"
           style={{
             width: '100vw',
             left: '50%',
-            transform: 'translateX(-50%)',
-            opacity: showFirstFrame ? 1 : 0,
-            transition: 'opacity 1s ease-in-out'
+            transform: 'translateX(-50%)'
           }}
         >
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center text-purple-900">
-              <div className="w-16 h-16 border-4 border-purple-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-              <p className="text-lg font-medium">새살 영상 준비 중...</p>
-            </div>
-          </div>
+          <picture>
+            <source media="(max-width: 768px)" srcSet="/footermob.jpg" />
+            <img
+              src="/footer.jpg"
+              alt="Footer Background"
+              className="w-full h-full object-cover"
+            />
+          </picture>
         </div>
       )}
       
