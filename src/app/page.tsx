@@ -256,12 +256,23 @@ export default function Home() {
         const shouldShow = rect.top <= window.innerHeight;
         setShowBackground(shouldShow);
 
+        // 디버그용 로그 (모바일에서 확인 위해)
+        if (isMobile) {
+          console.log('Mobile background check:', {
+            shouldShow,
+            rectTop: rect.top,
+            innerHeight: window.innerHeight,
+            showBackground: shouldShow
+          });
+        }
+
         // 모바일에서만 스크롤 위치에 따른 배경 위치 조정
         if (shouldShow && isMobile) {
           const scrollY = window.pageYOffset;
           const viewportHeight = window.innerHeight;
           const backgroundY = scrollY + viewportHeight / 2;
           setBackgroundPosition(`center ${backgroundY}px`);
+          console.log('Background position updated:', `center ${backgroundY}px`);
         }
       }
     };
@@ -285,6 +296,20 @@ export default function Home() {
           background-position: ${isMobile ? backgroundPosition : 'center center'} !important;
           background-repeat: no-repeat !important;
           background-attachment: ${isMobile ? 'scroll' : 'fixed'} !important;
+        }
+
+        /* 디버그용 - 배경 상태 확인 */
+        body::before {
+          content: "${showBackground ? 'BG:ON' : 'BG:OFF'} ${isMobile ? 'MOBILE' : 'DESKTOP'}";
+          position: fixed;
+          top: 10px;
+          right: 10px;
+          background: rgba(0,0,0,0.7);
+          color: white;
+          padding: 5px;
+          font-size: 12px;
+          z-index: 9999;
+          display: ${process.env.NODE_ENV === 'development' ? 'block' : 'none'};
         }
 
         /* 모바일에서 배경 위치 최적화 */
