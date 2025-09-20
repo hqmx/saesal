@@ -93,12 +93,13 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
         </motion.div>
 
         {/* 메인 비교 그리드 */}
-        <motion.div 
+        <motion.div
           className="grid lg:grid-cols-2 gap-8 mb-16"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
+          style={{ touchAction: 'pan-y' }}
         >
           {/* Laser 한계점 */}
           <motion.div
@@ -106,7 +107,8 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
             className="h-full p-4 sm:p-8 rounded-3xl shadow-xl border-2"
             style={{
               backgroundColor: 'rgba(254, 226, 226, 0.6)',
-              borderColor: '#fca5a5'
+              borderColor: '#fca5a5',
+              touchAction: 'pan-y'
             }}
           >
             <div className="text-center mb-8">
@@ -169,7 +171,8 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
             className="h-full p-4 sm:p-8 rounded-3xl shadow-xl border-2"
             style={{
               backgroundColor: `${config.theme.colors.secondary}10`,
-              borderColor: config.theme.colors.secondary
+              borderColor: config.theme.colors.secondary,
+              touchAction: 'pan-y'
             }}
           >
             <div className="text-center mb-8">

@@ -238,73 +238,47 @@ const siteConfig = {
 export default function Home() {
   const activeSection = useActiveSection();
   const [showBackground, setShowBackground] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const checkMobile = () => {
-      const isIOSDevice = /iPad|iPhone|iPod/.test(navigator.userAgent);
-      const isMobileDevice = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
-      setIsMobile(isMobileDevice);
-
-      // iOS에서 viewport height 문제 해결
-      if (isIOSDevice) {
-        const vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-      }
-    };
-
     const handleScroll = () => {
       const comparisonSection = document.getElementById('comparison');
       if (comparisonSection) {
         const rect = comparisonSection.getBoundingClientRect();
         setShowBackground(rect.top <= window.innerHeight);
       }
-
-      // 모바일에서 스크롤 위치 추적 (성능 최적화)
-      if (isMobile) {
-        requestAnimationFrame(() => {
-          setScrollY(window.pageYOffset || window.scrollY);
-        });
-      }
     };
 
-    checkMobile();
     handleScroll();
-
     window.addEventListener('scroll', handleScroll);
-    window.addEventListener('resize', checkMobile);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', checkMobile);
-    };
-  }, [isMobile]);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <VideoManagerProvider>
-      {/* ComparisonSection부터 시작하는 배경 - 모바일에서 스크롤 추적 */}
-      {showBackground && (
-        <div
-          style={{
-            position: isMobile ? 'absolute' : 'fixed',
-            top: 0,
-            left: 0,
-            width: '100vw',
-            height: isMobile ? 'calc(var(--vh, 1vh) * 100)' : '100vh',
-            backgroundImage: "url('/mb.png')",
-            backgroundSize: '400px 400px',
-            backgroundPosition: 'center center',
-            backgroundRepeat: 'no-repeat',
-            backgroundAttachment: isMobile ? 'scroll' : 'fixed',
-            transform: isMobile ? `translateY(${scrollY}px)` : 'none',
-            zIndex: -10,
-            pointerEvents: 'none',
-            opacity: 1,
-            transition: 'opacity 0.3s ease-in-out',
-            willChange: isMobile ? 'transform' : 'auto'
-          }}
-        />
-      )}
+      {/* 전체 페이지 배경 */}
+      <style jsx global>{`
+        body {
+          background-image: ${showBackground ? "url('/mb.png')" : 'none'} !important;
+          background-size: 400px 400px !important;
+          background-position: center center !important;
+          background-repeat: no-repeat !important;
+          background-attachment: fixed !important;
+        }
+
+        /* 모바일에서 배경 고정 처리 */
+        @media (max-width: 768px) {
+          body {
+            background-attachment: scroll !important;
+          }
+
+          /* iOS Safari 전용 */
+          @supports (-webkit-touch-callout: none) {
+            body {
+              background-attachment: local !important;
+            }
+          }
+        }
+      `}</style>
       <div style={{
         fontFamily: siteConfig.theme.typography.fontFamily.primary,
         backgroundColor: 'transparent',
