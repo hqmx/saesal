@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
@@ -11,6 +11,7 @@ import ContactSection from '@/components/ContactSection';
 import MeaningSection from '@/components/MeaningSection';
 import { useActiveSection } from '@/hooks/useActiveSection';
 import { VideoManagerProvider } from '@/contexts/VideoManagerContext';
+import { LanguageProvider } from '@/contexts/LanguageContext';
 
 const siteConfig = {
   "theme": {
@@ -77,7 +78,7 @@ const siteConfig = {
       "description": "'Saesal' Solve Every Limitation of Laser Treatment",
       "meaning": {
         "title": "Meaning of 'Saesal'",
-        "description": "It Means \"New Skin\" in Korean leading to new life with new skin. create a clean and brighter future."
+        "description": "It Means \"New Skin\" in Korean leading to new life with new skin. create a bigger and brighter future."
       }
     },
     "comparison": {
@@ -237,115 +238,60 @@ const siteConfig = {
 
 export default function Home() {
   const activeSection = useActiveSection();
-  const [showBackground, setShowBackground] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-  const [backgroundPosition, setBackgroundPosition] = useState('center center');
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-
-    const handleScroll = () => {
-      const comparisonSection = document.getElementById('comparison');
-      if (comparisonSection) {
-        const rect = comparisonSection.getBoundingClientRect();
-        const shouldShow = rect.top <= window.innerHeight;
-        setShowBackground(shouldShow);
-
-        // 디버그용 로그 (모바일에서 확인 위해)
-        if (isMobile) {
-          console.log('Mobile background check:', {
-            shouldShow,
-            rectTop: rect.top,
-            innerHeight: window.innerHeight,
-            showBackground: shouldShow
-          });
-        }
-
-        // 모바일에서만 스크롤 위치에 따른 배경 위치 조정
-        if (shouldShow && isMobile) {
-          const scrollY = window.pageYOffset;
-          const viewportHeight = window.innerHeight;
-          const backgroundY = scrollY + viewportHeight / 2;
-          setBackgroundPosition(`center ${backgroundY}px`);
-          console.log('Background position updated:', `center ${backgroundY}px`);
-        }
-      }
-    };
-
-    handleScroll();
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', checkMobile);
-    };
-  }, [isMobile]);
 
   return (
-    <VideoManagerProvider>
-      {/* 전체 페이지 배경 */}
-      <style jsx global>{`
-        body {
-          background-image: ${showBackground ? "url('/mb.png')" : 'none'} !important;
-          background-size: 400px 400px !important;
-          background-position: ${isMobile ? backgroundPosition : 'center center'} !important;
-          background-repeat: no-repeat !important;
-          background-attachment: ${isMobile ? 'scroll' : 'fixed'} !important;
-        }
-
-        /* 디버그용 - 배경 상태 확인 */
-        body::before {
-          content: "${showBackground ? 'BG:ON' : 'BG:OFF'} ${isMobile ? 'MOBILE' : 'DESKTOP'}";
-          position: fixed;
-          top: 10px;
-          right: 10px;
-          background: rgba(0,0,0,0.7);
-          color: white;
-          padding: 5px;
-          font-size: 12px;
-          z-index: 9999;
-          display: ${process.env.NODE_ENV === 'development' ? 'block' : 'none'};
-        }
-
-        /* 모바일에서 배경 위치 최적화 */
-        @media (max-width: 768px) {
+    <LanguageProvider>
+      <VideoManagerProvider>
+        {/* 전체 사이트 고정 배경 설정 */}
+        <style jsx global>{`
           body {
-            background-attachment: scroll !important;
+            background-image: url('/mb.png') !important;
+            background-size: 400px 400px !important;
+            background-position: center center !important;
+            background-repeat: no-repeat !important;
+            background-attachment: fixed !important;
           }
 
-          /* iOS Safari 전용 최적화 */
-          @supports (-webkit-touch-callout: none) {
+          /* 모바일에서 배경이 화면을 따라다니도록 설정 */
+          @media (max-width: 768px) {
             body {
-              background-attachment: scroll !important;
-              -webkit-transform: translate3d(0, 0, 0);
-              transform: translate3d(0, 0, 0);
+              background-attachment: fixed !important;
+              background-position: center center !important;
+            }
+
+            /* iOS Safari에서도 배경 고정 유지 */
+            @supports (-webkit-touch-callout: none) {
+              body {
+                background-attachment: fixed !important;
+                -webkit-background-size: 400px 400px !important;
+                background-size: 400px 400px !important;
+                background-position: center center !important;
+                /* iOS Safari 배경 최적화 */
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+              }
             }
           }
-        }
-      `}</style>
-      <div style={{
-        fontFamily: siteConfig.theme.typography.fontFamily.primary,
-        backgroundColor: 'transparent',
-        color: siteConfig.theme.colors.text.primary,
-        position: 'relative',
-        zIndex: 1
-      }}>
-        <Navigation activeSection={activeSection} config={siteConfig} />
-        <main>
-          <HeroSection config={siteConfig} />
-          <AboutSection config={siteConfig} />
-          <ComparisonSection config={siteConfig} />
-          <ProcessSection config={siteConfig} />
-          <SafetySection config={siteConfig} />
-          <ContactSection config={siteConfig} />
-          <MeaningSection config={siteConfig} />
-        </main>
-      </div>
-    </VideoManagerProvider>
+        `}</style>
+        <div style={{
+          fontFamily: siteConfig.theme.typography.fontFamily.primary,
+          backgroundColor: 'transparent',
+          color: siteConfig.theme.colors.text.primary,
+          position: 'relative',
+          zIndex: 1
+        }}>
+          <Navigation activeSection={activeSection} config={siteConfig} />
+          <main>
+            <HeroSection config={siteConfig} />
+            <AboutSection config={siteConfig} />
+            <ComparisonSection config={siteConfig} />
+            <ProcessSection config={siteConfig} />
+            <SafetySection config={siteConfig} />
+            <ContactSection config={siteConfig} />
+            <MeaningSection config={siteConfig} />
+          </main>
+        </div>
+      </VideoManagerProvider>
+    </LanguageProvider>
   );
 }

@@ -2,6 +2,16 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Deployment Information
+- **EC2 Server**: 98.89.19.16
+- **Key File**: hqmx-ec2.pem
+- **Production Commands**: PM2로 배포 관리
+  ```bash
+  git pull origin main
+  npm run build
+  pm2 restart saesal
+  ```
+
 ## Project Overview
 
 **SæsaL** is a Next.js 15 application for a tattoo removal service company. It's built as a landing page with multiple sections showcasing the SæsaL treatment method as an alternative to laser tattoo removal.
@@ -12,26 +22,30 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 # Development server with Turbopack
 npm run dev
 
-# Build for production with Turbopack  
+# Build for production with Turbopack
 npm run build
 
 # Start production server
 npm start
 
-# Lint code
+# Lint code (ESLint)
 npm run lint
+
+# Type checking (TypeScript)
+npx tsc --noEmit
 ```
 
 ## Tech Stack & Architecture
 
 - **Framework**: Next.js 15 with App Router
-- **Styling**: Tailwind CSS v4 with PostCSS  
+- **Styling**: Tailwind CSS v4 with PostCSS
 - **TypeScript**: Strict mode enabled
 - **Build Tool**: Turbopack (Next.js native bundler)
 - **Database**: Supabase (PostgreSQL)
 - **Email Service**: Nodemailer with Gmail SMTP
 - **Animations**: Framer Motion
 - **Internationalization**: Custom i18n system with 10 languages
+- **Environment**: Production-ready with Turbopack optimization
 
 ## Project Structure
 
@@ -45,7 +59,7 @@ src/
 ├── hooks/         # Custom React hooks  
 ├── data/          # Static data (countries, locations)
 ├── lib/           # Utility libraries (translations, supabase)
-└── locales/       # Translation files (9 languages: en, ko, ja, zh, th, vi, es, sv, de)
+└── locales/       # Translation files (10 languages: en, ko, ja, zh, zh-tw, th, vi, es, sv, de)
 ```
 
 ## Key Architecture Patterns
@@ -79,10 +93,14 @@ The project implements a custom i18n system through:
 - **Translation Files**: JSON files in `/src/locales/` for 10 languages (en, ko, ja, zh, zh-tw, th, vi, es, sv, de)
 - **Language Detection**: Automatic browser language detection with localStorage persistence
 - **Translation Function**: `t(key)` function with fallback to English
+- **Language Switching**: Dynamic language switching with persistence across sessions
 
 ### Custom Hooks
 - `useActiveSection` - Tracks which section is currently in view for navigation highlighting
 - `useLanguage` - Provides translation functions and language state from LanguageContext
+- `useStaggeredAnimation` - Manages complex animation sequences with Framer Motion
+- `useLazyVideo` - Optimized video loading for performance
+- `usePageLoaded` - Handles page load state management
 
 ## Font Configuration
 
@@ -162,10 +180,12 @@ TO_EMAIL=consultation_recipient_email
 
 ## Important Notes
 - Uses Turbopack for both development and production builds
-- ESLint configured with Next.js recommended rules
-- No testing framework currently configured
+- ESLint configured with Next.js recommended rules but disabled during builds for faster deployment
+- TypeScript strict mode enabled but build errors ignored for deployment
+- No testing framework currently configured (recommend Playwright for E2E testing)
 - Static assets stored in `/public` directory
 - Form submissions require Supabase database setup with `consultations` table
 - Email functionality requires Gmail SMTP configuration
 - Production-ready with optimized performance settings
 - All UI components tested and validated across different screen sizes
+- Current dependencies include Playwright (available for testing implementation)

@@ -1,5 +1,35 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+
+# 1. 프로젝트 디렉토리로 이동
+  cd saesal
+
+  # 2. 최신 변경사항 가져오기
+  git pull origin main
+
+  # 3. 의존성 설치 (필요한 경우)
+  npm install
+
+  # 4. 프로덕션 빌드
+  npm run build
+
+  # 5. PM2로 애플리케이션 재시작 (또는 처음 시작)
+  pm2 restart saesal
+  # 또는 처음이라면
+  pm2 start npm --name "saesal" -- start
+
+  # 6. PM2 상태 확인
+  pm2 status
+
+  # 7. 로그 확인 (문제가 있다면)
+  pm2 logs saesal
+
+-프론트앤드변경시.
+git pull origin main
+  npm run build
+  pm2 restart saesal
+
+
 ## Getting Started
 
 First, run the development server:

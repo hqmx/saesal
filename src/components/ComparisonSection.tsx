@@ -68,10 +68,10 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
         willChange: isMobile ? 'auto' : 'transform'
       }}
     >
-      <div 
+      <div
         className="absolute inset-0"
         style={{
-          backgroundColor: 'rgba(248, 250, 252, 0.1)'
+          backgroundColor: 'rgba(255, 255, 255, 0.3)'
         }}
       ></div>
       <div 
@@ -81,14 +81,12 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
         {/* 제목 */}
         <motion.div
           className="text-center mb-16"
-          initial={isMobile ? false : { opacity: 0, y: 10 }}
-          whileInView={isMobile ? false : { opacity: 1, y: 0 }}
-          transition={isMobile ? undefined : { duration: 0.8 }}
-          viewport={isMobile ? undefined : { once: true }}
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 1 }}
         >
-          <h2 
+          <h2
             className="font-medium mb-4"
-            style={{ 
+            style={{
               color: config.theme.colors.text.primary,
               fontFamily: config.theme.typography.fontFamily.heading,
               fontSize: 'clamp(1.875rem, 4vw, 3rem)',
@@ -111,10 +109,8 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
         {/* 메인 비교 그리드 */}
         <motion.div
           className="grid lg:grid-cols-2 gap-8 mb-16"
-          variants={isMobile ? {} : containerVariants}
-          initial={isMobile ? false : "hidden"}
-          whileInView={isMobile ? false : "visible"}
-          viewport={isMobile ? undefined : { once: true, amount: 0.1 }}
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 1 }}
           style={{
             touchAction: 'pan-y',
             overscrollBehavior: 'contain'
@@ -122,10 +118,11 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
         >
           {/* Laser 한계점 */}
           <motion.div
-            variants={isMobile ? {} : itemVariants}
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
             className="h-full p-4 sm:p-8 rounded-3xl shadow-xl border-2"
             style={{
-              backgroundColor: 'rgba(254, 226, 226, 0.6)',
+              backgroundColor: 'rgba(254, 226, 226, 0.3)',
               borderColor: '#fca5a5',
               touchAction: 'pan-y',
               contain: 'layout style'
@@ -187,7 +184,8 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
 
           {/* Saesal 장점 */}
           <motion.div
-            variants={isMobile ? {} : itemVariants}
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
             className="h-full p-4 sm:p-8 rounded-3xl shadow-xl border-2"
             style={{
               backgroundColor: `${config.theme.colors.secondary}10`,
@@ -289,19 +287,18 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
 
         {/* "The Clear Choice" 요약 비교 컨테이너 */}
         <motion.div
-          initial={isMobile ? false : { opacity: 0, y: 10 }}
-          whileInView={isMobile ? false : { opacity: 1, y: 0 }}
-          transition={isMobile ? undefined : { duration: 0.8, delay: 0.3 }}
-          viewport={isMobile ? undefined : { once: true, amount: 0.1, margin: "0px 0px -100px 0px" }}
-          className="p-6 lg:p-10 mt-8"
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 1 }}
+          className="p-6 lg:p-10 mt-8 rounded-3xl"
           style={{
+            backgroundColor: 'rgba(255, 255, 255, 0.9)',
             touchAction: 'pan-y',
             contain: 'layout style'
           }}
         >
-          <h3 
+          <h3
             className="font-medium mb-8 text-center"
-            style={{ 
+            style={{
               color: config.theme.colors.text.primary,
               fontSize: 'clamp(1.875rem, 4vw, 3rem)',
               lineHeight: '1.3'
@@ -322,10 +319,8 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
                   touchAction: 'pan-y',
                   contain: 'layout style'
                 }}
-                initial={isMobile ? false : { opacity: 0, x: -10 }}
-                whileInView={isMobile ? false : { opacity: 1, x: 0 }}
-                transition={isMobile ? undefined : { duration: 0.6, delay: 0.4 }}
-                viewport={isMobile ? undefined : { once: true, amount: 0.2, margin: "0px 0px -50px 0px" }}
+                initial={{ opacity: 1 }}
+                animate={{ opacity: 1 }}
               >
                 <div className="text-center">
                   <div 
@@ -397,10 +392,8 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
                   touchAction: 'pan-y',
                   contain: 'layout style'
                 }}
-                initial={isMobile ? false : { opacity: 0, x: 10 }}
-                whileInView={isMobile ? false : { opacity: 1, x: 0 }}
-                transition={isMobile ? undefined : { duration: 0.6, delay: 0.6 }}
-                viewport={isMobile ? undefined : { once: true, amount: 0.2, margin: "0px 0px -50px 0px" }}
+                initial={{ opacity: 1 }}
+                animate={{ opacity: 1 }}
               >
                 <div className="text-center">
                   <div 

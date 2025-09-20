@@ -92,7 +92,7 @@ export default function ProcessSection({ config }: ProcessSectionProps) {
             </motion.div>
           
           <motion.div variants={itemVariants}>
-            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
+            <div className="rounded-3xl shadow-2xl overflow-hidden" style={{ backgroundColor: 'transparent' }}>
               <div className="p-8">
                 <div className="grid md:grid-cols-3 gap-8 mb-8">
                   {/* Step 1 */}
@@ -215,7 +215,7 @@ export default function ProcessSection({ config }: ProcessSectionProps) {
                 </div>
               </div>
             </div>
-            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
+            <div className="rounded-3xl shadow-2xl overflow-hidden" style={{ backgroundColor: 'transparent' }}>
 
               {/* Content */}
               <div className="p-8">
@@ -299,13 +299,13 @@ export default function ProcessSection({ config }: ProcessSectionProps) {
                   }}
                 >
                   <div className="space-y-2">
-                    <p className="text-lg font-semibold" style={{ color: config.theme.colors.secondary }}>
+                    <p className="text-base font-medium" style={{ color: config.theme.colors.text.primary }}>
                       {t('process.saesal.benefit1')}
                     </p>
-                    <p className="text-lg font-semibold" style={{ color: config.theme.colors.secondary }}>
+                    <p className="text-base font-medium" style={{ color: config.theme.colors.text.primary }}>
                       {t('process.saesal.benefit2')}
                     </p>
-                    <p className="text-lg font-semibold" style={{ color: config.theme.colors.secondary }}>
+                    <p className="text-base font-medium" style={{ color: config.theme.colors.text.primary }}>
                       {t('process.saesal.benefit3')}
                     </p>
                   </div>
@@ -343,7 +343,7 @@ export default function ProcessSection({ config }: ProcessSectionProps) {
                 </div>
               </div>
             </div>
-            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
+            <div className="rounded-3xl shadow-2xl overflow-hidden" style={{ backgroundColor: 'transparent' }}>
 
               {/* Content */}
               <div className="p-8">
@@ -397,10 +397,10 @@ export default function ProcessSection({ config }: ProcessSectionProps) {
                 </div>
 
                 {/* Timeline indicator */}
-                <div 
+                <div
                   className="py-8 px-1 md:py-12 md:px-12 rounded-xl mx-0 md:mx-auto my-16"
-                  style={{ 
-                    backgroundColor: config.theme.colors.surface,
+                  style={{
+                    backgroundColor: 'transparent',
                     border: `2px solid ${config.theme.colors.secondary}`,
                     maxWidth: '800px'
                   }}
