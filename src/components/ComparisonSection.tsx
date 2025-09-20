@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useState, useEffect } from 'react';
 
 interface ComparisonSectionProps {
   config: any;
@@ -9,6 +10,17 @@ interface ComparisonSectionProps {
 
 export default function ComparisonSection({ config }: ComparisonSectionProps) {
   const { t } = useLanguage();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768 || /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -47,15 +59,36 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
   return (
     <section
       id="comparison"
-      className="relative pt-20 pb-0 px-2 sm:px-4 overflow-x-hidden w-full"
+      className="relative pt-20 pb-0 px-2 sm:px-4 w-full"
       style={{
-        backgroundImage: "url('/mb-clear.png')",
-        backgroundSize: '400px 400px',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed'
+        minHeight: '100vh'
       }}
     >
+      {/* 배경 이미지 - 모바일과 데스크톱 다르게 처리 */}
+      {!isMobile ? (
+        // 데스크톱: 고정 배경
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: "url('/mb-clear.png')",
+            backgroundSize: '400px 400px',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundAttachment: 'fixed'
+          }}
+        />
+      ) : (
+        // 모바일: 스크롤되는 배경
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: "url('/mb-clear.png')",
+            backgroundSize: '400px 400px',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        />
+      )}
       <div 
         className="absolute inset-0"
         style={{
@@ -69,7 +102,7 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
         {/* 제목 */}
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -269,10 +302,10 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
 
         {/* "The Clear Choice" 요약 비교 컨테이너 */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1, margin: "0px 0px -100px 0px" }}
           className="p-6 lg:p-10 mt-8"
         >
           <h3 
@@ -296,10 +329,10 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
                   backgroundColor: 'rgba(254, 226, 226, 0.3)',
                   borderColor: '#fca5a5'
                 }}
-                initial={{ opacity: 0, x: -30 }}
+                initial={{ opacity: 0, x: -10 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                viewport={{ once: true, amount: 0.5 }}
+                viewport={{ once: true, amount: 0.2, margin: "0px 0px -50px 0px" }}
               >
                 <div className="text-center">
                   <div 
@@ -369,10 +402,10 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
                   backgroundColor: `${config.theme.colors.secondary}10`,
                   borderColor: config.theme.colors.secondary
                 }}
-                initial={{ opacity: 0, x: 30 }}
+                initial={{ opacity: 0, x: 10 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
-                viewport={{ once: true, amount: 0.5 }}
+                viewport={{ once: true, amount: 0.2, margin: "0px 0px -50px 0px" }}
               >
                 <div className="text-center">
                   <div 

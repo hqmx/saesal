@@ -96,7 +96,7 @@ export default function Navigation({ activeSection, config }: NavigationProps) {
                 className="flex items-center group transition-transform duration-300 hover:scale-105 hover:shadow-lg"
               >
                 <img
-                  src="/logo.png"
+                  src={(!isScrolled && !isMobile) ? "/logo-white.png" : "/logo.png"}
                   alt="SæsaL Logo"
                   className="w-auto object-contain transition-all duration-300 group-hover:brightness-110"
                   style={{

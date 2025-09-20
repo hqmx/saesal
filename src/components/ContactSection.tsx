@@ -12,6 +12,7 @@ interface ContactSectionProps {
 
 export default function ContactSection({ config }: ContactSectionProps) {
   const { t } = useLanguage();
+  const [isMobile, setIsMobile] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -35,6 +36,16 @@ export default function ContactSection({ config }: ContactSectionProps) {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768 || /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -226,18 +237,40 @@ export default function ContactSection({ config }: ContactSectionProps) {
   };
 
   return (
-    <section 
-      id="contact" 
+    <section
+      id="contact"
       className="relative py-20 px-4"
       style={{
-        background: `linear-gradient(135deg, ${config.theme.colors.primary}10, ${config.theme.colors.secondary}08, ${config.theme.colors.background})`,
-        backgroundImage: "url('/mb-clear.png')",
-        backgroundSize: '400px 400px',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed'
+        background: `linear-gradient(135deg, ${config.theme.colors.primary}10, ${config.theme.colors.secondary}08, ${config.theme.colors.background})`
       }}
     >
+      {/* 배경 이미지 - 모바일과 데스크톱 다르게 처리 */}
+      {!isMobile ? (
+        // 데스크톱: 고정 배경
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: "url('/mb-clear.png')",
+            backgroundSize: '400px 400px',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundAttachment: 'fixed',
+            background: `linear-gradient(135deg, ${config.theme.colors.primary}10, ${config.theme.colors.secondary}08, ${config.theme.colors.background})`
+          }}
+        />
+      ) : (
+        // 모바일: 스크롤되는 배경
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: "url('/mb-clear.png')",
+            backgroundSize: '400px 400px',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            background: `linear-gradient(135deg, ${config.theme.colors.primary}10, ${config.theme.colors.secondary}08, ${config.theme.colors.background})`
+          }}
+        />
+      )}
       <div 
         className="absolute inset-0"
         style={{

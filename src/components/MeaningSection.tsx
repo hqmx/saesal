@@ -3,6 +3,7 @@
 import { StaggeredAnimationContainer, StaggeredItem } from '@/hooks/useStaggeredAnimation';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useLazyVideo } from '@/hooks/useLazyVideo';
+import { useState, useEffect } from 'react';
 
 interface MeaningSectionProps {
   config: any;
@@ -15,10 +16,21 @@ export default function MeaningSection({ config }: MeaningSectionProps) {
     videoId: 'meaning'
   });
   const { about } = config.components;
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768 || /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   
   return (
-    <section 
-      className="relative py-20 overflow-hidden" 
+    <section
+      className="relative py-20 overflow-hidden"
       style={{
         background: `linear-gradient(135deg, ${config.theme.colors.primary}10, ${config.theme.colors.secondary}08, ${config.theme.colors.background})`
       }}

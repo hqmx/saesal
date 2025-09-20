@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useState, useEffect } from 'react';
 
 interface ProcessSectionProps {
   config: any;
@@ -9,6 +10,17 @@ interface ProcessSectionProps {
 
 export default function ProcessSection({ config }: ProcessSectionProps) {
   const { t } = useLanguage();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768 || /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -45,17 +57,35 @@ export default function ProcessSection({ config }: ProcessSectionProps) {
   };
   
   return (
-    <section 
-      id="process" 
+    <section
+      id="process"
       className="relative py-20 px-2 sm:px-4"
-      style={{
-        backgroundImage: "url('/mb-clear.png')",
-        backgroundSize: '400px 400px',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed'
-      }}
     >
+      {/* 배경 이미지 - 모바일과 데스크톱 다르게 처리 */}
+      {!isMobile ? (
+        // 데스크톱: 고정 배경
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: "url('/mb-clear.png')",
+            backgroundSize: '400px 400px',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundAttachment: 'fixed'
+          }}
+        />
+      ) : (
+        // 모바일: 스크롤되는 배경
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: "url('/mb-clear.png')",
+            backgroundSize: '400px 400px',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        />
+      )}
       <div 
         className="absolute inset-0"
         style={{
