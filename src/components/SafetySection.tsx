@@ -30,9 +30,6 @@ export default function SafetySection({ config }: SafetySectionProps) {
         preload="metadata"
         className="absolute top-0 left-0 w-full h-full object-cover"
         style={{
-          width: '100vw',
-          left: '50%',
-          transform: 'translateX(-50%)',
           opacity: isLoaded ? 1 : 0,
           transition: 'opacity 1s ease-in-out'
         }}
@@ -52,11 +49,7 @@ export default function SafetySection({ config }: SafetySectionProps) {
       {!isLoaded && (
         <div
           className="absolute top-0 left-0 w-full h-full"
-          style={{
-            width: '100vw',
-            left: '50%',
-            transform: 'translateX(-50%)'
-          }}
+          style={{}}
         >
           <picture>
             <source media="(max-width: 768px)" srcSet="/safemob.jpg" />

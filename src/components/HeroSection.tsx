@@ -32,7 +32,7 @@ const HeroSection = memo(function HeroSection({ config }: HeroSectionProps) {
       style={{
         backgroundColor: config.theme.colors.background,
         height: '100vh',
-        width: '100vw',
+        minHeight: '100vh'
       }}
     >
       {/* Background Video */}

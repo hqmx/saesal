@@ -52,7 +52,8 @@ export default function ProcessSection({ config }: ProcessSectionProps) {
         backgroundImage: "url('/mb-clear.png')",
         backgroundSize: '400px 400px',
         backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed'
       }}
     >
       <div 
