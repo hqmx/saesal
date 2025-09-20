@@ -259,15 +259,22 @@ export default function ContactSection({ config }: ContactSectionProps) {
           }}
         />
       ) : (
-        // 모바일: 스크롤되는 배경
+        // 모바일: 화면에 고정된 배경
         <div
-          className="absolute inset-0"
           style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100vw',
+            height: '100vh',
             backgroundImage: "url('/mb-clear.png')",
             backgroundSize: '400px 400px',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
-            background: `linear-gradient(135deg, ${config.theme.colors.primary}10, ${config.theme.colors.secondary}08, ${config.theme.colors.background})`
+            background: `linear-gradient(135deg, ${config.theme.colors.primary}10, ${config.theme.colors.secondary}08, ${config.theme.colors.background})`,
+            zIndex: -1,
+            transform: 'translateZ(0)',
+            willChange: 'transform'
           }}
         />
       )}
