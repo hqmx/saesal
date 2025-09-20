@@ -16,8 +16,8 @@ export default function AboutSection({ config }: AboutSectionProps) {
   return (
     <section
       id="about"
-      className="py-20 px-2 sm:px-4"
-      style={{ backgroundColor: config.theme.colors.surface }}
+      className="relative py-20 px-2 sm:px-4"
+      style={{ backgroundColor: 'transparent' }}
     >
       <div
         className="mx-auto"
@@ -69,6 +69,18 @@ export default function AboutSection({ config }: AboutSectionProps) {
                 }}
               ></div>
 
+              {/* mb-clear.png 배경 */}
+              <div
+                className="absolute inset-0 flex items-center justify-center z-5"
+                style={{
+                  backgroundImage: "url('/mb-clear.png')",
+                  backgroundSize: '300px 300px',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat',
+                  opacity: 0.6
+                }}
+              ></div>
+
               {/* Solution 이미지 */}
               <div className="relative z-10 flex items-center justify-center">
                 <div
@@ -103,7 +115,7 @@ export default function AboutSection({ config }: AboutSectionProps) {
 
           <StaggeredItem>
             <div className="space-y-8">
-              <div className="bg-white rounded-2xl p-6 shadow-lg border-l-4" style={{ borderColor: config.theme.colors.primary }}>
+              <div className="rounded-2xl p-6 shadow-lg border-l-4" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', borderColor: config.theme.colors.primary }}>
                 <h4
                   className="text-2xl font-medium mb-4"
                   style={{ color: config.theme.colors.text.primary }}
@@ -118,7 +130,7 @@ export default function AboutSection({ config }: AboutSectionProps) {
                 </p>
               </div>
 
-              <div className="bg-white rounded-2xl p-6 shadow-lg border-l-4" style={{ borderColor: config.theme.colors.secondary }}>
+              <div className="rounded-2xl p-6 shadow-lg border-l-4" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', borderColor: config.theme.colors.secondary }}>
                 <h4
                   className="text-2xl font-medium mb-4"
                   style={{ color: config.theme.colors.text.primary }}
@@ -133,7 +145,7 @@ export default function AboutSection({ config }: AboutSectionProps) {
                 </p>
               </div>
 
-              <div className="bg-white rounded-2xl p-6 shadow-lg border-l-4" style={{ borderColor: config.theme.colors.primary }}>
+              <div className="rounded-2xl p-6 shadow-lg border-l-4" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', borderColor: config.theme.colors.primary }}>
                 <h4
                   className="text-2xl font-medium mb-4"
                   style={{ color: config.theme.colors.text.primary }}
@@ -152,6 +164,7 @@ export default function AboutSection({ config }: AboutSectionProps) {
         </StaggeredAnimationContainer>
 
       </div>
+
     </section>
   );
 }

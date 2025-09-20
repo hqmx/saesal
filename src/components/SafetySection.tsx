@@ -206,16 +206,16 @@ export default function SafetySection({ config }: SafetySectionProps) {
                   borderColor: config.theme.colors.secondary
                 }}
               >
-                <div className="flex items-center justify-center space-x-6 mb-6">
-                  <div 
-                    className="w-12 h-12 rounded-full flex items-center justify-center"
+                <div className="text-center mb-6">
+                  <div
+                    className="w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center"
                     style={{ backgroundColor: config.theme.colors.secondary }}
                   >
                     <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <h3 
+                  <h3
                     className="text-2xl font-medium"
                     style={{ color: config.theme.colors.text.primary }}
                   >
