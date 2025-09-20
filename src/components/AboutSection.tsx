@@ -61,24 +61,13 @@ export default function AboutSection({ config }: AboutSectionProps) {
         <StaggeredAnimationContainer className="grid lg:grid-cols-2 gap-16 items-center mb-20" delay={200}>
           <StaggeredItem>
             <div className="relative flex items-center justify-center min-h-[400px]">
-              {/* 배경 이미지 */}
+              {/* 배경 오버레이 */}
               <div
                 className="absolute inset-0 rounded-3xl overflow-hidden"
                 style={{
-                  backgroundImage: "url('/mb-clear.png')",
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  backgroundRepeat: 'no-repeat'
+                  backgroundColor: 'rgba(255, 255, 255, 0.05)'
                 }}
-              >
-                {/* 오버레이 */}
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    backgroundColor: 'rgba(255, 255, 255, 0.1)'
-                  }}
-                ></div>
-              </div>
+              ></div>
 
               {/* Solution 이미지 */}
               <div className="relative z-10 flex items-center justify-center">

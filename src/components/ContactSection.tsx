@@ -12,7 +12,6 @@ interface ContactSectionProps {
 
 export default function ContactSection({ config }: ContactSectionProps) {
   const { t } = useLanguage();
-  const [isMobile, setIsMobile] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -36,16 +35,6 @@ export default function ContactSection({ config }: ContactSectionProps) {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768 || /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
-    };
-
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -241,43 +230,9 @@ export default function ContactSection({ config }: ContactSectionProps) {
       id="contact"
       className="relative py-20 px-4"
       style={{
-        background: `linear-gradient(135deg, ${config.theme.colors.primary}10, ${config.theme.colors.secondary}08, ${config.theme.colors.background})`
+        background: `linear-gradient(135deg, ${config.theme.colors.primary}10, ${config.theme.colors.secondary}08, transparent)`
       }}
     >
-      {/* 배경 이미지 - 모바일과 데스크톱 다르게 처리 */}
-      {!isMobile ? (
-        // 데스크톱: 고정 배경
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: "url('/mb-clear.png')",
-            backgroundSize: '400px 400px',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            backgroundAttachment: 'fixed',
-            background: `linear-gradient(135deg, ${config.theme.colors.primary}10, ${config.theme.colors.secondary}08, ${config.theme.colors.background})`
-          }}
-        />
-      ) : (
-        // 모바일: 화면에 고정된 배경
-        <div
-          style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            width: '100vw',
-            height: '100vh',
-            backgroundImage: "url('/mb-clear.png')",
-            backgroundSize: '400px 400px',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            background: `linear-gradient(135deg, ${config.theme.colors.primary}10, ${config.theme.colors.secondary}08, ${config.theme.colors.background})`,
-            zIndex: -1,
-            transform: 'translateZ(0)',
-            willChange: 'transform'
-          }}
-        />
-      )}
       <div 
         className="absolute inset-0"
         style={{

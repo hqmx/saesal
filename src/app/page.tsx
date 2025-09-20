@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
@@ -237,13 +237,56 @@ const siteConfig = {
 
 export default function Home() {
   const activeSection = useActiveSection();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768 || /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   return (
     <VideoManagerProvider>
+      {/* 전체 페이지 고정 배경 */}
+      {!isMobile ? (
+        // 데스크톱: CSS 고정 배경
+        <div
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100vw',
+            height: '100vh',
+            backgroundImage: "url('/mb.png')",
+            backgroundSize: '400px 400px',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundAttachment: 'fixed',
+            zIndex: -1
+          }}
+        />
+      ) : (
+        // 모바일: body 배경으로 설정
+        <style jsx global>{`
+          body {
+            background-image: url('/mb.png') !important;
+            background-size: 400px 400px !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-attachment: fixed !important;
+          }
+        `}</style>
+      )}
       <div style={{
         fontFamily: siteConfig.theme.typography.fontFamily.primary,
-        backgroundColor: siteConfig.theme.colors.background,
-        color: siteConfig.theme.colors.text.primary
+        backgroundColor: 'transparent',
+        color: siteConfig.theme.colors.text.primary,
+        position: 'relative',
+        zIndex: 1
       }}>
         <Navigation activeSection={activeSection} config={siteConfig} />
         <main>

@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { useState, useEffect } from 'react';
 
 interface ComparisonSectionProps {
   config: any;
@@ -10,17 +9,6 @@ interface ComparisonSectionProps {
 
 export default function ComparisonSection({ config }: ComparisonSectionProps) {
   const { t } = useLanguage();
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768 || /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
-    };
-
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -64,38 +52,6 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
         minHeight: '100vh'
       }}
     >
-      {/* 배경 이미지 - 모바일과 데스크톱 다르게 처리 */}
-      {!isMobile ? (
-        // 데스크톱: 고정 배경
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: "url('/mb-clear.png')",
-            backgroundSize: '400px 400px',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            backgroundAttachment: 'fixed'
-          }}
-        />
-      ) : (
-        // 모바일: 화면에 고정된 배경
-        <div
-          style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            width: '100vw',
-            height: '100vh',
-            backgroundImage: "url('/mb-clear.png')",
-            backgroundSize: '400px 400px',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            zIndex: -1,
-            transform: 'translateZ(0)',
-            willChange: 'transform'
-          }}
-        />
-      )}
       <div 
         className="absolute inset-0"
         style={{
