@@ -238,20 +238,42 @@ const siteConfig = {
 export default function Home() {
   const activeSection = useActiveSection();
   const [showBackground, setShowBackground] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [backgroundPosition, setBackgroundPosition] = useState('center center');
 
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
     const handleScroll = () => {
       const comparisonSection = document.getElementById('comparison');
       if (comparisonSection) {
         const rect = comparisonSection.getBoundingClientRect();
-        setShowBackground(rect.top <= window.innerHeight);
+        const shouldShow = rect.top <= window.innerHeight;
+        setShowBackground(shouldShow);
+
+        // 모바일에서만 스크롤 위치에 따른 배경 위치 조정
+        if (shouldShow && isMobile) {
+          const scrollY = window.pageYOffset;
+          const viewportHeight = window.innerHeight;
+          const backgroundY = scrollY + viewportHeight / 2;
+          setBackgroundPosition(`center ${backgroundY}px`);
+        }
       }
     };
 
     handleScroll();
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', checkMobile);
+    };
+  }, [isMobile]);
 
   return (
     <VideoManagerProvider>
@@ -260,21 +282,23 @@ export default function Home() {
         body {
           background-image: ${showBackground ? "url('/mb.png')" : 'none'} !important;
           background-size: 400px 400px !important;
-          background-position: center center !important;
+          background-position: ${isMobile ? backgroundPosition : 'center center'} !important;
           background-repeat: no-repeat !important;
-          background-attachment: fixed !important;
+          background-attachment: ${isMobile ? 'scroll' : 'fixed'} !important;
         }
 
-        /* 모바일에서 배경 고정 처리 */
+        /* 모바일에서 배경 위치 최적화 */
         @media (max-width: 768px) {
           body {
             background-attachment: scroll !important;
           }
 
-          /* iOS Safari 전용 */
+          /* iOS Safari 전용 최적화 */
           @supports (-webkit-touch-callout: none) {
             body {
-              background-attachment: local !important;
+              background-attachment: scroll !important;
+              -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
             }
           }
         }
