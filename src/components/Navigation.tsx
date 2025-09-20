@@ -101,9 +101,7 @@ export default function Navigation({ activeSection, config }: NavigationProps) {
                   className="w-auto object-contain transition-all duration-300 group-hover:brightness-110"
                   style={{
                     height: 'clamp(50px, 5vw, 70px)',
-                    filter: isScrolled
-                      ? 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))'
-                      : 'brightness(0) invert(1) drop-shadow(0 2px 4px rgba(0,0,0,0.1))',
+                    filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))',
                     transform: 'translateZ(0)'
                   }}
                 />

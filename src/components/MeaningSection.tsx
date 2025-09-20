@@ -89,9 +89,9 @@ export default function MeaningSection({ config }: MeaningSectionProps) {
                 
               </div>
 
-              <div className="flex justify-between items-center relative z-10 max-w-6xl mx-auto px-8">
-                <div className="text-left">
-                  <p 
+              <div className="flex flex-col md:flex-row md:justify-between items-center relative z-10 max-w-6xl mx-auto px-4 sm:px-8 gap-4 md:gap-0">
+                <div className="text-center md:text-left">
+                  <p
                     className="text-lg font-medium"
                     style={{ 
                       color: 'rgba(255, 255, 255, 0.9)',
@@ -101,7 +101,7 @@ export default function MeaningSection({ config }: MeaningSectionProps) {
                     {t('about.meaning.line1')}
                   </p>
                 </div>
-                <div className="text-right">
+                <div className="text-center md:text-right">
                   <p 
                     className="text-lg leading-relaxed"
                     style={{ 
@@ -116,7 +116,7 @@ export default function MeaningSection({ config }: MeaningSectionProps) {
 
               {/* Footer Section */}
               <div className="relative z-10 mt-16 pt-12 border-t border-white border-opacity-20">
-                <div className="max-w-6xl mx-auto px-8">
+                <div className="max-w-6xl mx-auto px-4 sm:px-8">
                   <div className="grid md:grid-cols-3 gap-8 text-center md:text-left">
                     
                     {/* Company Info */}

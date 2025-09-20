@@ -286,9 +286,9 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
             {t('comparison.clearChoice')}
           </h3>
           
-          <div className="max-w-6xl mx-auto">
-            {/* 모든 화면 크기에서 항상 좌우 배치 */}
-            <div className="flex flex-row gap-4 md:gap-8">
+          <div className="max-w-6xl mx-auto px-4">
+            {/* 모바일: 세로 배치, 데스크톱: 가로 배치 */}
+            <div className="flex flex-col md:flex-row gap-4 md:gap-8">
               {/* 레이저 치료 */}
               <motion.div
                 className="h-full p-4 sm:p-8 rounded-3xl shadow-xl border-2 flex-1"
