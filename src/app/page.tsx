@@ -238,16 +238,8 @@ const siteConfig = {
 export default function Home() {
   const activeSection = useActiveSection();
   const [showBackground, setShowBackground] = useState(false);
-  const [viewportSize, setViewportSize] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
-    const updateViewport = () => {
-      setViewportSize({
-        width: window.innerWidth,
-        height: window.innerHeight
-      });
-    };
-
     const handleScroll = () => {
       const comparisonSection = document.getElementById('comparison');
       if (comparisonSection) {
@@ -256,43 +248,31 @@ export default function Home() {
       }
     };
 
-    // 초기 viewport 크기 설정
-    updateViewport();
     handleScroll();
-
     window.addEventListener('scroll', handleScroll);
-    window.addEventListener('resize', updateViewport);
-    window.addEventListener('orientationchange', updateViewport);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', updateViewport);
-      window.removeEventListener('orientationchange', updateViewport);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <VideoManagerProvider>
-      {/* ComparisonSection부터 시작하는 고정 배경 - 헤더처럼 고정 */}
-      {showBackground && viewportSize.width > 0 && (
+      {/* ComparisonSection부터 시작하는 배경 - 스크롤을 따라다니는 고정 배경 */}
+      {showBackground && (
         <div
           style={{
             position: 'fixed',
             top: 0,
             left: 0,
-            width: `${viewportSize.width}px`,
-            height: `${viewportSize.height}px`,
+            width: '100vw',
+            height: '100vh',
             backgroundImage: "url('/mb.png')",
             backgroundSize: '400px 400px',
-            backgroundPosition: 'center',
+            backgroundPosition: 'center center',
             backgroundRepeat: 'no-repeat',
+            backgroundAttachment: 'fixed',
             zIndex: -10,
             pointerEvents: 'none',
             opacity: 1,
-            transition: 'opacity 0.3s ease-in-out',
-            transform: 'translate3d(0, 0, 0)',
-            willChange: 'transform',
-            backfaceVisibility: 'hidden'
+            transition: 'opacity 0.3s ease-in-out'
           }}
         />
       )}
