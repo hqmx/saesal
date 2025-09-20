@@ -238,28 +238,45 @@ const siteConfig = {
 export default function Home() {
   const activeSection = useActiveSection();
   const [showBackground, setShowBackground] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768);
+    };
+
     const handleScroll = () => {
       const comparisonSection = document.getElementById('comparison');
       if (comparisonSection) {
         const rect = comparisonSection.getBoundingClientRect();
         setShowBackground(rect.top <= window.innerHeight);
       }
+
+      // 모바일에서 스크롤 위치 추적
+      if (isMobile) {
+        setScrollY(window.scrollY);
+      }
     };
 
+    checkMobile();
     handleScroll();
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener('resize', checkMobile);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', checkMobile);
+    };
+  }, [isMobile]);
 
   return (
     <VideoManagerProvider>
-      {/* ComparisonSection부터 시작하는 배경 - 스크롤을 따라다니는 고정 배경 */}
+      {/* ComparisonSection부터 시작하는 배경 - 모바일에서 스크롤 추적 */}
       {showBackground && (
         <div
           style={{
-            position: 'fixed',
+            position: isMobile ? 'absolute' : 'fixed',
             top: 0,
             left: 0,
             width: '100vw',
@@ -268,11 +285,13 @@ export default function Home() {
             backgroundSize: '400px 400px',
             backgroundPosition: 'center center',
             backgroundRepeat: 'no-repeat',
-            backgroundAttachment: 'fixed',
+            backgroundAttachment: isMobile ? 'scroll' : 'fixed',
+            transform: isMobile ? `translateY(${scrollY}px)` : 'none',
             zIndex: -10,
             pointerEvents: 'none',
             opacity: 1,
-            transition: 'opacity 0.3s ease-in-out'
+            transition: 'opacity 0.3s ease-in-out',
+            willChange: isMobile ? 'transform' : 'auto'
           }}
         />
       )}
