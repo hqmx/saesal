@@ -13,7 +13,8 @@ const HeroSection = memo(function HeroSection({ config }: HeroSectionProps) {
   const { t, language } = useLanguage();
   const [isBackgroundLoaded, setIsBackgroundLoaded] = useState(false);
   const { videoRef, isInView, isLoaded, handleLoadedData, handleEnded, handleTimeUpdate } = useLazyVideo({
-    threshold: 0.1
+    threshold: 0.1,
+    videoId: 'hero'
   });
   const [showContent, setShowContent] = useState(true);
 
@@ -53,8 +54,8 @@ const HeroSection = memo(function HeroSection({ config }: HeroSectionProps) {
       >
         {isInView && (
           <>
-            <source media="(max-width: 768px)" src="/heromob.webm" type="video/webm" />
-            <source src="/hero.webm" type="video/webm" />
+            <source media="(max-width: 768px)" src="/mobbg.webm" type="video/webm" />
+            <source src="/4kbg.webm" type="video/webm" />
           </>
         )}
       </video>

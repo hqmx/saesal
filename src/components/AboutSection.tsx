@@ -83,7 +83,7 @@ export default function AboutSection({ config }: AboutSectionProps) {
               {/* Solution 이미지 */}
               <div className="relative z-10 flex items-center justify-center">
                 <div
-                  className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-3xl shadow-2xl"
+                  className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64"
                   style={{
                     backgroundImage: "url('/solution.png')",
                     backgroundSize: 'contain',

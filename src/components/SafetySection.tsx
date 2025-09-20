@@ -11,7 +11,8 @@ interface SafetySectionProps {
 export default function SafetySection({ config }: SafetySectionProps) {
   const { t } = useLanguage();
   const { videoRef, isInView, isLoaded, handleLoadedData, handleEnded, handleTimeUpdate } = useLazyVideo({
-    threshold: 0.2
+    threshold: 0.2,
+    videoId: 'safety'
   });
   
   return (
@@ -41,8 +42,8 @@ export default function SafetySection({ config }: SafetySectionProps) {
       >
         {isInView && (
           <>
-            <source media="(max-width: 768px)" src="/safemob.webm" type="video/webm" />
-            <source src="/safe.webm" type="video/webm" />
+            <source media="(max-width: 768px)" src="/safemobbg.webm" type="video/webm" />
+            <source src="/safebgwebm.webm" type="video/webm" />
           </>
         )}
       </video>

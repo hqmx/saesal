@@ -10,6 +10,7 @@ import SafetySection from '@/components/SafetySection';
 import ContactSection from '@/components/ContactSection';
 import MeaningSection from '@/components/MeaningSection';
 import { useActiveSection } from '@/hooks/useActiveSection';
+import { VideoManagerProvider } from '@/contexts/VideoManagerContext';
 
 const siteConfig = {
   "theme": {
@@ -238,21 +239,23 @@ export default function Home() {
   const activeSection = useActiveSection();
 
   return (
-    <div style={{ 
-      fontFamily: siteConfig.theme.typography.fontFamily.primary,
-      backgroundColor: siteConfig.theme.colors.background,
-      color: siteConfig.theme.colors.text.primary
-    }}>
-      <Navigation activeSection={activeSection} config={siteConfig} />
-      <main>
-        <HeroSection config={siteConfig} />
-        <AboutSection config={siteConfig} />
-        <ComparisonSection config={siteConfig} />
-        <ProcessSection config={siteConfig} />
-        <SafetySection config={siteConfig} />
-        <ContactSection config={siteConfig} />
-        <MeaningSection config={siteConfig} />
-      </main>
-    </div>
+    <VideoManagerProvider>
+      <div style={{
+        fontFamily: siteConfig.theme.typography.fontFamily.primary,
+        backgroundColor: siteConfig.theme.colors.background,
+        color: siteConfig.theme.colors.text.primary
+      }}>
+        <Navigation activeSection={activeSection} config={siteConfig} />
+        <main>
+          <HeroSection config={siteConfig} />
+          <AboutSection config={siteConfig} />
+          <ComparisonSection config={siteConfig} />
+          <ProcessSection config={siteConfig} />
+          <SafetySection config={siteConfig} />
+          <ContactSection config={siteConfig} />
+          <MeaningSection config={siteConfig} />
+        </main>
+      </div>
+    </VideoManagerProvider>
   );
 }

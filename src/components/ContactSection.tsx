@@ -234,8 +234,7 @@ export default function ContactSection({ config }: ContactSectionProps) {
         backgroundImage: "url('/mb-clear.png')",
         backgroundSize: '400px 400px',
         backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed'
+        backgroundRepeat: 'no-repeat'
       }}
     >
       <div 

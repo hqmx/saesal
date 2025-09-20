@@ -11,7 +11,8 @@ interface MeaningSectionProps {
 export default function MeaningSection({ config }: MeaningSectionProps) {
   const { t } = useLanguage();
   const { videoRef, isInView, isLoaded, handleLoadedData, handleEnded, handleTimeUpdate } = useLazyVideo({
-    threshold: 0.3
+    threshold: 0.3,
+    videoId: 'meaning'
   });
   const { about } = config.components;
   
@@ -43,8 +44,8 @@ export default function MeaningSection({ config }: MeaningSectionProps) {
       >
         {isInView && (
           <>
-            <source media="(max-width: 768px)" src="/footermob.webm" type="video/webm" />
-            <source src="/footer.webm" type="video/webm" />
+            <source media="(max-width: 768px)" src="/footermobbgwebm.webm" type="video/webm" />
+            <source src="/meaningbg.webm" type="video/webm" />
           </>
         )}
       </video>

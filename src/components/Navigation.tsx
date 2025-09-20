@@ -14,6 +14,7 @@ export default function Navigation({ activeSection, config }: NavigationProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   const navigationItems = [
     { id: 'about', label: t('nav.about'), href: '#about' },
@@ -29,8 +30,19 @@ export default function Navigation({ activeSection, config }: NavigationProps) {
       setIsScrolled(window.scrollY > 100);
     };
 
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+
+    // 초기 설정
+    handleResize();
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   const handleNavClick = (href: string) => {
@@ -83,14 +95,14 @@ export default function Navigation({ activeSection, config }: NavigationProps) {
                 onClick={() => handleNavClick('#hero')}
                 className="flex items-center group transition-transform duration-300 hover:scale-105 hover:shadow-lg"
               >
-                <img 
-                  src="/logo.png" 
-                  alt="SæsaL Logo" 
+                <img
+                  src="/logo.png"
+                  alt="SæsaL Logo"
                   className="w-auto object-contain transition-all duration-300 group-hover:brightness-110"
-                  style={{ 
-                    height: 'clamp(50px, 5vw, 70px)', 
-                    filter: isScrolled 
-                      ? 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))' 
+                  style={{
+                    height: 'clamp(50px, 5vw, 70px)',
+                    filter: (isScrolled && !isMobile)
+                      ? 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))'
                       : 'brightness(0) invert(1) drop-shadow(0 2px 4px rgba(0,0,0,0.1))',
                     transform: 'translateZ(0)'
                   }}

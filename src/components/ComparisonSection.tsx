@@ -45,15 +45,14 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
   };
 
   return (
-    <section 
-      id="comparison" 
+    <section
+      id="comparison"
       className="relative pt-20 pb-0 px-2 sm:px-4 overflow-x-hidden w-full"
       style={{
         backgroundImage: "url('/mb-clear.png')",
         backgroundSize: '400px 400px',
         backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed'
+        backgroundRepeat: 'no-repeat'
       }}
     >
       <div 
@@ -112,7 +111,6 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
               backgroundColor: 'rgba(254, 226, 226, 0.6)',
               borderColor: '#fca5a5'
             }}
-            whileHover={{ y: -5, transition: { duration: 0.3 } }}
           >
             <div className="text-center mb-8">
               <div className="w-20 h-20 mx-auto mb-6 bg-red-100 rounded-full flex items-center justify-center shadow-lg">
@@ -145,7 +143,6 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
                   style={{
                     backgroundColor: 'rgba(255, 255, 255, 0.8)'
                   }}
-                  whileHover={{ scale: 1.02 }}
                 >
                   <div className="flex items-start space-x-4">
                     <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
@@ -177,7 +174,6 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
               backgroundColor: `${config.theme.colors.secondary}10`,
               borderColor: config.theme.colors.secondary
             }}
-            whileHover={{ y: -5, transition: { duration: 0.3 } }}
           >
             <div className="text-center mb-8">
               <div 
@@ -222,7 +218,6 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
                     backgroundColor: config.theme.colors.surface,
                     borderColor: `${config.theme.colors.secondary}30`
                   }}
-                  whileHover={{ scale: 1.02 }}
                 >
                   <div className="flex items-start space-x-4">
                     <div 
@@ -276,9 +271,8 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.3 }}
           className="p-6 lg:p-10 mt-8"
-          whileHover={{ y: -5 }}
         >
           <h3 
             className="font-medium mb-8 text-center"
@@ -295,7 +289,7 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
             {/* 모든 화면 크기에서 항상 좌우 배치 */}
             <div className="flex flex-row gap-4 md:gap-8">
               {/* 레이저 치료 */}
-              <motion.div 
+              <motion.div
                 className="h-full p-4 sm:p-8 rounded-3xl shadow-xl border-2 flex-1"
                 style={{
                   backgroundColor: 'rgba(254, 226, 226, 0.3)',
@@ -304,8 +298,7 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -5, transition: { duration: 0.3 } }}
+                viewport={{ once: true, amount: 0.5 }}
               >
                 <div className="text-center">
                   <div 
@@ -362,7 +355,7 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
                       >
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
                       </svg>
-                      <span className="text-gray-900 font-semibold text-left">{t('comparison.laser.aftercare.title')}</span>
+                      <span className="text-gray-900 font-semibold text-left whitespace-nowrap">{t('comparison.laser.aftercare.title')}</span>
                     </div>
                   </div>
                 </div>
@@ -378,8 +371,7 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -5, transition: { duration: 0.3 } }}
+                viewport={{ once: true, amount: 0.5 }}
               >
                 <div className="text-center">
                   <div 
