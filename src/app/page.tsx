@@ -243,7 +243,15 @@ export default function Home() {
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768);
+      const isIOSDevice = /iPad|iPhone|iPod/.test(navigator.userAgent);
+      const isMobileDevice = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
+      setIsMobile(isMobileDevice);
+
+      // iOS에서 viewport height 문제 해결
+      if (isIOSDevice) {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+      }
     };
 
     const handleScroll = () => {
@@ -253,9 +261,11 @@ export default function Home() {
         setShowBackground(rect.top <= window.innerHeight);
       }
 
-      // 모바일에서 스크롤 위치 추적
+      // 모바일에서 스크롤 위치 추적 (성능 최적화)
       if (isMobile) {
-        setScrollY(window.scrollY);
+        requestAnimationFrame(() => {
+          setScrollY(window.pageYOffset || window.scrollY);
+        });
       }
     };
 
@@ -280,7 +290,7 @@ export default function Home() {
             top: 0,
             left: 0,
             width: '100vw',
-            height: '100vh',
+            height: isMobile ? 'calc(var(--vh, 1vh) * 100)' : '100vh',
             backgroundImage: "url('/mb.png')",
             backgroundSize: '400px 400px',
             backgroundPosition: 'center center',
