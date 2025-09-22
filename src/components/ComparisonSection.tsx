@@ -291,7 +291,7 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
           animate={{ opacity: 1 }}
           className="p-6 lg:p-10 mt-8 rounded-3xl"
           style={{
-            backgroundColor: 'rgba(255, 255, 255, 0.9)',
+            backgroundColor: 'transparent',
             touchAction: 'pan-y',
             contain: 'layout style'
           }}
