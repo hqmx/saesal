@@ -58,7 +58,7 @@ export default function AboutSection({ config }: AboutSectionProps) {
           </p>
         </div>
 
-        <StaggeredAnimationContainer className="grid lg:grid-cols-2 gap-16 items-center mb-20" delay={200}>
+        <StaggeredAnimationContainer className="flex flex-col items-center gap-16 mb-20" delay={200}>
           <StaggeredItem>
             <div className="relative flex items-center justify-center min-h-[400px]">
               {/* 배경 오버레이 */}
@@ -66,18 +66,6 @@ export default function AboutSection({ config }: AboutSectionProps) {
                 className="absolute inset-0 rounded-3xl overflow-hidden"
                 style={{
                   backgroundColor: 'rgba(255, 255, 255, 0.05)'
-                }}
-              ></div>
-
-              {/* mb-clear.png 배경 */}
-              <div
-                className="absolute inset-0 flex items-center justify-center z-5"
-                style={{
-                  backgroundImage: "url('/mb-clear.png')",
-                  backgroundSize: '300px 300px',
-                  backgroundPosition: 'center',
-                  backgroundRepeat: 'no-repeat',
-                  opacity: 0.6
                 }}
               ></div>
 
@@ -114,7 +102,7 @@ export default function AboutSection({ config }: AboutSectionProps) {
           </StaggeredItem>
 
           <StaggeredItem>
-            <div className="space-y-8">
+            <div className="space-y-8 max-w-4xl">
               <div className="rounded-2xl p-6 shadow-lg border-l-4" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', borderColor: config.theme.colors.primary }}>
                 <h4
                   className="text-2xl font-medium mb-4"
