@@ -3,8 +3,9 @@
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Deployment Information
-- **EC2 Server**: 98.89.19.16
+- **EC2 Server**: 54.83.83.238 (ubuntu 계정 사용)
 - **Key File**: hqmx-ec2.pem
+- **SSH Connection**: `ssh -i hqmx-ec2.pem ubuntu@54.83.83.238`
 - **Production Commands**: PM2로 배포 관리
   ```bash
   git pull origin main

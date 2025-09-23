@@ -127,7 +127,7 @@ export default function MeaningSection({ config }: MeaningSectionProps) {
               </div>
 
               {/* Footer Section */}
-              <div className="relative z-10 mt-16 pt-12 border-t border-white border-opacity-20">
+              <div className="relative z-10 mt-24 pt-16 border-t border-white border-opacity-20">
                 <div className="max-w-6xl mx-auto px-4 sm:px-8">
                   <div className="grid md:grid-cols-3 gap-8 text-center md:text-left">
                     
@@ -187,8 +187,8 @@ export default function MeaningSection({ config }: MeaningSectionProps) {
                   </div>
 
                   {/* Copyright */}
-                  <div className="mt-12 pt-8 border-t border-white border-opacity-20 text-center">
-                    <p 
+                  <div className="mt-16 pt-12 border-t border-white border-opacity-20 text-center pb-16">
+                    <p
                       className="text-sm"
                       style={{ color: 'rgba(255, 255, 255, 0.5)' }}
                     >
