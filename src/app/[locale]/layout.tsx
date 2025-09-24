@@ -13,10 +13,10 @@ const localeMetadata: Record<string, {
   ogDescription: string;
 }> = {
   en: {
-    title: "SæsaL - Revolutionary Tattoo Removal Treatment | Safe & Natural",
-    description: "SæsaL offers revolutionary tattoo removal in just 4 sessions. 100% natural, safe, and works on all colors. No burn scars, no pain. Alternative to laser treatment.",
+    title: "SaesaL - Revolutionary Tattoo Removal Treatment | Safe & Natural",
+    description: "SaesaL offers revolutionary tattoo removal in just 4 sessions. 100% natural, safe, and works on all colors. No burn scars, no pain. Alternative to laser treatment.",
     keywords: "tattoo removal, saesal, natural tattoo removal, laser alternative, tattoo removal treatment, safe tattoo removal, tattoo ink removal",
-    ogTitle: "SæsaL - Revolutionary Tattoo Removal Treatment",
+    ogTitle: "SaesaL - Revolutionary Tattoo Removal Treatment",
     ogDescription: "Revolutionary tattoo removal in just 4 sessions. 100% natural, safe, and works on all colors."
   },
   ko: {
@@ -27,59 +27,59 @@ const localeMetadata: Record<string, {
     ogDescription: "단 4회 세션으로 혁신적인 타투 제거. 100% 자연스럽고 안전하며 모든 색상에 효과적."
   },
   ja: {
-    title: "SæsaL - 革新的なタトゥー除去治療 | 安全で自然",
-    description: "SæsaLはわずか4セッションで革新的なタトゥー除去を提供。100%自然で安全、すべての色に効果的。火傷の傷跡や痛みなし。レーザー治療の代替。",
+    title: "SaesaL - 革新的なタトゥー除去治療 | 安全で自然",
+    description: "SaesaLはわずか4セッションで革新的なタトゥー除去を提供。100%自然で安全、すべての色に効果的。火傷の傷跡や痛みなし。レーザー治療の代替。",
     keywords: "タトゥー除去, saesal, 自然なタトゥー除去, レーザー代替, タトゥー除去治療, 安全なタトゥー除去, タトゥーインク除去",
-    ogTitle: "SæsaL - 革新的なタトゥー除去治療",
+    ogTitle: "SaesaL - 革新的なタトゥー除去治療",
     ogDescription: "わずか4セッションで革新的なタトゥー除去。100%自然で安全、すべての色に効果的。"
   },
   zh: {
-    title: "SæsaL - 革命性纹身去除治疗 | 安全自然",
-    description: "SæsaL仅需4次疗程即可提供革命性纹身去除。100%天然安全，对所有颜色有效。无烧伤疤痕，无痛苦。激光治疗的替代方案。",
+    title: "SaesaL - 革命性纹身去除治疗 | 安全自然",
+    description: "SaesaL仅需4次疗程即可提供革命性纹身去除。100%天然安全，对所有颜色有效。无烧伤疤痕，无痛苦。激光治疗的替代方案。",
     keywords: "纹身去除, saesal, 天然纹身去除, 激光替代, 纹身去除治疗, 安全纹身去除, 纹身墨水去除",
-    ogTitle: "SæsaL - 革命性纹身去除治疗",
+    ogTitle: "SaesaL - 革命性纹身去除治疗",
     ogDescription: "仅需4次疗程即可革命性纹身去除。100%天然安全，对所有颜色有效。"
   },
   'zh-tw': {
-    title: "SæsaL - 革命性刺青去除治療 | 安全自然",
-    description: "SæsaL僅需4次療程即可提供革命性刺青去除。100%天然安全，對所有顏色有效。無燒傷疤痕，無痛苦。雷射治療的替代方案。",
+    title: "SaesaL - 革命性刺青去除治療 | 安全自然",
+    description: "SaesaL僅需4次療程即可提供革命性刺青去除。100%天然安全，對所有顏色有效。無燒傷疤痕，無痛苦。雷射治療的替代方案。",
     keywords: "刺青去除, saesal, 天然刺青去除, 雷射替代, 刺青去除治療, 安全刺青去除, 刺青墨水去除",
-    ogTitle: "SæsaL - 革命性刺青去除治療",
+    ogTitle: "SaesaL - 革命性刺青去除治療",
     ogDescription: "僅需4次療程即可革命性刺青去除。100%天然安全，對所有顏色有效。"
   },
   th: {
-    title: "SæsaL - การรักษาเลเซอร์ลบรอยสักแบบปฏิวัติ | ปลอดภัยและธรรมชาติ",
-    description: "SæsaL นำเสนอการลบรอยสักแบบปฏิวัติในเพียง 4 เซสชัน 100% ธรรมชาติ ปลอดภัย และได้ผลกับทุกสี ไม่มีแผลเป็น ไม่เจ็บ ทางเลือกแทนการรักษาด้วยเลเซอร์",
+    title: "SaesaL - การรักษาเลเซอร์ลบรอยสักแบบปฏิวัติ | ปลอดภัยและธรรมชาติ",
+    description: "SaesaL นำเสนอการลบรอยสักแบบปฏิวัติในเพียง 4 เซสชัน 100% ธรรมชาติ ปลอดภัย และได้ผลกับทุกสี ไม่มีแผลเป็น ไม่เจ็บ ทางเลือกแทนการรักษาด้วยเลเซอร์",
     keywords: "ลบรอยสัก, saesal, ลบรอยสักธรรมชาติ, ทางเลือกแทนเลเซอร์, การรักษาลบรอยสัก, ลบรอยสักปลอดภัย, ลบหมึกรอยสัก",
-    ogTitle: "SæsaL - การรักษาเลเซอร์ลบรอยสักแบบปฏิวัติ",
+    ogTitle: "SaesaL - การรักษาเลเซอร์ลบรอยสักแบบปฏิวัติ",
     ogDescription: "การลบรอยสักแบบปฏิวัติในเพียง 4 เซสชัน 100% ธรรมชาติ ปลอดภัย และได้ผลกับทุกสี"
   },
   vi: {
-    title: "SæsaL - Phương Pháp Xóa Xăm Cách Mạng | An Toàn & Tự Nhiên",
-    description: "SæsaL cung cấp phương pháp xóa xăm cách mạng chỉ trong 4 phiên. 100% tự nhiên, an toàn, hiệu quả với mọi màu sắc. Không sẹo bỏng, không đau. Thay thế cho điều trị laser.",
+    title: "SaesaL - Phương Pháp Xóa Xăm Cách Mạng | An Toàn & Tự Nhiên",
+    description: "SaesaL cung cấp phương pháp xóa xăm cách mạng chỉ trong 4 phiên. 100% tự nhiên, an toàn, hiệu quả với mọi màu sắc. Không sẹo bỏng, không đau. Thay thế cho điều trị laser.",
     keywords: "xóa xăm, saesal, xóa xăm tự nhiên, thay thế laser, điều trị xóa xăm, xóa xăm an toàn, loại bỏ mực xăm",
-    ogTitle: "SæsaL - Phương Pháp Xóa Xăm Cách Mạng",
+    ogTitle: "SaesaL - Phương Pháp Xóa Xăm Cách Mạng",
     ogDescription: "Phương pháp xóa xăm cách mạng chỉ trong 4 phiên. 100% tự nhiên, an toàn, hiệu quả với mọi màu sắc."
   },
   es: {
-    title: "SæsaL - Tratamiento Revolucionario para Eliminar Tatuajes | Seguro y Natural",
-    description: "SæsaL ofrece eliminación revolucionaria de tatuajes en solo 4 sesiones. 100% natural, seguro y funciona en todos los colores. Sin cicatrices de quemaduras, sin dolor. Alternativa al tratamiento láser.",
+    title: "SaesaL - Tratamiento Revolucionario para Eliminar Tatuajes | Seguro y Natural",
+    description: "SaesaL ofrece eliminación revolucionaria de tatuajes en solo 4 sesiones. 100% natural, seguro y funciona en todos los colores. Sin cicatrices de quemaduras, sin dolor. Alternativa al tratamiento láser.",
     keywords: "eliminación de tatuajes, saesal, eliminación natural de tatuajes, alternativa láser, tratamiento eliminación tatuajes, eliminación segura tatuajes, eliminación tinta tatuajes",
-    ogTitle: "SæsaL - Tratamiento Revolucionario para Eliminar Tatuajes",
+    ogTitle: "SaesaL - Tratamiento Revolucionario para Eliminar Tatuajes",
     ogDescription: "Eliminación revolucionaria de tatuajes en solo 4 sesiones. 100% natural, seguro y funciona en todos los colores."
   },
   sv: {
-    title: "SæsaL - Revolutionerande Tatueringsborttagning | Säker & Naturlig",
-    description: "SæsaL erbjuder revolutionerande tatueringsborttagning på bara 4 sessioner. 100% naturlig, säker och fungerar på alla färger. Inga brännskador, ingen smärta. Alternativ till laserbehandling.",
+    title: "SaesaL - Revolutionerande Tatueringsborttagning | Säker & Naturlig",
+    description: "SaesaL erbjuder revolutionerande tatueringsborttagning på bara 4 sessioner. 100% naturlig, säker och fungerar på alla färger. Inga brännskador, ingen smärta. Alternativ till laserbehandling.",
     keywords: "tatueringsborttagning, saesal, naturlig tatueringsborttagning, laseralternativ, tatueringsborttagningsbehandling, säker tatueringsborttagning, tatueringsbläck borttagning",
-    ogTitle: "SæsaL - Revolutionerande Tatueringsborttagning",
+    ogTitle: "SaesaL - Revolutionerande Tatueringsborttagning",
     ogDescription: "Revolutionerande tatueringsborttagning på bara 4 sessioner. 100% naturlig, säker och fungerar på alla färger."
   },
   de: {
-    title: "SæsaL - Revolutionäre Tattoo-Entfernung | Sicher & Natürlich",
-    description: "SæsaL bietet revolutionäre Tattoo-Entfernung in nur 4 Sitzungen. 100% natürlich, sicher und wirkt bei allen Farben. Keine Verbrennungsnarben, keine Schmerzen. Alternative zur Laserbehandlung.",
+    title: "SaesaL - Revolutionäre Tattoo-Entfernung | Sicher & Natürlich",
+    description: "SaesaL bietet revolutionäre Tattoo-Entfernung in nur 4 Sitzungen. 100% natürlich, sicher und wirkt bei allen Farben. Keine Verbrennungsnarben, keine Schmerzen. Alternative zur Laserbehandlung.",
     keywords: "tattoo entfernung, saesal, natürliche tattoo entfernung, laser alternative, tattoo entfernung behandlung, sichere tattoo entfernung, tattoo tinte entfernung",
-    ogTitle: "SæsaL - Revolutionäre Tattoo-Entfernung",
+    ogTitle: "SaesaL - Revolutionäre Tattoo-Entfernung",
     ogDescription: "Revolutionäre Tattoo-Entfernung in nur 4 Sitzungen. 100% natürlich, sicher und wirkt bei allen Farben."
   }
 };
@@ -136,9 +136,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: metadata.title,
     description: metadata.description,
     keywords: metadata.keywords,
-    authors: [{ name: "SæsaL" }],
-    creator: "SæsaL",
-    publisher: "SæsaL",
+    authors: [{ name: "SaesaL" }],
+    creator: "SaesaL",
+    publisher: "SaesaL",
     formatDetection: {
       email: false,
       address: false,
@@ -153,13 +153,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: metadata.ogTitle,
       description: metadata.ogDescription,
       url: `https://saesal.hqmx.net/${locale === 'en' ? 'en' : (locale === 'ko' ? 'kr' : (locale === 'ja' ? 'jp' : locale))}`,
-      siteName: 'SæsaL',
+      siteName: 'SaesaL',
       images: [
         {
           url: 'https://saesal.hqmx.net/solution.png',
           width: 1200,
           height: 630,
-          alt: 'SæsaL - Revolutionary Tattoo Removal',
+          alt: 'SaesaL - Revolutionary Tattoo Removal',
         }
       ],
       locale: hreflangMap[locale],
@@ -199,7 +199,7 @@ export default function LocaleLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "MedicalBusiness",
-              "name": "SæsaL",
+              "name": "SaesaL",
               "description": localeMetadata[params.locale]?.description || localeMetadata.en.description,
               "url": `https://saesal.hqmx.net`,
               "logo": "https://saesal.hqmx.net/logo.png",

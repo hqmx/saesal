@@ -87,7 +87,7 @@ export default function AboutSection({ config }: AboutSectionProps) {
               <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20">
                 <OptimizedImage
                   src="/logo.png"
-                  alt="SæsaL Logo"
+                  alt="SaesaL Logo"
                   className="object-contain"
                   style={{
                     transform: 'scale(1.5)',

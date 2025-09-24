@@ -361,7 +361,7 @@ export default function ContactSection({ config }: ContactSectionProps) {
               <div className="flex justify-center mb-6">
                 <img 
                   src="/logo.png" 
-                  alt="SæsaL Logo" 
+                  alt="SaesaL Logo" 
                   className="h-12 object-contain"
                 />
               </div>

@@ -126,7 +126,7 @@ export default function Navigation({ activeSection, config }: NavigationProps) {
               >
                 <img
                   src={(!isScrolled && !isMobile) ? "/logo-white.png" : "/logo.png"}
-                  alt="SæsaL Logo"
+                  alt="SaesaL Logo"
                   className="w-auto object-contain transition-all duration-300 group-hover:brightness-110"
                   style={{
                     height: 'clamp(50px, 5vw, 70px)',

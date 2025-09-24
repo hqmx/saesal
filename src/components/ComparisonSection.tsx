@@ -383,7 +383,7 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
                 </div>
               </motion.div>
               
-              {/* SæsaL 치료 */}
+              {/* SaesaL 치료 */}
               <motion.div
                 className="h-full p-4 sm:p-8 rounded-3xl shadow-xl border-2 flex-1"
                 style={{
@@ -409,7 +409,7 @@ export default function ComparisonSection({ config }: ComparisonSectionProps) {
                     {t('comparison.saesal.sessions')}
                   </div>
                   
-                  {/* SæsaL 치료의 장점들 */}
+                  {/* SaesaL 치료의 장점들 */}
                   <div className="space-y-1.5 md:space-y-2 text-xs md:text-sm">
                     <div className="flex items-center justify-center space-x-1 md:space-x-2">
                       <svg 

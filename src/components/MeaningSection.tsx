@@ -136,7 +136,7 @@ export default function MeaningSection({ config }: MeaningSectionProps) {
                       <div className="flex justify-center md:justify-start">
                         <img 
                           src="/logo.png" 
-                          alt="SæsaL Logo" 
+                          alt="SaesaL Logo" 
                           className="h-12 object-contain"
                           style={{
                             filter: 'brightness(0) invert(1)'
@@ -192,7 +192,7 @@ export default function MeaningSection({ config }: MeaningSectionProps) {
                       className="text-sm"
                       style={{ color: 'rgba(255, 255, 255, 0.5)' }}
                     >
-                      © 2024 SæsaL. All rights reserved.
+                      © 2024 SaesaL. All rights reserved.
                     </p>
                   </div>
                 </div>

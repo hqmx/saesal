@@ -97,7 +97,7 @@ export async function POST(request: NextRequest) {
         <p><strong>첨부된 타투 이미지:</strong> ${tattooImages.length}장</p>
         <hr style="margin: 20px 0;">
         <p style="color: #666; font-size: 12px;">
-          이 이메일은 SæsaL 웹사이트의 상담 신청 폼을 통해 자동으로 전송되었습니다.<br>
+          이 이메일은 SaesaL 웹사이트의 상담 신청 폼을 통해 자동으로 전송되었습니다.<br>
           신청 시간: ${new Date().toLocaleString('ko-KR')}
         </p>
       `,

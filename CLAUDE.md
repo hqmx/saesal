@@ -3,6 +3,7 @@
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Deployment Information
+https://saesal.hqmx.net
 - **EC2 Server**: 54.83.83.238 (ubuntu 계정 사용)
 - **Key File**: hqmx-ec2.pem
 - **SSH Connection**: `ssh -i hqmx-ec2.pem ubuntu@54.83.83.238`
@@ -15,7 +16,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**SæsaL** is a Next.js 15 application for a tattoo removal service company. It's built as a landing page with multiple sections showcasing the SæsaL treatment method as an alternative to laser tattoo removal.
+**SaesaL** is a Next.js 15 application for a tattoo removal service company. It's built as a landing page with multiple sections showcasing the SæsaL treatment method as an alternative to laser tattoo removal.
 
 ## Development Commands
 
