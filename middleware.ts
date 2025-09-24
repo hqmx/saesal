@@ -67,7 +67,9 @@ export function middleware(request: NextRequest) {
   if (
     pathname.startsWith('/api/') ||
     pathname.startsWith('/_next/') ||
-    pathname.includes('.') // 파일 확장자가 있는 경우
+    pathname.startsWith('/_static/') ||
+    pathname.includes('.') || // 파일 확장자가 있는 경우
+    pathname.startsWith('/favicon')
   ) {
     return NextResponse.next();
   }
@@ -76,20 +78,24 @@ export function middleware(request: NextRequest) {
   const localeFromPath = getLocaleFromPath(pathname);
 
   if (localeFromPath) {
-    // 이미 언어 경로가 포함된 경우, 해당 언어로 처리
+    // 이미 언어 경로가 포함된 경우, 해당 언어로 내부 리라이팅
     const pathWithoutLocale = pathname.replace(`/${localeMap[localeFromPath]}`, '') || '/';
     const url = request.nextUrl.clone();
     url.pathname = `/${localeFromPath}${pathWithoutLocale}`;
     return NextResponse.rewrite(url);
   }
 
-  // 언어 경로가 없는 경우, 브라우저 언어 감지 후 리다이렉트
-  const detectedLocale = detectLocaleFromHeaders(request);
-  const redirectPath = localeMap[detectedLocale];
+  // 루트 경로 또는 언어 경로가 없는 경우만 리다이렉트
+  if (pathname === '/' || (!pathname.startsWith('/en') && !pathname.startsWith('/ko') && !pathname.startsWith('/ja'))) {
+    const detectedLocale = detectLocaleFromHeaders(request);
+    const redirectPath = localeMap[detectedLocale];
 
-  const url = request.nextUrl.clone();
-  url.pathname = `/${redirectPath}${pathname}`;
-  return NextResponse.redirect(url);
+    const url = request.nextUrl.clone();
+    url.pathname = `/${redirectPath}${pathname === '/' ? '' : pathname}`;
+    return NextResponse.redirect(url, 307); // 307 임시 리다이렉트로 변경
+  }
+
+  return NextResponse.next();
 }
 
 export const config = {
