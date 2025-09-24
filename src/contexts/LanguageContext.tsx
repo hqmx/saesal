@@ -38,16 +38,30 @@ const translations = {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>(defaultLanguage);
+interface LanguageProviderProps {
+  children: ReactNode;
+  initialLocale?: string;
+}
+
+export function LanguageProvider({ children, initialLocale }: LanguageProviderProps) {
+  const [language, setLanguageState] = useState<Language>(
+    (initialLocale as Language) || defaultLanguage
+  );
 
   // Initialize language on client side
   useEffect(() => {
+    // URL의 locale 파라미터가 있으면 우선 사용
+    if (initialLocale && languages[initialLocale as Language]) {
+      setLanguageState(initialLocale as Language);
+      saveLanguage(initialLocale as Language);
+      return;
+    }
+
     const stored = getStoredLanguage();
     const detected = detectBrowserLanguage();
-    const initialLanguage = stored || detected;
-    
-    setLanguageState(initialLanguage);
+    const finalLanguage = initialLocale || stored || detected;
+
+    setLanguageState(finalLanguage as Language);
   }, []);
 
   const setLanguage = (lang: Language) => {

@@ -296,7 +296,7 @@ export default function ContactSection({ config }: ContactSectionProps) {
                 </div>
                 
                 <h3 className="text-2xl lg:text-3xl font-bold mb-4">{t('contact.info.title')}</h3>
-                <p className="text-base lg:text-lg opacity-90 mb-6">
+                <p className="text-lg lg:text-xl opacity-90 mb-6">
                   {t('contact.info.subtitle')}
                 </p>
               </div>
@@ -311,7 +311,7 @@ export default function ContactSection({ config }: ContactSectionProps) {
                     </svg>
                     <h4 className="font-semibold text-lg">{t('contact.info.photo.title')}</h4>
                   </div>
-                  <p className="opacity-90 text-sm ml-7">{t('contact.info.photo.description')}</p>
+                  <p className="opacity-90 text-base ml-7">{t('contact.info.photo.description')}</p>
                 </div>
 
                 {/* Tattoo History */}
@@ -322,7 +322,7 @@ export default function ContactSection({ config }: ContactSectionProps) {
                     </svg>
                     <h4 className="font-semibold text-lg">{t('contact.info.history.title')}</h4>
                   </div>
-                  <p className="opacity-90 text-sm ml-7">{t('contact.info.history.description')}</p>
+                  <p className="opacity-90 text-base ml-7">{t('contact.info.history.description')}</p>
                 </div>
 
                 {/* Medical History */}
@@ -333,7 +333,7 @@ export default function ContactSection({ config }: ContactSectionProps) {
                     </svg>
                     <h4 className="font-semibold text-lg">{t('contact.info.medical.title')}</h4>
                   </div>
-                  <p className="opacity-90 text-sm ml-7">{t('contact.info.medical.description')}</p>
+                  <p className="opacity-90 text-base ml-7">{t('contact.info.medical.description')}</p>
                 </div>
 
                 {/* Skin Condition */}
@@ -344,7 +344,7 @@ export default function ContactSection({ config }: ContactSectionProps) {
                     </svg>
                     <h4 className="font-semibold text-lg">{t('contact.info.skin.title')}</h4>
                   </div>
-                  <p className="opacity-90 text-sm ml-7">{t('contact.info.skin.description')}</p>
+                  <p className="opacity-90 text-base ml-7">{t('contact.info.skin.description')}</p>
                 </div>
               </div>
             </div>
@@ -505,15 +505,24 @@ export default function ContactSection({ config }: ContactSectionProps) {
                   <label className="block font-semibold mb-2" style={{ color: config.theme.colors.text.primary }}>
                     {t('contact.form.images')}
                   </label>
-                  <input 
-                    type="file" 
-                    name="tattooImages"
-                    onChange={handleInputChange}
-                    multiple
-                    accept="image/*"
-                    className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
-                  />
-                  <p className="text-sm text-gray-500 mt-2">{t('contact.form.uploadPhotos')}</p>
+                  <div className="relative">
+                    <input
+                      type="file"
+                      name="tattooImages"
+                      onChange={handleInputChange}
+                      multiple
+                      accept="image/*"
+                      className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
+                      id="tattooImages"
+                    />
+                    <div className="w-full p-4 border-2 border-dashed border-gray-300 rounded-xl hover:border-blue-500 transition-all bg-gray-50 hover:bg-blue-50 cursor-pointer flex flex-col items-center justify-center min-h-[120px]">
+                      <svg className="w-8 h-8 text-gray-400 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                      </svg>
+                      <p className="text-sm font-medium text-gray-700 mb-1">{t('contact.form.uploadPhotos')}</p>
+                      <p className="text-xs text-gray-500">{t('contact.form.dragDrop')}</p>
+                    </div>
+                  </div>
                 </div>
                 
                 <div>

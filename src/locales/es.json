@@ -1,69 +1,224 @@
 {
+  "nav": {
+    "about": "Acerca de",
+    "comparison": "Comparación",
+    "process": "Proceso",
+    "safety": "Seguridad",
+    "contact": "Contacto"
+  },
   "hero": {
-    "title": "Tatuaje Sobre Tatuaje",
-    "subtitle": "La Tinta Se Eliminará",
+    "title": "Tatuaje sobre Tatuaje",
+    "subtitle": "La tinta se eliminará",
     "description": "Solución para eliminar tinta de tu piel"
   },
   "about": {
-    "title": "What is 'Saesal'?",
+    "title": "¿Qué es 'Saesal'?",
     "subtitle": "Manera perfecta y efectiva de eliminar la tinta del tatuaje de la piel",
-    "description": "'Saesal' resuelve todas las limitaciones del tratamiento láser"
+    "description": "'Saesal' resuelve todas las limitaciones del tratamiento láser",
+    "meaning": {
+      "title": "Significado de 'Saesal'",
+      "line1": "Significa \"Piel nueva\" en coreano.",
+      "line2": "Lleva a una nueva vida con piel nueva.<br />Crear un futuro más grande y brillante."
+    },
+    "revolutionary": {
+      "title": "Enfoque revolucionario",
+      "description": "A diferencia de los tratamientos láser tradicionales, Saesal trabaja con el sistema de curación natural de tu cuerpo para eliminar de forma segura y efectiva la tinta del tatuaje de todos los colores y tipos."
+    },
+    "natural": {
+      "title": "Natural y seguro",
+      "description": "Nuestra solución utiliza solo materiales naturales y orgánicos que ya son componentes del cuerpo humano, asegurando máxima seguridad y efectividad."
+    },
+    "fast": {
+      "title": "Resultados rápidos",
+      "description": "Eliminación completa del tatuaje en solo 4 sesiones, comparado con las 10+ sesiones requeridas por los tratamientos láser tradicionales."
+    }
   },
   "comparison": {
-    "title": "Laser vs Saesal",
-    "subtitle": "Vea la diferencia entre el tratamiento láser tradicional y nuestro método innovador Saesal"
+    "title": "Láser vs Saesal",
+    "subtitle": "Ve la diferencia entre el tratamiento láser tradicional y nuestro método innovador Saesal",
+    "clearChoice": "La elección clara",
+    "laser": {
+      "title": "Limitaciones del tratamiento láser",
+      "sessions": "Sesiones láser",
+      "traditional": "Tradicional",
+      "summary": "10+ sesiones requeridas • Proceso doloroso • Colores limitados",
+      "colorLimitation": {
+        "title": "Limitación de color",
+        "description": "El láser solo funciona en colores oscuros. La eliminación de colores cálidos y brillantes (rojo, amarillo, verde) es una gran limitación."
+      },
+      "painful": {
+        "title": "Proceso doloroso",
+        "description": "Técnicamente el tratamiento láser es quemar la piel, lo cual es el problema más doloroso del cuerpo humano. También causa cicatrices de quemadura."
+      },
+      "longProcess": {
+        "title": "Proceso largo",
+        "description": "Toma más de 10 sesiones para eliminar completamente el tatuaje. Si es un tatuaje a color, toma aún más sesiones."
+      },
+      "aftercare": {
+        "title": "Cuidado posterior difícil",
+        "description": "El tratamiento láser deja ampollas. Necesita un cuidado posterior más difícil."
+      }
+    },
+    "saesal": {
+      "title": "¿Qué hay de 'Saesal'?",
+      "sessions": "Sesiones Saesal",
+      "revolutionary": "Revolucionario",
+      "summary": "Solo 4 sesiones • Menos dolor • Todos los colores compatibles",
+      "allColors": {
+        "title": "Todos los colores",
+        "description": "'Saesal' funciona en todos los colores. También funciona en tatuajes cosméticos."
+      },
+      "safe": {
+        "title": "Proceso seguro",
+        "description": "No es eliminación láser. El tratamiento 'Saesal' es igual que tatuar. (Para aplicar, usando aguja de tatuaje)"
+      },
+      "fast": {
+        "title": "Resultados rápidos",
+        "description": "El tratamiento 'Saesal' solo toma 4 sesiones para eliminar completamente las tintas. Si es un tatuaje de línea simple, toma solo 2 sesiones."
+      },
+      "easycare": {
+        "title": "Cuidado fácil",
+        "description": "El tratamiento 'Saesal' solo deja costras, como un tatuaje. Y el cuidado posterior también es como un tatuaje."
+      }
+    }
   },
   "process": {
-    "title": "SæsaL Process",
-    "subtitle": "Proceso simple y efectivo de 4 pasos"
+    "title": "Proceso SæsaL",
+    "subtitle": "Proceso simple y efectivo de 4 pasos",
+    "comparison": {
+      "subtitle": "Ve la diferencia entre el tratamiento láser tradicional y nuestro método innovador Saesal"
+    },
+    "laser": {
+      "howWorks": "Cómo funciona el tratamiento láser",
+      "step1": {
+        "title": "Partículas de tinta bajo la piel",
+        "description": "Partículas grandes de tinta de tatuaje incrustadas en las capas de la piel"
+      },
+      "step2": {
+        "title": "El láser rompe las partículas",
+        "description": "El láser de alta energía rompe la tinta en fragmentos más pequeños"
+      },
+      "step3": {
+        "title": "Transporte por el torrente sanguíneo",
+        "description": "Las partículas viajan a través del torrente sanguíneo a los órganos"
+      },
+      "warning1": "El tratamiento láser se desvanece lentamente pero permanece visible durante las sesiones",
+      "warning2": "Requiere 10+ sesiones y puede causar cicatrices de quemadura",
+      "warning3": "Efectos desconocidos de las partículas de tinta acumulándose en los órganos"
+    },
+    "saesal": {
+      "howWorks": "Cómo funciona el tratamiento 'Saesal'",
+      "step1": {
+        "title": "Solución Saesal aplicada",
+        "description": "Proceso de tratamiento Saesal como tatuar"
+      },
+      "step2": {
+        "title": "Formación natural de costra",
+        "description": "El cuerpo forma una costra protectora que contiene tinta"
+      },
+      "step3": {
+        "title": "Eliminación natural de tinta",
+        "description": "La tinta sale naturalmente con la costra después de 2 semanas"
+      },
+      "benefit1": "Funciona en todos los colores incluyendo tatuajes cosméticos",
+      "benefit2": "Resultados visibles en solo una sesión - sin cicatrices de quemadura",
+      "benefit3": "Proceso 100% natural con curación más rápida"
+    },
+    "healing": {
+      "title": "Proceso de curación natural del tratamiento 'Saesal'",
+      "step1": {
+        "title": "Justo después de que las costras se caen",
+        "description": "La piel se ve rosada - esto es completamente normal durante el proceso de curación natural"
+      },
+      "step2": {
+        "title": "10-12 semanas después",
+        "description": "La piel se cura completamente y está lista para la siguiente sesión de tratamiento"
+      },
+      "timeline": {
+        "day": "Día del\ntratamiento",
+        "weeks2": "2 semanas\nCostras se caen",
+        "weeks12": "10-12 semanas\nCompletamente curado"
+      },
+      "whyChoose": "¿Por qué elegir Saesal?",
+      "benefit1": "Solo se necesitan 4 sesiones",
+      "benefit2": "Sin involucrar órganos internos",
+      "benefit3": "Funciona en todos los colores",
+      "benefit4": "Sin cicatrices de quemadura"
+    },
+    "step1": {
+      "title": "1. Consulta y análisis",
+      "description": "Analizar la condición del tatuaje y crear un plan de tratamiento personalizado"
+    },
+    "step2": {
+      "title": "2. Preparación del tratamiento",
+      "description": "Preparación de la piel y anestesia para un procedimiento seguro"
+    },
+    "step3": {
+      "title": "3. Aplicación SæsaL",
+      "description": "Aplicar precisamente la solución SæsaL usando técnica de aguja de tatuaje"
+    },
+    "step4": {
+      "title": "4. Cuidado posterior",
+      "description": "Gestión del proceso de recuperación y planificación de la siguiente sesión"
+    }
   },
   "safety": {
-    "title": "Solution is Safe?",
+    "title": "¿La solución es segura?",
     "answer": "¡Sí!",
     "description": "Nuestra solución utiliza ingredientes 100% naturales que son componentes esenciales del cuerpo humano - no químicos sintéticos, sino sustancias que se encuentran naturalmente en tu piel.",
-    "natural": "100% Natural",
-    "professional": "Professional Grade",
-    "bodyComponents": "Body Components", 
-    "guaranteed": "Safety Guaranteed"
+    "natural": "100% natural",
+    "professional": "Grado profesional",
+    "bodyComponents": "Componentes corporales",
+    "guaranteed": "Seguridad garantizada",
+    "naturalDescription": "Sustancias derivadas naturalmente encontradas en la naturaleza, no químicos creados en laboratorio",
+    "professionalDescription": "Ampliamente confiado en tratamientos estéticos y procedimientos dermatológicos en todo el mundo",
+    "bodyComponentsDescription": "Contiene los mismos compuestos que se encuentran naturalmente en el tejido corporal humano saludable",
+    "guarantee1": "Solo ingredientes biocompatibles derivados naturalmente",
+    "guarantee2": "Idéntico a las sustancias encontradas en la piel saludable",
+    "guarantee3": "Riesgo minimizado de reacciones adversas",
+    "guarantee4": "Apoya el proceso natural de regeneración de la piel",
+    "guarantee5": "Metabolizado de forma segura por el cuerpo",
+    "guarantee6": "Compatible con diversas condiciones de la piel"
   },
   "contact": {
     "title": "¡Contáctanos!",
     "subtitle": "Siempre estamos abiertos",
     "info": {
       "title": "Lista de verificación",
-      "subtitle": "Todo lo que necesitas saber antes de tu consulta",
+      "subtitle": "Todo lo que necesitas preparar antes de tu consulta",
       "photo": {
         "title": "Requisitos de foto",
-        "description": "Por favor, prepara fotos claras de tu tatuaje desde diferentes ángulos con buena iluminación en luz natural"
+        "description": "Por favor prepara fotos claras de tu tatuaje desde diferentes ángulos con buena iluminación en luz natural"
       },
       "history": {
-        "title": "Historia del tatuaje",
+        "title": "Historial del tatuaje",
         "description": "¿Cuándo te hiciste el tatuaje? La edad del tatuaje afecta la planificación del tratamiento y el número de sesiones"
       },
       "medical": {
-        "title": "Historia médica",
-        "description": "¿Tienes alguna condición médica existente, trastornos de la piel o alergias que debamos conocer?"
+        "title": "Historial médico",
+        "description": "¿Tienes alguna condición médica existente, trastornos de la piel o alergias que deberíamos saber?"
       },
       "skin": {
         "title": "Condiciones de la piel",
-        "description": "¿Algún tratamiento actual de la piel, medicamentos o condiciones dermatológicas en el área del tatuaje?"
+        "description": "¿Algún tratamiento de piel actual, medicamentos o condiciones dermatológicas en el área del tatuaje?"
       }
     },
     "form": {
       "subtitle": "¿Listo para comenzar tu viaje hacia una nueva piel?",
-      "privacy": "Al enviar este formulario, aceptas la recolección y uso de tu información personal para fines de consulta.",
+      "privacy": "Al enviar este formulario, aceptas la recopilación y uso de tu información personal para fines de consulta.",
       "send": "Enviar",
       "sending": "Enviando...",
       "name": "Nombre",
-      "email": "Email",
+      "email": "Correo electrónico",
       "phone": "Teléfono",
       "location": "Ubicación",
-      "images": "Imágenes de tatuaje (hasta 5 fotos)",
+      "images": "Imágenes del tatuaje (hasta 5 fotos)",
       "message": "Detalles de consulta",
       "messagePlaceholder": "Por favor describe tu tatuaje (tamaño, ubicación, colores, edad, etc.) y cualquier preocupación específica que tengas.",
-      "uploadPhotos": "Subir fotos del tatuaje",
-      "successMessage": "Tu solicitud de consulta ha sido enviada exitosamente. Te responderemos dentro de 24-48 horas.",
-      "errorMessage": "Ocurrió un error al enviar. Por favor, inténtalo de nuevo."
+      "uploadPhotos": "Haz clic para subir fotos del tatuaje",
+      "dragDrop": "o arrastra y suelta archivos aquí (hasta 5 fotos)",
+      "successMessage": "Tu solicitud de consulta ha sido enviada exitosamente. Responderemos dentro de 24-48 horas.",
+      "errorMessage": "Ocurrió un error al enviar. Por favor inténtalo de nuevo."
     }
   }
 }

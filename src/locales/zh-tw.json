@@ -234,7 +234,8 @@
       "images": "紋身圖片（最多5張照片）",
       "message": "諮詢詳情",
       "messagePlaceholder": "請描述您的紋身（大小、位置、顏色、年齡等）以及任何特別擔心的問題。",
-      "uploadPhotos": "上傳紋身照片",
+      "uploadPhotos": "點擊上傳紋身照片",
+      "dragDrop": "或將檔案拖放到此處（最多5張照片）",
       "successMessage": "您的諮詢請求已成功發送。我們將在24-48小時內回覆。",
       "errorMessage": "發送時發生錯誤。請重試。"
     }

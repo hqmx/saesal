@@ -7,58 +7,200 @@
     "contact": "Kontakt"
   },
   "hero": {
-    "title": "Tatuering Över Tatuering",
-    "subtitle": "Bläck Kommer Att Tas Bort",
+    "title": "Tatuering över Tatuering",
+    "subtitle": "Bläck kommer att tas bort",
     "description": "Lösning för att ta bort bläck från din hud"
   },
   "about": {
-    "title": "What is 'Saesal'?",
+    "title": "Vad är 'Saesal'?",
     "subtitle": "Perfekt och effektivt sätt att ta bort tatueringsbläck från huden",
     "description": "'Saesal' löser alla begränsningar med laserbehandling",
     "meaning": {
       "title": "Betydelsen av 'Saesal'",
-      "line1": "Betyder 'Ny hud' på koreanska.",
-      "line2": "Leder till nytt liv med ny hud<br />Skapar en större och ljusare framtid."
+      "line1": "Det betyder \"Ny hud\" på koreanska.",
+      "line2": "Leder till nytt liv med ny hud.<br />Skapa en större och ljusare framtid."
+    },
+    "revolutionary": {
+      "title": "Revolutionerande tillvägagångssätt",
+      "description": "Till skillnad från traditionella laserbehandlingar arbetar Saesal med din kropps naturliga läkningssystem för att säkert och effektivt ta bort tatueringsbläck från alla färger och typer."
+    },
+    "natural": {
+      "title": "Naturligt & Säkert",
+      "description": "Vår lösning använder endast naturliga och organiska material som redan är komponenter i människokroppen, vilket garanterar maximal säkerhet och effektivitet."
+    },
+    "fast": {
+      "title": "Snabba resultat",
+      "description": "Komplett tatueringsborttagning på bara 4 sessioner, jämfört med 10+ sessioner som krävs av traditionella laserbehandlingar."
     }
   },
   "comparison": {
     "title": "Laser vs Saesal",
-    "subtitle": "Se skillnaden mellan traditionell laserbehandling och vår innovativa Saesal-metod"
+    "subtitle": "Se skillnaden mellan traditionell laserbehandling och vår innovativa Saesal-metod",
+    "clearChoice": "Det tydliga valet",
+    "laser": {
+      "title": "Begränsningar av laserbehandling",
+      "sessions": "Lasersessioner",
+      "traditional": "Traditionell",
+      "summary": "10+ sessioner krävs • Smärtsam process • Begränsade färger",
+      "colorLimitation": {
+        "title": "Färgbegränsning",
+        "description": "Laser fungerar bara på mörka färger. Borttagning av varma och ljusa färger (Röd, Gul, Grön) är en stor begränsning."
+      },
+      "painful": {
+        "title": "Smärtsam process",
+        "description": "Tekniskt sett är laserbehandling att bränna huden, vilket är det mest smärtsamma problemet för människokroppen. Det orsakar också brännskador."
+      },
+      "longProcess": {
+        "title": "Lång process",
+        "description": "Det tar mer än 10 sessioner att helt ta bort tatuering. Om det är en färgtatuering tar det ännu fler sessioner."
+      },
+      "aftercare": {
+        "title": "Svår eftervård",
+        "description": "Laserbehandling lämnar blåsor. Det behöver svårare eftervård."
+      }
+    },
+    "saesal": {
+      "title": "Vad sägs om 'Saesal'?",
+      "sessions": "Saesal-sessioner",
+      "revolutionary": "Revolutionerande",
+      "summary": "Bara 4 sessioner • Mindre smärta • Alla färger stöds",
+      "allColors": {
+        "title": "Alla färger",
+        "description": "'Saesal' fungerar på alla färger. Fungerar även på kosmetisk tatuering."
+      },
+      "safe": {
+        "title": "Säker process",
+        "description": "Det är inte laserborttagning. 'Saesal'-behandling är samma som tatuering. (För att applicera, använd tatueringsnål)"
+      },
+      "fast": {
+        "title": "Snabba resultat",
+        "description": "'Saesal'-behandling tar bara 4 sessioner att helt ta bort bläck. Om det är en enkel linjetatuering tar det bara 2 sessioner."
+      },
+      "easycare": {
+        "title": "Enkel eftervård",
+        "description": "'Saesal'-behandling lämnar bara skorv, som tatuering. Och eftervård är också som tatuering."
+      }
+    }
   },
   "process": {
-    "title": "SæsaL Process",
-    "subtitle": "Enkel och effektiv 4-stegsprocess"
+    "title": "SæsaL-process",
+    "subtitle": "Enkel och effektiv 4-stegsprocess",
+    "comparison": {
+      "subtitle": "Se skillnaden mellan traditionell laserbehandling och vår innovativa Saesal-metod"
+    },
+    "laser": {
+      "howWorks": "Hur laserbehandling fungerar",
+      "step1": {
+        "title": "Bläckpartiklar under huden",
+        "description": "Stora tatueringsbläckpartiklar inbäddade i hudlager"
+      },
+      "step2": {
+        "title": "Laser bryter partiklar",
+        "description": "Högenergilaser bryter bläck i mindre fragment"
+      },
+      "step3": {
+        "title": "Transport via blodomloppet",
+        "description": "Partiklar reser genom blodomloppet till organ"
+      },
+      "warning1": "Laserbehandling bleknar långsamt men förblir synlig under sessioner",
+      "warning2": "Kräver 10+ sessioner och kan orsaka brännskador",
+      "warning3": "Okända effekter av bläckpartiklar som ackumuleras i organ"
+    },
+    "saesal": {
+      "howWorks": "Hur 'Saesal'-behandling fungerar",
+      "step1": {
+        "title": "Saesal-lösning applicerad",
+        "description": "Saesal-behandlingsprocess som tatuering"
+      },
+      "step2": {
+        "title": "Naturlig skorvbildning",
+        "description": "Kroppen bildar skyddande skorv som innehåller bläck"
+      },
+      "step3": {
+        "title": "Naturlig bläckborttagning",
+        "description": "Bläck kommer ut naturligt med skorv efter 2 veckor"
+      },
+      "benefit1": "Fungerar på alla färger inklusive kosmetiska tatueringar",
+      "benefit2": "Synliga resultat på bara en session - inga brännskador",
+      "benefit3": "100% naturlig process med snabbare läkning"
+    },
+    "healing": {
+      "title": "'Saesal'-behandlingens naturliga läkningsprocess",
+      "step1": {
+        "title": "Precis efter att skorv faller av",
+        "description": "Huden ser rosa ut - detta är helt normalt under den naturliga läkningsprocessen"
+      },
+      "step2": {
+        "title": "10-12 veckor senare",
+        "description": "Huden läker helt och är redo för nästa behandlingssession"
+      },
+      "timeline": {
+        "day": "Behandlings-\ndag",
+        "weeks2": "2 veckor\nSkorv faller av",
+        "weeks12": "10-12 veckor\nHelt läkt"
+      },
+      "whyChoose": "Varför välja Saesal?",
+      "benefit1": "Bara 4 sessioner behövs",
+      "benefit2": "Ingen involvering av inre organ",
+      "benefit3": "Fungerar på alla färger",
+      "benefit4": "Inga brännskador"
+    },
+    "step1": {
+      "title": "1. Konsultation och analys",
+      "description": "Analysera tatueringstillstånd och skapa personlig behandlingsplan"
+    },
+    "step2": {
+      "title": "2. Behandlingsförberedelse",
+      "description": "Hudförberedelse och anestesi för säker procedur"
+    },
+    "step3": {
+      "title": "3. SæsaL-applikation",
+      "description": "Applicera SæsaL-lösning exakt med tatueringsnålsteknik"
+    },
+    "step4": {
+      "title": "4. Eftervård",
+      "description": "Hantering av återhämtningsprocess och planering av nästa session"
+    }
   },
   "safety": {
-    "title": "Solution is Safe?",
+    "title": "Är lösningen säker?",
     "answer": "Ja!",
     "description": "Vår lösning använder 100% naturliga ingredienser som är viktiga komponenter i människokroppen - inte syntetiska kemikalier, utan ämnen som naturligt finns i din hud.",
-    "natural": "100% Natural",
-    "professional": "Professional Grade",
-    "bodyComponents": "Body Components",
-    "guaranteed": "Safety Guaranteed"
+    "natural": "100% naturligt",
+    "professional": "Professionell kvalitet",
+    "bodyComponents": "Kroppskomponenter",
+    "guaranteed": "Säkerhet garanterad",
+    "naturalDescription": "Naturligt härledda ämnen som finns i naturen, inte laboratorieskapade kemikalier",
+    "professionalDescription": "Brett betrodd inom estetiska behandlingar och dermatologiska procedurer världen över",
+    "bodyComponentsDescription": "Innehåller samma föreningar som naturligt finns i frisk mänsklig vävnad",
+    "guarantee1": "Endast naturligt härledda biokompatibla ingredienser",
+    "guarantee2": "Identisk med ämnen som finns i frisk hud",
+    "guarantee3": "Minimerad risk för negativa reaktioner",
+    "guarantee4": "Stöder naturlig hudregenerationsprocess",
+    "guarantee5": "Metaboliseras säkert av kroppen",
+    "guarantee6": "Kompatibel med olika hudförhållanden"
   },
   "contact": {
-    "title": "Kontakta Oss!",
+    "title": "Kontakta oss!",
     "subtitle": "Vi är alltid öppna",
     "info": {
       "title": "Checklista",
-      "subtitle": "Allt du behöver veta innan din konsultation",
+      "subtitle": "Allt du behöver förbereda före din konsultation",
       "photo": {
         "title": "Fotokrav",
         "description": "Vänligen förbered tydliga foton av din tatuering från olika vinklar med bra belysning i naturligt ljus"
       },
       "history": {
         "title": "Tatueringshistoria",
-        "description": "När fick du din tatuering? Åldern på tatueringen påverkar behandlingsplanering och antal sessioner"
+        "description": "När gjorde du din tatuering? Tatueringens ålder påverkar behandlingsplanering och antal sessioner"
       },
       "medical": {
         "title": "Medicinsk historia",
-        "description": "Har du några befintliga medicinska tillstånd, hudsjukdomar eller allergier vi bör känna till?"
+        "description": "Har du några befintliga medicinska tillstånd, hudsjukdomar eller allergier vi borde veta om?"
       },
       "skin": {
         "title": "Hudförhållanden",
-        "description": "Några aktuella hudbehandlingar, mediciner eller dermatologiska tillstånd i tatueringsområdet?"
+        "description": "Några nuvarande hudbehandlingar, mediciner eller dermatologiska förhållanden i tatueringsområdet?"
       }
     },
     "form": {
@@ -67,15 +209,16 @@
       "send": "Skicka",
       "sending": "Skickar...",
       "name": "Namn",
-      "email": "Email",
+      "email": "E-post",
       "phone": "Telefon",
       "location": "Plats",
       "images": "Tatueringsbilder (upp till 5 foton)",
       "message": "Konsultationsdetaljer",
       "messagePlaceholder": "Vänligen beskriv din tatuering (storlek, plats, färger, ålder, etc.) och eventuella specifika bekymmer du har.",
-      "uploadPhotos": "Ladda upp tatueringsfoton",
-      "successMessage": "Din konsultationsförfrågan har skickats framgångsrikt. Vi kommer att svara inom 24-48 timmar.",
-      "errorMessage": "Ett fel uppstod vid sändning. Vänligen försök igen."
+      "uploadPhotos": "Klicka för att ladda upp tatueringsfoton",
+      "dragDrop": "eller dra och släpp filer här (upp till 5 foton)",
+      "successMessage": "Din konsultationsförfrågan har skickats framgångsrikt. Vi svarar inom 24-48 timmar.",
+      "errorMessage": "Ett fel uppstod vid skickandet. Vänligen försök igen."
     }
   }
 }

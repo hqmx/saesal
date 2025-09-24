@@ -7,47 +7,218 @@
     "contact": "Liên hệ"
   },
   "hero": {
-    "title": "Xăm Đè Lên Xăm",
-    "subtitle": "Mực Sẽ Được Loại Bỏ",
+    "title": "Xăm lên xăm",
+    "subtitle": "Mực sẽ được loại bỏ",
     "description": "Giải pháp loại bỏ mực khỏi da của bạn"
   },
   "about": {
-    "title": "What is 'Saesal'?",
+    "title": "'Saesal' là gì?",
     "subtitle": "Cách hoàn hảo và hiệu quả để loại bỏ mực xăm khỏi da",
     "description": "'Saesal' giải quyết mọi hạn chế của điều trị bằng laser",
     "meaning": {
       "title": "Ý nghĩa của 'Saesal'",
-      "line1": "Trong tiếng Hàn có nghĩa là 'Da mới'.",
-      "line2": "Dẫn đến cuộc sống mới với làn da mới<br />Tạo ra tương lai lớn hơn và tươi sáng hơn."
+      "line1": "Có nghĩa là \"Da mới\" trong tiếng Hàn.",
+      "line2": "Dẫn đến cuộc sống mới với làn da mới.<br />Tạo ra một tương lai lớn lao và tươi sáng hơn."
+    },
+    "revolutionary": {
+      "title": "Phương pháp cách mạng",
+      "description": "Không giống như các phương pháp điều trị laser truyền thống, Saesal hoạt động cùng với hệ thống chữa lành tự nhiên của cơ thể để loại bỏ mực xăm ở tất cả các màu sắc và loại một cách an toàn và hiệu quả."
+    },
+    "natural": {
+      "title": "Tự nhiên & An toàn",
+      "description": "Giải pháp của chúng tôi chỉ sử dụng các vật liệu tự nhiên và hữu cơ vốn đã là thành phần của cơ thể con người, đảm bảo độ an toàn và hiệu quả tối đa."
+    },
+    "fast": {
+      "title": "Kết quả nhanh",
+      "description": "Loại bỏ hoàn toàn hình xăm chỉ trong 4 lần điều trị, so với hơn 10 lần cần thiết bởi các phương pháp điều trị laser truyền thống."
     }
   },
   "comparison": {
-    "title": "Laser vs Saesal", 
-    "subtitle": "Xem sự khác biệt giữa điều trị laser truyền thống và phương pháp Saesal sáng tạo của chúng tôi"
+    "title": "Laser vs Saesal",
+    "subtitle": "Xem sự khác biệt giữa điều trị laser truyền thống và phương pháp Saesal sáng tạo của chúng tôi",
+    "clearChoice": "Sự lựa chọn rõ ràng",
+    "laser": {
+      "title": "Hạn chế của điều trị Laser",
+      "sessions": "Phiên Laser",
+      "traditional": "Truyền thống",
+      "summary": "Cần 10+ phiên • Quá trình đau đớn • Màu sắc hạn chế",
+      "colorLimitation": {
+        "title": "Hạn chế màu sắc",
+        "description": "Laser chỉ hoạt động trên màu tối. Việc loại bỏ màu ấm và sáng (Đỏ, Vàng, Xanh lá) là hạn chế lớn."
+      },
+      "painful": {
+        "title": "Quá trình đau đớn",
+        "description": "Về mặt kỹ thuật, điều trị bằng laser là việc đốt da, đây là vấn đề đau đớn nhất của cơ thể con người. Nó cũng gây ra scar bỏng."
+      },
+      "longProcess": {
+        "title": "Quá trình dài",
+        "description": "Cần hơn 10 phiên để loại bỏ hoàn toàn hình xăm. Nếu là hình xăm màu, cần thêm nhiều phiên."
+      },
+      "aftercare": {
+        "title": "Chăm sóc sau khó khăn",
+        "description": "Điều trị laser để lại phỏng nước. Cần chăm sóc sau khó khăn hơn."
+      }
+    },
+    "saesal": {
+      "title": "'Saesal' thì sao?",
+      "sessions": "Phiên Saesal",
+      "revolutionary": "Cách mạng",
+      "summary": "Chỉ 4 phiên • Ít đau • Hỗ trợ tất cả màu",
+      "allColors": {
+        "title": "Tất cả màu sắc",
+        "description": "'Saesal' hoạt động với mọi màu sắc. Cũng hoạt động với xăm thẩm mỹ."
+      },
+      "safe": {
+        "title": "Quá trình an toàn",
+        "description": "Không phải là loại bỏ bằng Laser. Điều trị 'Saesal' giống như xăm. (Để áp dụng, sử dụng kim xăm)"
+      },
+      "fast": {
+        "title": "Kết quả nhanh",
+        "description": "Điều trị 'Saesal' chỉ cần 4 phiên để loại bỏ hoàn toàn mực. Nếu là hình xăm đường đơn giản, chỉ cần 2 phiên."
+      },
+      "easycare": {
+        "title": "Chăm sóc dễ dàng",
+        "description": "Điều trị 'Saesal' chỉ để lại vảy, như hình xăm. Và chăm sóc sau cũng như hình xăm."
+      }
+    }
   },
   "process": {
-    "title": "SæsaL Process",
-    "subtitle": "Quy trình 4 bước đơn giản và hiệu quả"
+    "title": "Quy trình SæsaL",
+    "subtitle": "Quy trình 4 bước đơn giản và hiệu quả",
+    "comparison": {
+      "subtitle": "Xem sự khác biệt giữa điều trị laser truyền thống và phương pháp Saesal sáng tạo của chúng tôi"
+    },
+    "laser": {
+      "howWorks": "Điều trị Laser hoạt động như thế nào",
+      "step1": {
+        "title": "Các hạt mực dưới da",
+        "description": "Các hạt mực xăm lớn nhúng trong các lớp da"
+      },
+      "step2": {
+        "title": "Laser phá vỡ các hạt",
+        "description": "Laser năng lượng cao phá vỡ mực thành các mảnh nhỏ hơn"
+      },
+      "step3": {
+        "title": "Vận chuyển qua dòng máu",
+        "description": "Các hạt di chuyển qua dòng máu đến các cơ quan"
+      },
+      "warning1": "Điều trị laser từ từ mờ đi nhưng vẫn có thể nhìn thấy trong các phiên",
+      "warning2": "Cần 10+ phiên và có thể gây scar bỏng",
+      "warning3": "Ảnh hưởng chưa biết của các hạt mực tích tụ trong cơ quan"
+    },
+    "saesal": {
+      "howWorks": "Điều trị 'Saesal' hoạt động như thế nào",
+      "step1": {
+        "title": "Áp dụng dung dịch Saesal",
+        "description": "Quy trình điều trị Saesal như xăm"
+      },
+      "step2": {
+        "title": "Hình thành vảy tự nhiên",
+        "description": "Cơ thể hình thành vảy bảo vệ chứa mực"
+      },
+      "step3": {
+        "title": "Loại bỏ mực tự nhiên",
+        "description": "Mực thoát ra tự nhiên cùng với vảy sau 2 tuần"
+      },
+      "benefit1": "Hoạt động trên mọi màu sắc bao gồm cả xăm thẩm mỹ",
+      "benefit2": "Kết quả có thể nhìn thấy chỉ trong một phiên - không có scar bỏng",
+      "benefit3": "Quá trình 100% tự nhiên với việc chữa lành nhanh hơn"
+    },
+    "healing": {
+      "title": "Quá trình chữa lành tự nhiên của điều trị 'Saesal'",
+      "step1": {
+        "title": "Ngay sau khi vảy rụng",
+        "description": "Da trông hồng - điều này hoàn toàn bình thường trong quá trình chữa lành tự nhiên"
+      },
+      "step2": {
+        "title": "10-12 tuần sau",
+        "description": "Da lành hoàn toàn và sẵn sàng cho phiên điều trị tiếp theo"
+      },
+      "timeline": {
+        "day": "Ngày\nĐiều trị",
+        "weeks2": "2 tuần\nVảy rụng",
+        "weeks12": "10-12 tuần\nLành hoàn toàn"
+      },
+      "whyChoose": "Tại sao chọn Saesal?",
+      "benefit1": "Chỉ cần 4 phiên",
+      "benefit2": "Không liên quan đến cơ quan nội tạng",
+      "benefit3": "Hoạt động trên tất cả màu sắc",
+      "benefit4": "Không có scar bỏng"
+    },
+    "step1": {
+      "title": "1. Tư vấn & Phân tích",
+      "description": "Phân tích tình trạng hình xăm và tạo kế hoạch điều trị cá nhân hóa"
+    },
+    "step2": {
+      "title": "2. Chuẩn bị điều trị",
+      "description": "Chuẩn bị da và gây tê để thực hiện thủ thuật an toàn"
+    },
+    "step3": {
+      "title": "3. Áp dụng SæsaL",
+      "description": "Áp dụng chính xác dung dịch SæsaL bằng kỹ thuật kim xăm"
+    },
+    "step4": {
+      "title": "4. Chăm sóc sau",
+      "description": "Quản lý quá trình phục hồi và lập kế hoạch phiên tiếp theo"
+    }
   },
   "safety": {
-    "title": "Solution is Safe?",
+    "title": "Dung dịch có an toàn không?",
     "answer": "Có!",
-    "description": "Giải pháp của chúng tôi sử dụng 100% thành phần tự nhiên là các thành phần thiết yếu của cơ thể con người - không phải hóa chất tổng hợp mà là các chất tự nhiên có trong da của bạn.",
-    "natural": "100% Natural",
-    "professional": "Professional Grade", 
-    "bodyComponents": "Body Components",
-    "guaranteed": "Safety Guaranteed"
+    "description": "Dung dịch của chúng tôi sử dụng 100% thành phần tự nhiên là các thành phần thiết yếu của cơ thể con người - không phải hóa chất tổng hợp, mà là các chất tự nhiên có trong da của bạn.",
+    "natural": "100% Tự nhiên",
+    "professional": "Cấp độ chuyên nghiệp",
+    "bodyComponents": "Thành phần cơ thể",
+    "guaranteed": "Đảm bảo an toàn",
+    "naturalDescription": "Các chất có nguồn gốc tự nhiên được tìm thấy trong tự nhiên, không phải hóa chất được tạo ra trong phòng thí nghiệm",
+    "professionalDescription": "Được tin tưởng rộng rãi trong các phương pháp điều trị thẩm mỹ và thủ thuật da liễu trên toàn thế giới",
+    "bodyComponentsDescription": "Chứa các hợp chất giống như có trong mô cơ thể con người khỏe mạnh một cách tự nhiên",
+    "guarantee1": "Chỉ sử dụng các thành phần tương thích sinh học có nguồn gốc tự nhiên",
+    "guarantee2": "Giống hệt với các chất có trong da khỏe mạnh",
+    "guarantee3": "Giảm thiểu nguy cơ phản ứng bất lợi",
+    "guarantee4": "Hỗ trợ quá trình tái tạo da tự nhiên",
+    "guarantee5": "Được chuyển hóa an toàn bởi cơ thể",
+    "guarantee6": "Tương thích với các tình trạng da đa dạng"
   },
   "contact": {
-    "title": "Liên Hệ Chúng Tôi !",
+    "title": "Liên hệ chúng tôi!",
     "subtitle": "Chúng tôi luôn sẵn sàng",
+    "info": {
+      "title": "Danh sách kiểm tra",
+      "subtitle": "Mọi thứ bạn cần chuẩn bị trước khi tư vấn",
+      "photo": {
+        "title": "Yêu cầu ảnh",
+        "description": "Vui lòng chuẩn bị ảnh hình xăm rõ nét từ các góc độ khác nhau với ánh sáng tốt dưới ánh sáng tự nhiên"
+      },
+      "history": {
+        "title": "Lịch sử hình xăm",
+        "description": "Bạn xăm khi nào? Tuổi của hình xăm ảnh hưởng đến kế hoạch điều trị và số lần phiên"
+      },
+      "medical": {
+        "title": "Tiền sử bệnh",
+        "description": "Bạn có bất kỳ tình trạng y tế hiện tại, rối loạn da hoặc dị ứng nào mà chúng tôi nên biết không?"
+      },
+      "skin": {
+        "title": "Tình trạng da",
+        "description": "Có bất kỳ phương pháp điều trị da hiện tại, thuốc men hoặc tình trạng da liễu nào ở khu vực hình xăm không?"
+      }
+    },
     "form": {
+      "subtitle": "Sẵn sàng bắt đầu hành trình đến làn da mới?",
+      "privacy": "Bằng cách gửi biểu mẫu này, bạn đồng ý với việc thu thập và sử dụng thông tin cá nhân của bạn cho mục đích tư vấn.",
       "send": "Gửi",
       "sending": "Đang gửi...",
       "name": "Tên",
       "email": "Email",
       "phone": "Điện thoại",
-      "location": "Địa điểm"
+      "location": "Vị trí",
+      "images": "Ảnh hình xăm (tối đa 5 ảnh)",
+      "message": "Chi tiết tư vấn",
+      "messagePlaceholder": "Vui lòng mô tả hình xăm của bạn (kích thước, vị trí, màu sắc, tuổi, v.v.) và bất kỳ mối quan tâm cụ thể nào bạn có.",
+      "uploadPhotos": "Nhấp để tải lên ảnh hình xăm",
+      "dragDrop": "hoặc kéo và thả tệp vào đây (tối đa 5 ảnh)",
+      "successMessage": "Yêu cầu tư vấn của bạn đã được gửi thành công. Chúng tôi sẽ phản hồi trong vòng 24-48 giờ.",
+      "errorMessage": "Đã xảy ra lỗi khi gửi. Vui lòng thử lại."
     }
   }
 }

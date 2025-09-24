@@ -84,7 +84,83 @@
   },
   "process": {
     "title": "SæsaL Process",
-    "subtitle": "简单有效的4步流程"
+    "subtitle": "简单有效的4步流程",
+    "comparison": {
+      "subtitle": "查看传统激光治疗与我们创新的Saesal方法之间的区别"
+    },
+    "laser": {
+      "howWorks": "激光治疗原理",
+      "step1": {
+        "title": "皮肤下的墨水颗粒",
+        "description": "嵌入皮肤层的大纹身墨水颗粒"
+      },
+      "step2": {
+        "title": "激光分解颗粒",
+        "description": "高能激光将墨水分解成更小的碎片"
+      },
+      "step3": {
+        "title": "血流运输",
+        "description": "颗粒通过血流运输到器官"
+      },
+      "warning1": "激光治疗缓慢褪色但在疗程中仍可见",
+      "warning2": "需要10+次疗程，可能造成烧伤疤痕",
+      "warning3": "墨水颗粒在器官中积累的影响未知"
+    },
+    "saesal": {
+      "howWorks": "'Saesal'治疗原理",
+      "step1": {
+        "title": "应用Saesal溶液",
+        "description": "类似纹身的Saesal治疗过程"
+      },
+      "step2": {
+        "title": "自然结痂形成",
+        "description": "身体形成含有墨水的保护性结痂"
+      },
+      "step3": {
+        "title": "自然墨水去除",
+        "description": "2周后墨水与结痂一起自然排出"
+      },
+      "benefit1": "对包括化妆性纹身在内的每种颜色都有效",
+      "benefit2": "仅一次疗程即可见到效果 - 无烧伤疤痕",
+      "benefit3": "100%天然过程，愈合更快"
+    },
+    "healing": {
+      "title": "'Saesal'治疗的自然愈合过程",
+      "step1": {
+        "title": "结痂脱落后",
+        "description": "皮肤看起来呈粉红色 - 这在自然愈合过程中完全正常"
+      },
+      "step2": {
+        "title": "10-12周后",
+        "description": "皮肤完全愈合，准备进行下一次治疗疗程"
+      },
+      "timeline": {
+        "day": "治疗\n当天",
+        "weeks2": "2周后\n结痂脱落",
+        "weeks12": "10-12周后\n完全愈合"
+      },
+      "whyChoose": "为什么选择Saesal？",
+      "benefit1": "仅需4次疗程",
+      "benefit2": "不涉及内脏器官",
+      "benefit3": "对所有颜色有效",
+      "benefit4": "无烧伤疤痕"
+    },
+    "step1": {
+      "title": "1. 咨询与分析",
+      "description": "分析纹身状况并制定个性化治疗计划"
+    },
+    "step2": {
+      "title": "2. 治疗准备",
+      "description": "为安全手术进行皮肤准备和麻醉"
+    },
+    "step3": {
+      "title": "3. SæsaL应用",
+      "description": "使用纹身针技术精确应用SæsaL溶液"
+    },
+    "step4": {
+      "title": "4. 后期护理",
+      "description": "康复过程管理和下次疗程规划"
+    }
   },
   "safety": {
     "title": "Solution is Safe?",
@@ -96,13 +172,20 @@
     "guaranteed": "Safety Guaranteed",
     "naturalDescription": "自然界中发现的天然衍生物质，不是实验室制造的化学品",
     "professionalDescription": "在全世界的美容治疗和皮肤科手术中广受信赖",
-    "bodyComponentsDescription": "含有健康人体组织中自然存在的相同化合物"
+    "bodyComponentsDescription": "含有健康人体组织中天然存在的相同化合物",
+    "guarantee1": "仅使用天然衡生的生物相容性成分",
+    "guarantee2": "与健康皮肤中发现的物质相同",
+    "guarantee3": "最大限度降低不良反应风险",
+    "guarantee4": "支持自然皮肤再生过程",
+    "guarantee5": "被身体安全代谢",
+    "guarantee6": "与多样皮肤状况兼容"
   },
   "contact": {
     "title": "联系我们！",
     "subtitle": "我们随时开放",
     "info": {
       "title": "检查清单",
+      "subtitle": "咨询前您需要准备的一切",
       "photo": {
         "title": "照片要求",
         "description": "请在自然光下准备不同角度纹身的清晰照片"
@@ -112,7 +195,7 @@
         "description": "您何时纹的身？纹身的年龄影响治疗计划和疗程次数"
       },
       "medical": {
-        "title": "病史",
+        "title": "医疗史",
         "description": "您是否有任何现有疾病、皮肤病或我们应该了解的过敏？"
       },
       "skin": {
@@ -121,16 +204,21 @@
       }
     },
     "form": {
-      "privacy": "提交此表格即表示您同意为咨询目的收集和使用您的个人信息。",
+      "subtitle": "准备开始您的新皮肤之旅了吗？",
+      "privacy": "提交此表格，即表示您同意收集和使用您的个人信息用于咨询目的。",
       "send": "发送",
       "sending": "发送中...",
       "name": "姓名",
       "email": "邮箱",
       "phone": "电话",
       "location": "位置",
-      "images": "纹身图片",
+      "images": "纹身图片（最多5张照片）",
       "message": "咨询详情",
-      "messagePlaceholder": "请描述您的纹身（大小、位置、颜色、年龄等）以及任何特别担心的问题。"
+      "messagePlaceholder": "请描述您的纹身（大小、位置、颜色、年龄等）以及您的任何具体担心。",
+      "uploadPhotos": "点击上传纹身照片",
+      "dragDrop": "或将文件拖放到此处（最多5张照片）",
+      "successMessage": "您的咨询请求已成功发送。我们将在24-48小时内回复。",
+      "errorMessage": "发送时发生错误。请重试。"
     }
   }
 }

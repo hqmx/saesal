@@ -11,14 +11,13 @@ import ContactSection from '@/components/ContactSection';
 import MeaningSection from '@/components/MeaningSection';
 import { useActiveSection } from '@/hooks/useActiveSection';
 import { VideoManagerProvider } from '@/contexts/VideoManagerContext';
-import { LanguageProvider } from '@/contexts/LanguageContext';
 
 const siteConfig = {
   "theme": {
     "colors": {
       "primary": "#2563EB",
       "secondary": "#10B981",
-      "accent": "#F59E0B", 
+      "accent": "#F59E0B",
       "background": "#F8FAFC",
       "surface": "#FFFFFF",
       "text": {
@@ -57,7 +56,7 @@ const siteConfig = {
       "maxWidth": "1200px",
       "padding": {
         "mobile": "1rem",
-        "tablet": "2rem", 
+        "tablet": "2rem",
         "desktop": "3rem"
       }
     }
@@ -66,7 +65,7 @@ const siteConfig = {
     "hero": {
       "title": "Do Tattoo<br/>On Tattoo",
       "subtitle": "Ink will Remove",
-      "description": "Solution of Remove Ink off your Skin",
+      "description": "Perfect Solution of Remove Ink off your Skin",
       "cta": {
         "primary": "Learn More",
         "secondary": "Contact Us"
@@ -91,7 +90,7 @@ const siteConfig = {
             "description": "Laser only works on dark colors. Warm and bright (Red, Yellow, Green) color removal is big limitation."
           },
           {
-            "title": "Painful Process", 
+            "title": "Painful Process",
             "description": "Technically Laser treatment is burning skin which is most painful issue of humans body. Also it causes burn scars."
           },
           {
@@ -120,7 +119,7 @@ const siteConfig = {
             "description": "'Saesal' Treatment only takes 4 sessions to completely remove inks. If it's simple line tattoo, it takes only 2 sessions."
           },
           {
-            "title": "Easy Aftercare", 
+            "title": "Easy Aftercare",
             "description": "'Saesal' treatment only left scabs, like tattoo. And aftercare is also like tattoo."
           }
         ]
@@ -135,7 +134,7 @@ const siteConfig = {
           "description": "Saesal solution treatment works same as tattooing"
         },
         {
-          "title": "Natural Scab Formation", 
+          "title": "Natural Scab Formation",
           "description": "Saesal solution helps Natural healing system make scab with ink"
         },
         {
@@ -154,7 +153,7 @@ const siteConfig = {
           "description": "Laser treatment break ink particle smaller. White blood cell moves ink particles through the vein to kidney"
         },
         "saesal": {
-          "title": "Saesal Treatment", 
+          "title": "Saesal Treatment",
           "description": "Tattoo ink is stays big particle under the skin. Saesal removes ink particles with natural scab formation"
         }
       }
@@ -175,7 +174,7 @@ const siteConfig = {
             "description": "Please prepare clear photos of your tattoo from different angles with good lighting in natural light"
           },
           {
-            "title": "Tattoo History", 
+            "title": "Tattoo History",
             "description": "When did you get your tattoo? Age of tattoo affects treatment planning and session count"
           },
           {
@@ -201,11 +200,11 @@ const siteConfig = {
           {
             "name": "email",
             "label": "Email",
-            "type": "email", 
+            "type": "email",
             "required": true
           },
           {
-            "name": "phone", 
+            "name": "phone",
             "label": "Phone",
             "type": "tel",
             "required": true
@@ -236,62 +235,66 @@ const siteConfig = {
   }
 };
 
-export default function Home() {
+interface LocalePageProps {
+  params: {
+    locale: string;
+  };
+}
+
+export default function LocalePage({ params }: LocalePageProps) {
   const activeSection = useActiveSection();
 
   return (
-    <LanguageProvider>
-      <VideoManagerProvider>
-        {/* 전체 사이트 고정 배경 설정 */}
-        <style jsx global>{`
+    <VideoManagerProvider>
+      {/* 전체 사이트 고정 배경 설정 */}
+      <style jsx global>{`
+        body {
+          background-image: url('/mb.png') !important;
+          background-size: 400px 400px !important;
+          background-position: center center !important;
+          background-repeat: no-repeat !important;
+          background-attachment: fixed !important;
+        }
+
+        /* 모바일에서 배경이 화면을 따라다니도록 설정 */
+        @media (max-width: 768px) {
           body {
-            background-image: url('/mb.png') !important;
-            background-size: 400px 400px !important;
-            background-position: center center !important;
-            background-repeat: no-repeat !important;
             background-attachment: fixed !important;
+            background-position: center center !important;
           }
 
-          /* 모바일에서 배경이 화면을 따라다니도록 설정 */
-          @media (max-width: 768px) {
+          /* iOS Safari에서도 배경 고정 유지 */
+          @supports (-webkit-touch-callout: none) {
             body {
               background-attachment: fixed !important;
+              -webkit-background-size: 400px 400px !important;
+              background-size: 400px 400px !important;
               background-position: center center !important;
-            }
-
-            /* iOS Safari에서도 배경 고정 유지 */
-            @supports (-webkit-touch-callout: none) {
-              body {
-                background-attachment: fixed !important;
-                -webkit-background-size: 400px 400px !important;
-                background-size: 400px 400px !important;
-                background-position: center center !important;
-                /* iOS Safari 배경 최적화 */
-                -webkit-transform: translate3d(0, 0, 0);
-                transform: translate3d(0, 0, 0);
-              }
+              /* iOS Safari 배경 최적화 */
+              -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
             }
           }
-        `}</style>
-        <div style={{
-          fontFamily: siteConfig.theme.typography.fontFamily.primary,
-          backgroundColor: 'transparent',
-          color: siteConfig.theme.colors.text.primary,
-          position: 'relative',
-          zIndex: 1
-        }}>
-          <Navigation activeSection={activeSection} config={siteConfig} />
-          <main>
-            <HeroSection config={siteConfig} />
-            <AboutSection config={siteConfig} />
-            <ComparisonSection config={siteConfig} />
-            <ProcessSection config={siteConfig} />
-            <SafetySection config={siteConfig} />
-            <ContactSection config={siteConfig} />
-            <MeaningSection config={siteConfig} />
-          </main>
-        </div>
-      </VideoManagerProvider>
-    </LanguageProvider>
+        }
+      `}</style>
+      <div style={{
+        fontFamily: siteConfig.theme.typography.fontFamily.primary,
+        backgroundColor: 'transparent',
+        color: siteConfig.theme.colors.text.primary,
+        position: 'relative',
+        zIndex: 1
+      }}>
+        <Navigation activeSection={activeSection} config={siteConfig} />
+        <main>
+          <HeroSection config={siteConfig} />
+          <AboutSection config={siteConfig} />
+          <ComparisonSection config={siteConfig} />
+          <ProcessSection config={siteConfig} />
+          <SafetySection config={siteConfig} />
+          <ContactSection config={siteConfig} />
+          <MeaningSection config={siteConfig} />
+        </main>
+      </div>
+    </VideoManagerProvider>
   );
 }

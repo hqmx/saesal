@@ -7,63 +7,205 @@
     "contact": "Kontakt"
   },
   "hero": {
-    "title": "Tattoo Über Tattoo",
-    "subtitle": "Tinte Wird Entfernt",
+    "title": "Tattoo über Tattoo",
+    "subtitle": "Tinte wird entfernt",
     "description": "Lösung zur Entfernung von Tinte aus Ihrer Haut"
   },
   "about": {
-    "title": "What is 'Saesal'?",
+    "title": "Was ist 'Saesal'?",
     "subtitle": "Perfekte und effektive Methode zur Entfernung von Tattoo-Tinte aus der Haut",
     "description": "'Saesal' löst alle Einschränkungen der Laserbehandlung",
     "meaning": {
       "title": "Bedeutung von 'Saesal'",
-      "line1": "Bedeutet 'Neue Haut' auf Koreanisch.",
-      "line2": "Führt zu einem neuen Leben mit neuer Haut<br />Schafft eine größere und hellere Zukunft."
+      "line1": "Es bedeutet \"Neue Haut\" auf Koreanisch.",
+      "line2": "Führt zu neuem Leben mit neuer Haut.<br />Schaffe eine größere und hellere Zukunft."
+    },
+    "revolutionary": {
+      "title": "Revolutionärer Ansatz",
+      "description": "Im Gegensatz zu herkömmlichen Laserbehandlungen arbeitet Saesal mit dem natürlichen Heilungssystem Ihres Körpers zusammen, um Tattoo-Tinte aller Farben und Typen sicher und effektiv zu entfernen."
+    },
+    "natural": {
+      "title": "Natürlich & Sicher",
+      "description": "Unsere Lösung verwendet nur natürliche und organische Materialien, die bereits Bestandteile des menschlichen Körpers sind und maximale Sicherheit und Wirksamkeit gewährleisten."
+    },
+    "fast": {
+      "title": "Schnelle Ergebnisse",
+      "description": "Komplette Tattoo-Entfernung in nur 4 Sitzungen, verglichen mit den 10+ Sitzungen, die bei herkömmlichen Laserbehandlungen erforderlich sind."
     }
   },
   "comparison": {
     "title": "Laser vs Saesal",
-    "subtitle": "Sehen Sie den Unterschied zwischen traditioneller Laserbehandlung und unserer innovativen Saesal-Methode"
+    "subtitle": "Sehen Sie den Unterschied zwischen herkömmlicher Laserbehandlung und unserer innovativen Saesal-Methode",
+    "clearChoice": "Die klare Wahl",
+    "laser": {
+      "title": "Einschränkungen der Laserbehandlung",
+      "sessions": "Laser-Sitzungen",
+      "traditional": "Traditionell",
+      "summary": "10+ Sitzungen erforderlich • Schmerzhafter Prozess • Begrenzte Farben",
+      "colorLimitation": {
+        "title": "Farbbegrenzung",
+        "description": "Laser funktioniert nur bei dunklen Farben. Die Entfernung von warmen und hellen Farben (Rot, Gelb, Grün) ist eine große Einschränkung."
+      },
+      "painful": {
+        "title": "Schmerzhafter Prozess",
+        "description": "Technisch gesehen ist eine Laserbehandlung das Verbrennen der Haut, was das schmerzhafteste Problem des menschlichen Körpers ist. Es verursacht auch Brandnarben."
+      },
+      "longProcess": {
+        "title": "Langer Prozess",
+        "description": "Es dauert mehr als 10 Sitzungen, um ein Tattoo vollständig zu entfernen. Bei einem farbigen Tattoo sind noch mehr Sitzungen erforderlich."
+      },
+      "aftercare": {
+        "title": "Schwierige Nachsorge",
+        "description": "Laserbehandlung hinterlässt Blasen. Es erfordert eine schwierigere Nachsorge."
+      }
+    },
+    "saesal": {
+      "title": "Was ist mit 'Saesal'?",
+      "sessions": "Saesal-Sitzungen",
+      "revolutionary": "Revolutionär",
+      "summary": "Nur 4 Sitzungen • Weniger Schmerzen • Alle Farben unterstützt",
+      "allColors": {
+        "title": "Alle Farben",
+        "description": "'Saesal' funktioniert bei allen Farben. Funktioniert auch bei kosmetischen Tattoos."
+      },
+      "safe": {
+        "title": "Sicherer Prozess",
+        "description": "Es ist keine Laser-Entfernung. 'Saesal'-Behandlung ist dasselbe wie Tätowieren. (Zum Anwenden mit Tattoo-Nadel)"
+      },
+      "fast": {
+        "title": "Schnelle Ergebnisse",
+        "description": "'Saesal'-Behandlung benötigt nur 4 Sitzungen, um Tinte vollständig zu entfernen. Bei einem einfachen Linien-Tattoo sind nur 2 Sitzungen erforderlich."
+      },
+      "easycare": {
+        "title": "Einfache Nachsorge",
+        "description": "'Saesal'-Behandlung hinterlässt nur Schorf, wie ein Tattoo. Und die Nachsorge ist auch wie bei einem Tattoo."
+      }
+    }
   },
   "process": {
-    "title": "SæsaL Process",
-    "subtitle": "Einfacher und effektiver 4-Stufen-Prozess"
+    "title": "SæsaL-Prozess",
+    "subtitle": "Einfacher und effektiver 4-Schritte-Prozess",
+    "comparison": {
+      "subtitle": "Sehen Sie den Unterschied zwischen herkömmlicher Laserbehandlung und unserer innovativen Saesal-Methode"
+    },
+    "laser": {
+      "howWorks": "Wie Laserbehandlung funktioniert",
+      "step1": {
+        "title": "Tintenpartikel unter der Haut",
+        "description": "Große Tattoo-Tintenpartikel, die in Hautschichten eingebettet sind"
+      },
+      "step2": {
+        "title": "Laser zerbricht Partikel",
+        "description": "Hochenergie-Laser zerbricht Tinte in kleinere Fragmente"
+      },
+      "step3": {
+        "title": "Transport durch Blutkreislauf",
+        "description": "Partikel wandern durch den Blutkreislauf zu Organen"
+      },
+      "warning1": "Laserbehandlung verblasst langsam, bleibt aber während der Sitzungen sichtbar",
+      "warning2": "Erfordert 10+ Sitzungen und kann Brandnarben verursachen",
+      "warning3": "Unbekannte Auswirkungen von Tintenpartikeln, die sich in Organen ansammeln"
+    },
+    "saesal": {
+      "howWorks": "Wie 'Saesal'-Behandlung funktioniert",
+      "step1": {
+        "title": "Saesal-Lösung angewendet",
+        "description": "Saesal-Behandlungsprozess wie Tätowieren"
+      },
+      "step2": {
+        "title": "Natürliche Schorfbildung",
+        "description": "Der Körper bildet schützenden Schorf, der Tinte enthält"
+      },
+      "step3": {
+        "title": "Natürliche Tintenentfernung",
+        "description": "Tinte tritt nach 2 Wochen natürlich mit dem Schorf aus"
+      },
+      "benefit1": "Funktioniert bei allen Farben einschließlich kosmetischer Tattoos",
+      "benefit2": "Sichtbare Ergebnisse in nur einer Sitzung - keine Brandnarben",
+      "benefit3": "100% natürlicher Prozess mit schnellerer Heilung"
+    },
+    "healing": {
+      "title": "Natürlicher Heilungsprozess der 'Saesal'-Behandlung",
+      "step1": {
+        "title": "Direkt nachdem der Schorf abfällt",
+        "description": "Die Haut sieht rosa aus - das ist während des natürlichen Heilungsprozesses völlig normal"
+      },
+      "step2": {
+        "title": "10-12 Wochen später",
+        "description": "Die Haut heilt vollständig und ist bereit für die nächste Behandlungssitzung"
+      },
+      "timeline": {
+        "day": "Behandlungs-\ntag",
+        "weeks2": "2 Wochen\nSchorf fällt ab",
+        "weeks12": "10-12 Wochen\nVollständig geheilt"
+      },
+      "whyChoose": "Warum Saesal wählen?",
+      "benefit1": "Nur 4 Sitzungen erforderlich",
+      "benefit2": "Keine Beteiligung innerer Organe",
+      "benefit3": "Funktioniert bei allen Farben",
+      "benefit4": "Keine Brandnarben"
+    },
+    "step1": {
+      "title": "1. Beratung & Analyse",
+      "description": "Tattoo-Zustand analysieren und personalisierten Behandlungsplan erstellen"
+    },
+    "step2": {
+      "title": "2. Behandlungsvorbereitung",
+      "description": "Hautvorbereitung und Anästhesie für sicheres Verfahren"
+    },
+    "step3": {
+      "title": "3. SæsaL-Anwendung",
+      "description": "SæsaL-Lösung präzise mit Tattoo-Nadeltechnik anwenden"
+    },
+    "step4": {
+      "title": "4. Nachsorge",
+      "description": "Verwaltung des Wiederherstellungsprozesses und Planung der nächsten Sitzung"
+    }
   },
   "safety": {
-    "title": "Solution is Safe?",
+    "title": "Ist die Lösung sicher?",
     "answer": "Ja!",
     "description": "Unsere Lösung verwendet 100% natürliche Inhaltsstoffe, die wesentliche Bestandteile des menschlichen Körpers sind - keine synthetischen Chemikalien, sondern Substanzen, die natürlich in Ihrer Haut vorkommen.",
-    "natural": "100% Natural",
-    "professional": "Professional Grade", 
-    "bodyComponents": "Body Components",
-    "guaranteed": "Safety Guaranteed"
+    "natural": "100% natürlich",
+    "professional": "Professionelle Qualität",
+    "bodyComponents": "Körperbestandteile",
+    "guaranteed": "Sicherheit garantiert",
+    "naturalDescription": "Natürlich gewonnene Substanzen, die in der Natur vorkommen, nicht im Labor hergestellte Chemikalien",
+    "professionalDescription": "Weit vertraut in ästhetischen Behandlungen und dermatologischen Verfahren weltweit",
+    "bodyComponentsDescription": "Enthält die gleichen Verbindungen, die natürlich in gesundem menschlichem Gewebe vorkommen",
+    "guarantee1": "Nur natürlich gewonnene biokompatible Inhaltsstoffe",
+    "guarantee2": "Identisch mit Substanzen, die in gesunder Haut vorkommen",
+    "guarantee3": "Minimiertes Risiko von Nebenwirkungen",
+    "guarantee4": "Unterstützt natürlichen Hautregenerationsprozess",
+    "guarantee5": "Wird vom Körper sicher metabolisiert",
+    "guarantee6": "Kompatibel mit verschiedenen Hautzuständen"
   },
   "contact": {
-    "title": "Kontaktieren Sie Uns!",
+    "title": "Kontaktieren Sie uns!",
     "subtitle": "Wir sind immer offen",
     "info": {
       "title": "Checkliste",
-      "subtitle": "Alles, was Sie vor Ihrem Beratungsgespräch wissen müssen",
+      "subtitle": "Alles was Sie vor Ihrer Beratung vorbereiten müssen",
       "photo": {
         "title": "Foto-Anforderungen",
-        "description": "Bitte bereiten Sie klare Fotos Ihres Tattoos aus verschiedenen Winkeln mit guter Beleuchtung bei natürlichem Licht vor"
+        "description": "Bitte bereiten Sie klare Fotos Ihres Tattoos aus verschiedenen Winkeln mit guter Beleuchtung bei Tageslicht vor"
       },
       "history": {
         "title": "Tattoo-Geschichte",
-        "description": "Wann haben Sie Ihr Tattoo bekommen? Das Alter des Tattoos beeinflusst die Behandlungsplanung und Anzahl der Sitzungen"
+        "description": "Wann haben Sie Ihr Tattoo gemacht? Das Alter des Tattoos beeinflusst die Behandlungsplanung und Sitzungsanzahl"
       },
       "medical": {
         "title": "Krankengeschichte",
-        "description": "Haben Sie bestehende Erkrankungen, Hautkrankheiten oder Allergien, über die wir Bescheid wissen sollten?"
+        "description": "Haben Sie bestehende medizinische Zustände, Hautkrankheiten oder Allergien, die wir wissen sollten?"
       },
       "skin": {
-        "title": "Hautzustand",
-        "description": "Aktuelle Hautbehandlungen, Medikamente oder dermatologische Erkrankungen im Tattoo-Bereich?"
+        "title": "Hautzustände",
+        "description": "Irgendwelche aktuellen Hautbehandlungen, Medikamente oder dermatologische Zustände im Tattoo-Bereich?"
       }
     },
     "form": {
-      "subtitle": "Bereit, Ihre Reise zur neuen Haut zu beginnen?",
-      "privacy": "Durch das Absenden dieses Formulars stimmen Sie der Erhebung und Nutzung Ihrer persönlichen Daten zu Beratungszwecken zu.",
+      "subtitle": "Bereit, Ihre Reise zu neuer Haut zu beginnen?",
+      "privacy": "Durch das Absenden dieses Formulars stimmen Sie der Erfassung und Nutzung Ihrer persönlichen Daten zu Beratungszwecken zu.",
       "send": "Senden",
       "sending": "Wird gesendet...",
       "name": "Name",
@@ -72,9 +214,10 @@
       "location": "Standort",
       "images": "Tattoo-Bilder (bis zu 5 Fotos)",
       "message": "Beratungsdetails",
-      "messagePlaceholder": "Bitte beschreiben Sie Ihr Tattoo (Größe, Lage, Farben, Alter usw.) und spezielle Bedenken, die Sie haben.",
-      "uploadPhotos": "Tattoo-Fotos hochladen",
-      "successMessage": "Ihre Beratungsanfrage wurde erfolgreich gesendet. Wir werden innerhalb von 24-48 Stunden antworten.",
+      "messagePlaceholder": "Bitte beschreiben Sie Ihr Tattoo (Größe, Lage, Farben, Alter, etc.) und alle spezifischen Bedenken, die Sie haben.",
+      "uploadPhotos": "Klicken Sie, um Tattoo-Fotos hochzuladen",
+      "dragDrop": "oder ziehen Sie Dateien hierher (bis zu 5 Fotos)",
+      "successMessage": "Ihre Beratungsanfrage wurde erfolgreich gesendet. Wir antworten innerhalb von 24-48 Stunden.",
       "errorMessage": "Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
     }
   }

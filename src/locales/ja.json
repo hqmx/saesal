@@ -84,7 +84,83 @@
   },
   "process": {
     "title": "SæsaL Process",
-    "subtitle": "シンプルで効果的な4ステッププロセス"
+    "subtitle": "シンプルで効果的な4ステッププロセス",
+    "comparison": {
+      "subtitle": "従来のレーザー治療と革新的なSaesalメソッドの違いをご確認ください"
+    },
+    "laser": {
+      "howWorks": "レーザー治療の仕組み",
+      "step1": {
+        "title": "皮膚下のインク粒子",
+        "description": "皮膚層に埋め込まれた大きなタトゥーインク粒子"
+      },
+      "step2": {
+        "title": "レーザーが粒子を分解",
+        "description": "高エネルギーレーザーがインクを小さな破片に分解"
+      },
+      "step3": {
+        "title": "血流による輸送",
+        "description": "粒子が血流を通して臓器に移動"
+      },
+      "warning1": "レーザー治療は徐々に薄くなりますが、セッション中は見えたままです",
+      "warning2": "10回以上のセッションが必要で、火傷の傷跡を残すことがあります",
+      "warning3": "臓器に蓄積されるインク粒子の影響は未知数です"
+    },
+    "saesal": {
+      "howWorks": "'Saesal'治療の仕組み",
+      "step1": {
+        "title": "Saesalソリューション適用",
+        "description": "タトゥーのようなSaesal治療プロセス"
+      },
+      "step2": {
+        "title": "自然なかさぶた形成",
+        "description": "身体がインクを含む保護かさぶたを形成"
+      },
+      "step3": {
+        "title": "自然なインク除去",
+        "description": "2週間後にかさぶたと一緒にインクが自然に排出"
+      },
+      "benefit1": "アートメイクを含むすべての色で効果",
+      "benefit2": "わずか一回のセッションで目に見える結果 - 火傷の傷跡なし",
+      "benefit3": "100％自然なプロセスでより早い治癒"
+    },
+    "healing": {
+      "title": "'Saesal'治療の自然治癒過程",
+      "step1": {
+        "title": "かさぶたが落ちた直後",
+        "description": "皮膚がピンク色に見えます - これは自然な治癒過程で完全に正常です"
+      },
+      "step2": {
+        "title": "10-12週間後",
+        "description": "皮膚が完全に治癒し、次の治療セッションの準備ができます"
+      },
+      "timeline": {
+        "day": "治療\n当日",
+        "weeks2": "2週間後\nかさぶたが落ちる",
+        "weeks12": "10-12週間後\n完全治癒"
+      },
+      "whyChoose": "なぜSaesalを選ぶのか？",
+      "benefit1": "わずか4セッションで完了",
+      "benefit2": "内臓への影響なし",
+      "benefit3": "すべての色に効果",
+      "benefit4": "火傷の傷跡なし"
+    },
+    "step1": {
+      "title": "1. 相談と分析",
+      "description": "タトゥーの状態を分析し、個別の治療計画を作成"
+    },
+    "step2": {
+      "title": "2. 治療準備",
+      "description": "安全な施術のための皮膚準備と麻酔"
+    },
+    "step3": {
+      "title": "3. Sæsal適用",
+      "description": "タトゥー針技術を使用してSaesalソリューションを正確に適用"
+    },
+    "step4": {
+      "title": "4. アフターケア",
+      "description": "回復プロセス管理と次セッションの計画"
+    }
   },
   "safety": {
     "title": "Solution is Safe?",
@@ -96,13 +172,20 @@
     "guaranteed": "Safety Guaranteed",
     "naturalDescription": "自然界で見つかる天然由来物質で、実験室で作られた化学物質ではありません",
     "professionalDescription": "世界中の美容治療と皮膚科手術で広く信頼されています",
-    "bodyComponentsDescription": "健康な人体組織に自然に存在する同じ化合物を含んでいます"
+    "bodyComponentsDescription": "健康な人体組織に自然に存在する同じ化合物を含んでいます",
+    "guarantee1": "天然由来の生体適合性成分のみ",
+    "guarantee2": "健康な皮膚にある物質と同一",
+    "guarantee3": "副作用のリスクを最小化",
+    "guarantee4": "自然な皮膚再生プロセスをサポート",
+    "guarantee5": "身体で安全に代謝される",
+    "guarantee6": "多様な皮膚状態と互換性"
   },
   "contact": {
     "title": "お問い合わせください！",
     "subtitle": "いつでもオープンしています",
     "info": {
       "title": "チェックリスト",
+      "subtitle": "相談前に準備が必要なすべてのこと",
       "photo": {
         "title": "写真要件",
         "description": "自然光の良い照明で様々な角度のタトゥーの鮮明な写真をご用意ください"
@@ -121,6 +204,7 @@
       }
     },
     "form": {
+      "subtitle": "新しい肌への旅を始める準備はできていますか？",
       "privacy": "このフォームを送信することで、相談目的での個人情報の収集と使用に同意します。",
       "send": "送信",
       "sending": "送信中...",
@@ -128,9 +212,13 @@
       "email": "メール",
       "phone": "電話",
       "location": "場所",
-      "images": "タトゥー画像",
+      "images": "タトゥー画像（最大5枚）",
       "message": "相談詳細",
-      "messagePlaceholder": "タトゥーについて説明してください（サイズ、場所、色、年数など）そして特別な懸念事項があればお知らせください。"
+      "messagePlaceholder": "タトゥーについて説明してください（サイズ、場所、色、年数など）そして特別な懸念事項があればお知らせください。",
+      "uploadPhotos": "タトゥー写真をアップロードするにはクリック",
+      "dragDrop": "またはファイルをここにドラッグアンドドロップ（最大5枚）",
+      "successMessage": "相談リクエストが正常に送信されました。24-48時間以内にご返答いたします。",
+      "errorMessage": "送信中にエラーが発生しました。もう一度お試しください。"
     }
   }
 }

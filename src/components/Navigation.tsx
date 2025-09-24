@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useRouter, usePathname } from 'next/navigation';
 import { useLanguage } from '@/contexts/LanguageContext';
 import OptimizedImage from './OptimizedImage';
 
@@ -9,7 +10,23 @@ interface NavigationProps {
   config: any;
 }
 
+// 언어 코드를 URL 경로로 매핑
+const localeToPath: Record<string, string> = {
+  'en': 'en',
+  'ko': 'kr',
+  'ja': 'jp',
+  'zh': 'cn',
+  'zh-tw': 'tw',
+  'th': 'th',
+  'vi': 'vn',
+  'es': 'es',
+  'sv': 'se',
+  'de': 'de'
+};
+
 export default function Navigation({ activeSection, config }: NavigationProps) {
+  const router = useRouter();
+  const pathname = usePathname();
   const { language, setLanguage, t, availableLanguages } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -44,6 +61,18 @@ export default function Navigation({ activeSection, config }: NavigationProps) {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  // 언어 변경 핸들러
+  const handleLanguageChange = (newLanguage: string) => {
+    const newPath = localeToPath[newLanguage];
+    if (newPath) {
+      // 현재 경로에서 해시(#section) 부분 추출
+      const currentHash = window.location.hash;
+      router.push(`/${newPath}${currentHash}`);
+    }
+    setIsLanguageDropdownOpen(false);
+    setIsMobileMenuOpen(false);
+  };
 
   const handleNavClick = (href: string) => {
     const targetId = href.substring(1);
@@ -158,10 +187,7 @@ export default function Navigation({ activeSection, config }: NavigationProps) {
                       {Object.entries(availableLanguages).map(([code, langInfo], index, array) => (
                         <button
                           key={code}
-                          onClick={() => {
-                            setLanguage(code as any);
-                            setIsLanguageDropdownOpen(false);
-                          }}
+                          onClick={() => handleLanguageChange(code)}
                           className={`w-full text-left px-3 py-2 text-sm hover:bg-gray-50 ${
                             index === 0 ? 'rounded-t-lg' : ''
                           } ${
@@ -261,11 +287,7 @@ export default function Navigation({ activeSection, config }: NavigationProps) {
                       {Object.entries(availableLanguages).map(([code, langInfo], index, array) => (
                         <button
                           key={code}
-                          onClick={() => {
-                            setLanguage(code as any);
-                            setIsLanguageDropdownOpen(false);
-                            setIsMobileMenuOpen(false);
-                          }}
+                          onClick={() => handleLanguageChange(code)}
                           className={`w-full text-left px-3 py-2 text-sm hover:bg-gray-50 ${
                             index === 0 ? 'rounded-t-lg' : ''
                           } ${

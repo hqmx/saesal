@@ -185,7 +185,7 @@
     "subtitle": "We are always open",
     "info": {
       "title": "Checklist",
-      "subtitle": "Everything you need to know before your consultation",
+      "subtitle": "Everything you need to prepare before your consultation",
       "photo": {
         "title": "Photo Requirements",
         "description": "Please prepare clear photos of your tattoo from different angles with good lighting in natural light"
@@ -215,7 +215,8 @@
       "images": "Tattoo Images (up to 5 photos)",
       "message": "Consultation Details",
       "messagePlaceholder": "Please describe your tattoo (size, location, colors, age, etc.) and any specific concerns you have.",
-      "uploadPhotos": "Upload Tattoo Photos",
+      "uploadPhotos": "Click to upload tattoo photos",
+      "dragDrop": "or drag and drop files here (up to 5 photos)",
       "successMessage": "Your consultation request has been sent successfully. We will respond within 24-48 hours.",
       "errorMessage": "An error occurred while sending. Please try again."
     }
