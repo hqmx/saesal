@@ -19,24 +19,9 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ['framer-motion'],
   },
   
-  // 웹팩 최적화
-  webpack: (config, { dev, isServer }) => {
-    // 프로덕션에서 번들 크기 최적화
-    if (!dev && !isServer) {
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
-          vendor: {
-            test: /[\\/]node_modules[\\/]/,
-            name: 'vendors',
-            priority: 10,
-            enforce: true,
-          },
-        },
-      };
-    }
-    
-    return config;
+  // Turbopack 설정 (webpack 대신 사용)
+  turbopack: {
+    // Turbopack 전용 최적화 설정
   },
   
   // Next.js는 기본적으로 폰트 최적화가 활성화되어 있음
