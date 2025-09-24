@@ -88,12 +88,11 @@ export default function AboutSection({ config }: AboutSectionProps) {
                 <OptimizedImage
                   src="/logo.png"
                   alt="SæsaL Logo"
-                  width={320}
-                  height={60}
+                  width={800}
+                  height={200}
                   className="object-contain"
                   style={{
-                    width: '320px',
-                    height: '60px',
+                    transform: 'scale(0.4)',
                     margin: '0',
                     marginTop: '-10px'
                   }}
